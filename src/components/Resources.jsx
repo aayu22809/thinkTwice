@@ -1,206 +1,508 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Resources = ({ onBack }) => {
+    const [expandedFaq, setExpandedFaq] = useState(null);
+
+    const toggleFaq = (id) => {
+        setExpandedFaq(expandedFaq === id ? null : id);
+    };
+
+    // Scam type data with icons and colors
+    const scamTypes = [
+        { icon: "📧", title: "Phishing & Smishing", color: "#e3f2fd", description: "Fake emails or texts pretending to be from banks, employers, or services you use—trying to steal your login info or personal details." },
+        { icon: "💻", title: "Tech Support Scams", color: "#fce4ec", description: "Pop-ups or calls claiming your computer has a virus. They want money for fake 'repairs' or remote access to steal your data." },
+        { icon: "🎁", title: "Prize & Lottery Scams", color: "#fff3e0", description: "Messages saying you won money or a prize you never entered to win. They'll ask for fees or personal info to 'claim' it." },
+        { icon: "💼", title: "Fake Job Offers", color: "#e8f5e9", description: "Jobs requiring no interview, offering high pay, or asking you to deposit checks and wire money back. Too easy = too fake." },
+        { icon: "💕", title: "Romance Scams", color: "#fce4ec", description: "Fake online relationships where someone gains your trust, then invents emergencies to ask for money." },
+        { icon: "👵", title: "Grandparent Scams", color: "#f3e5f5", description: "Callers pretending to be a grandchild or family member in trouble, begging for money and secrecy." },
+        { icon: "📈", title: "Investment Scams", color: "#e0f2f1", description: "Promises of guaranteed high returns, often involving cryptocurrency. If it sounds too good to be true, it is." },
+        { icon: "💳", title: "Debt Scams", color: "#fff8e1", description: "Fake collectors threatening legal action, or companies promising to erase debt for upfront fees." }
+    ];
+
+    const redFlags = [
+        { icon: "⚠️", text: "Urgency & pressure tactics", detail: '"Act NOW or your account will be closed!"' },
+        { icon: "👤", text: "Generic greetings", detail: '"Dear Customer" instead of your actual name' },
+        { icon: "📧", text: "Suspicious sender address", detail: "Look for misspellings like 'amaz0n' or weird domains" },
+        { icon: "🔗", text: "Mismatched or sketchy URLs", detail: "Hover before you click—where does it really go?" },
+        { icon: "🔐", text: "Requests for passwords or PINs", detail: "Legitimate companies never ask for these via email/text" },
+        { icon: "✏️", text: "Spelling & grammar errors", detail: "Professional companies proofread their messages" },
+        { icon: "📎", text: "Suspicious attachments", detail: "Especially .exe, .zip, or files asking to 'enable macros'" },
+        { icon: "😰", text: "Strong emotional triggers", detail: "Fear, excitement, or sympathy designed to override your judgment" }
+    ];
+
+    const protectionTips = [
+        { icon: "🛑", title: "Pause Before You Click", text: "Urgency is a scammer's weapon. Take a breath and think." },
+        { icon: "🔍", title: "Hover Over Links", text: "On desktop, hover to see where a link actually goes before clicking." },
+        { icon: "🌐", title: "Go Direct", text: "Type the website URL yourself instead of clicking links in messages." },
+        { icon: "📞", title: "Verify by Phone", text: "Call companies using numbers from their official website or your card." },
+        { icon: "🚫", title: "Block & Report", text: "Don't engage with scammers. Block them and report to the platform." },
+        { icon: "🔒", title: "Enable 2FA", text: "Two-factor authentication adds an extra lock even if your password is stolen." }
+    ];
+
+    const faqItems = [
+        {
+            id: 1,
+            question: "What if I already clicked a suspicious link?",
+            answer: "Don't panic. Close the page immediately without entering any information. Run a virus scan on your device. If you entered any passwords, change them right away starting with email and banking. Monitor your accounts for unusual activity."
+        },
+        {
+            id: 2,
+            question: "What if I gave someone my password?",
+            answer: "Change that password immediately, plus any other accounts where you used the same password. Enable two-factor authentication. Contact the service (bank, email, etc.) to let them know. Monitor for suspicious activity."
+        },
+        {
+            id: 3,
+            question: "What if I sent money to a scammer?",
+            answer: "Contact your bank or payment service (Venmo, CashApp, Zelle) immediately—they may be able to stop or reverse the transaction. File a report at reportfraud.ftc.gov. Unfortunately, money sent via wire transfer or gift cards is very hard to recover."
+        },
+        {
+            id: 4,
+            question: "What if someone is asking me to keep something secret from my family?",
+            answer: "This is a major red flag. Scammers use secrecy to isolate you. Real emergencies don't require hiding from family. Always verify by calling the person directly on a number you already have—not one they give you."
+        },
+        {
+            id: 5,
+            question: "What if a 'friend' on social media is asking for money?",
+            answer: "Their account may be hacked. Contact them through a different method (call or text their real number) to verify it's actually them before sending anything. Real friends will understand you being careful."
+        },
+        {
+            id: 6,
+            question: "What if I think my identity has been stolen?",
+            answer: "Go to IdentityTheft.gov (the official FTC resource) to report it and get a personalized recovery plan. Contact your bank and credit card companies. Consider placing a fraud alert or credit freeze with the three credit bureaus."
+        }
+    ];
+
     return (
-        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            {/* Header */}
             <button
                 onClick={onBack}
                 className="btn btn-secondary"
-                style={{ marginBottom: '30px' }}
+                style={{ marginBottom: '20px' }}
             >
                 ← Back to Home
             </button>
 
-            <h1 style={{ fontSize: '2.5rem', marginBottom: '30px', textAlign: 'center' }}>
-                Online Safety & Scam Prevention Resources
-            </h1>
-
-            {/* Common Online Scams */}
-            <section className="card" style={{ marginBottom: '30px' }}>
-                <h2 style={{ borderBottom: '3px solid var(--color-yellow)', paddingBottom: '10px' }}>
-                    Common Online Scams
-                </h2>
-                <p>
-                    A scam is any dishonest scheme designed to trick you into giving away money, personal information, or access to your accounts. Scammers use psychology—like fear, excitement, or urgency—to catch you off guard. The good news is that once you know their tricks, you can spot them easily.
+            <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+                <h1 style={{ fontSize: '2.8rem', marginBottom: '15px' }}>
+                    🛡️ Safety Resources
+                </h1>
+                <p style={{ fontSize: '1.3rem', color: '#555', maxWidth: '600px', margin: '0 auto' }}>
+                    Everything you need to know to protect yourself online. Knowledge is your best defense.
                 </p>
+            </div>
 
-                <h3>Types of Scams You Should Know</h3>
-                <ul>
-                    <li><strong>Phishing & Smishing:</strong> Fake emails or text messages pretending to be from your bank, employer, or a service you use. They try to get you to click a link or share login info.</li>
-                    <li><strong>Tech Support Scams:</strong> Pop-ups or phone calls claiming your computer has a virus. They want you to pay for fake "repairs" or give them remote access.</li>
-                    <li><strong>Prize & Lottery Scams:</strong> Messages saying you won money or a prize—but you have to pay a fee or share personal info to claim it.</li>
-                    <li><strong>Fake Job Offers:</strong> "Jobs" that require no interview, offer unusually high pay, or ask you to deposit a check and send money back.</li>
-                    <li><strong>Romance Scams:</strong> Fake online relationships where the scammer eventually asks for money due to an "emergency."</li>
-                    <li><strong>Grandparent Scams:</strong> A caller pretends to be a grandchild in trouble and begs for money, asking you to keep it secret.</li>
-                    <li><strong>Investment Scams:</strong> Promises of guaranteed high returns, often involving cryptocurrency. If it sounds too good to be true, it probably is.</li>
-                    <li><strong>Debt Collection/Relief Scams:</strong> Fake debt collectors threatening legal action, or companies promising to erase your debt for an upfront fee.</li>
-                </ul>
+            {/* Common Scam Types - Grid Layout */}
+            <section style={{ marginBottom: '60px' }}>
+                <h2 style={{
+                    fontSize: '2rem',
+                    marginBottom: '25px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '10px'
+                }}>
+                    <span style={{
+                        backgroundColor: 'var(--color-yellow)',
+                        padding: '8px 16px',
+                        borderRadius: '8px',
+                        border: '2px solid black'
+                    }}>
+                        Common Scam Types
+                    </span>
+                </h2>
+
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                    gap: '20px'
+                }}>
+                    {scamTypes.map((scam, index) => (
+                        <div key={index} style={{
+                            backgroundColor: scam.color,
+                            borderRadius: '16px',
+                            padding: '24px',
+                            border: '2px solid #e0e0e0',
+                            transition: 'transform 0.2s, box-shadow 0.2s'
+                        }}>
+                            <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>{scam.icon}</div>
+                            <h3 style={{ fontSize: '1.2rem', marginBottom: '10px' }}>{scam.title}</h3>
+                            <p style={{ fontSize: '0.95rem', color: '#333', lineHeight: '1.5' }}>
+                                {scam.description}
+                            </p>
+                        </div>
+                    ))}
+                </div>
             </section>
 
-            {/* Scam Red Flags */}
-            <section className="card" style={{ marginBottom: '30px' }}>
-                <h2 style={{ borderBottom: '3px solid var(--color-yellow)', paddingBottom: '10px' }}>
-                    Scam Red Flags
+            {/* Red Flags Section */}
+            <section style={{ marginBottom: '60px' }}>
+                <h2 style={{
+                    fontSize: '2rem',
+                    marginBottom: '25px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '10px'
+                }}>
+                    <span style={{
+                        backgroundColor: '#ffcdd2',
+                        padding: '8px 16px',
+                        borderRadius: '8px',
+                        border: '2px solid black'
+                    }}>
+                        🚩 Red Flags to Watch For
+                    </span>
                 </h2>
-                <p>
-                    Scammers often follow the same patterns. Learning these warning signs can help you pause before you get tricked. If you notice one or more of these red flags, stop and verify before taking any action.
-                </p>
 
-                <ul>
-                    <li><strong>Unfamiliar or mismatched contact info:</strong> The email address doesn't match the company name, or the phone number looks strange.</li>
-                    <li><strong>Unexpected communication:</strong> You didn't enter a contest, apply for a job, or request help—but someone is contacting you about it anyway.</li>
-                    <li><strong>Generic greetings:</strong> Messages that say "Dear Customer" or "Dear User" instead of your actual name.</li>
-                    <li><strong>Urgency and fear tactics:</strong> Threats like "Your account will be closed in 24 hours!" or "Act NOW or face arrest!"</li>
-                    <li><strong>Strong emotional triggers:</strong> Appeals to greed (you won!), fear (you're in trouble!), or sympathy (help a loved one!).</li>
-                    <li><strong>Suspicious URLs:</strong> Links that look almost right but are slightly off, like "amaz0n.com" instead of "amazon.com."</li>
-                    <li><strong>Requests for login info:</strong> Legitimate companies never ask you to "confirm" your password via email or text.</li>
-                    <li><strong>Spelling/grammar errors:</strong> Professional companies proofread their messages. Lots of mistakes = a red flag.</li>
-                    <li><strong>Suspicious attachments:</strong> Unexpected files, especially .exe, .zip, or documents asking you to "enable macros."</li>
-                </ul>
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                    gap: '16px'
+                }}>
+                    {redFlags.map((flag, index) => (
+                        <div key={index} style={{
+                            backgroundColor: 'white',
+                            borderRadius: '12px',
+                            padding: '20px',
+                            border: '2px solid #333',
+                            boxShadow: '3px 3px 0px #333',
+                            display: 'flex',
+                            gap: '15px',
+                            alignItems: 'flex-start'
+                        }}>
+                            <span style={{ fontSize: '1.8rem' }}>{flag.icon}</span>
+                            <div>
+                                <div style={{ fontWeight: 'bold', marginBottom: '5px' }}>{flag.text}</div>
+                                <div style={{ fontSize: '0.9rem', color: '#666', fontStyle: 'italic' }}>
+                                    {flag.detail}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </section>
 
-            {/* How to Avoid Getting Scammed */}
-            <section className="card" style={{ marginBottom: '30px' }}>
-                <h2 style={{ borderBottom: '3px solid var(--color-yellow)', paddingBottom: '10px' }}>
-                    How to Avoid Getting Scammed
+            {/* Protection Tips */}
+            <section style={{ marginBottom: '60px' }}>
+                <h2 style={{
+                    fontSize: '2rem',
+                    marginBottom: '25px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '10px'
+                }}>
+                    <span style={{
+                        backgroundColor: '#c8e6c9',
+                        padding: '8px 16px',
+                        borderRadius: '8px',
+                        border: '2px solid black'
+                    }}>
+                        ✅ How to Protect Yourself
+                    </span>
                 </h2>
-                <p>
-                    Protecting yourself is easier than you think. These simple habits can stop most scams before they start. The key is to slow down, verify, and never let pressure push you into a quick decision.
-                </p>
 
-                <h3>Smart Habits</h3>
-                <ul>
-                    <li><strong>Think before you click:</strong> Hover over links to see where they really go. Look for "https://" and a lock icon, but remember that scam sites can have these too.</li>
-                    <li><strong>Go directly to the source:</strong> Instead of clicking a link in an email, type the company's web address directly into your browser.</li>
-                    <li><strong>Call official numbers:</strong> If you get a suspicious call or message, hang up and call the company using the number on their official website or your statement.</li>
-                    <li><strong>Use spam filters:</strong> Turn on spam filtering for your email and enable call blocking on your phone.</li>
-                    <li><strong>Enable multi-factor authentication (MFA):</strong> MFA adds an extra step (like a text code) when logging in, making it much harder for hackers to access your accounts even if they have your password.</li>
-                    <li><strong>Adjust privacy settings:</strong> Limit who can see your posts and personal info on social media.</li>
-                    <li><strong>Block and report:</strong> Don't engage with scammers. Block them and report the message to the platform, your email provider, or the FTC.</li>
-                </ul>
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                    gap: '20px'
+                }}>
+                    {protectionTips.map((tip, index) => (
+                        <div key={index} style={{
+                            backgroundColor: '#f8f9fa',
+                            borderRadius: '16px',
+                            padding: '24px',
+                            border: '2px solid #333',
+                            boxShadow: '4px 4px 0px var(--color-yellow)'
+                        }}>
+                            <div style={{
+                                fontSize: '2rem',
+                                marginBottom: '12px',
+                                backgroundColor: 'white',
+                                width: '50px',
+                                height: '50px',
+                                borderRadius: '50%',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                border: '2px solid #333'
+                            }}>
+                                {tip.icon}
+                            </div>
+                            <h3 style={{ fontSize: '1.1rem', marginBottom: '8px' }}>{tip.title}</h3>
+                            <p style={{ fontSize: '0.95rem', color: '#555' }}>{tip.text}</p>
+                        </div>
+                    ))}
+                </div>
             </section>
 
-            {/* Protecting Your Identity */}
-            <section className="card" style={{ marginBottom: '30px' }}>
-                <h2 style={{ borderBottom: '3px solid var(--color-yellow)', paddingBottom: '10px' }}>
-                    Protecting Your Identity
-                </h2>
-                <p>
-                    <strong>Identity theft</strong> happens when someone uses your personal information—like your name, Social Security number, or credit card—without your permission. Thieves can use your identity to open accounts, make purchases, or commit crimes in your name.
-                </p>
+            {/* Identity Theft & Data Security - Two Column */}
+            <section style={{ marginBottom: '60px' }}>
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+                    gap: '30px'
+                }}>
+                    {/* Identity Theft */}
+                    <div className="card" style={{
+                        backgroundColor: '#fff3e0',
+                        border: '3px solid #333'
+                    }}>
+                        <h3 style={{
+                            fontSize: '1.5rem',
+                            marginBottom: '20px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '10px'
+                        }}>
+                            🆔 Identity Theft
+                        </h3>
+                        <p style={{ marginBottom: '15px' }}>
+                            <strong>What it is:</strong> When someone uses your personal information (name, SSN, credit card) without permission.
+                        </p>
+                        <p style={{ marginBottom: '15px', fontWeight: 'bold' }}>How it happens:</p>
+                        <ul style={{ marginLeft: '20px', marginBottom: '15px' }}>
+                            <li>Phishing attacks</li>
+                            <li>Card skimmers on ATMs</li>
+                            <li>Data breaches</li>
+                            <li>Stolen mail</li>
+                            <li>Oversharing on social media</li>
+                        </ul>
+                        <p style={{ marginBottom: '10px', fontWeight: 'bold' }}>Warning signs:</p>
+                        <ul style={{ marginLeft: '20px' }}>
+                            <li>Unexplained charges</li>
+                            <li>Bills for accounts you didn't open</li>
+                            <li>Credit denials for no reason</li>
+                        </ul>
+                    </div>
 
-                <h3>How Identity Theft Happens</h3>
-                <ul>
-                    <li>Phishing emails or texts that trick you into sharing info.</li>
-                    <li>Card skimming devices on ATMs or gas pumps.</li>
-                    <li>Data breaches at companies that have your information.</li>
-                    <li>Stolen mail containing bank statements or credit offers.</li>
-                    <li>Oversharing on social media (birthdays, addresses, pet names used as passwords).</li>
-                </ul>
-
-                <h3>Warning Signs of Identity Theft</h3>
-                <ul>
-                    <li>Unexplained charges on your bank or credit card statements.</li>
-                    <li>Bills or collection notices for accounts you didn't open.</li>
-                    <li>Notifications that your data was part of a breach.</li>
-                    <li>Being denied credit for no clear reason.</li>
-                </ul>
-
-                <h3>Protecting Yourself</h3>
-                <ul>
-                    <li>Be careful on public Wi-Fi—avoid logging into bank accounts or entering sensitive info.</li>
-                    <li>Only enter personal info on secure websites (look for "https" and a lock icon).</li>
-                    <li>Don't overshare on social media. Avoid posting your full birthdate, address, or daily location.</li>
-                    <li>Shred documents with personal info before throwing them away.</li>
-                    <li>Factory reset devices before selling or recycling them.</li>
-                    <li>Monitor your bank and credit statements regularly for anything unusual.</li>
-                    <li>If you suspect identity theft, report it at <strong>IdentityTheft.gov</strong>—the official FTC resource.</li>
-                </ul>
+                    {/* Passwords & 2FA */}
+                    <div className="card" style={{
+                        backgroundColor: '#e8f5e9',
+                        border: '3px solid #333'
+                    }}>
+                        <h3 style={{
+                            fontSize: '1.5rem',
+                            marginBottom: '20px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '10px'
+                        }}>
+                            🔐 Passwords & Security
+                        </h3>
+                        <p style={{ marginBottom: '15px' }}>
+                            <strong>Strong passwords:</strong> 12+ characters mixing letters, numbers, and symbols. Never reuse passwords.
+                        </p>
+                        <p style={{ marginBottom: '15px' }}>
+                            <strong>Password managers:</strong> Apps that securely store and generate passwords so you don't have to remember them all.
+                        </p>
+                        <p style={{ marginBottom: '15px' }}>
+                            <strong>Two-Factor Authentication (2FA):</strong> An extra verification step (like a text code) when logging in. Even if someone steals your password, they can't get in without the second factor.
+                        </p>
+                        <div style={{
+                            backgroundColor: 'white',
+                            padding: '12px',
+                            borderRadius: '8px',
+                            border: '2px solid #333',
+                            marginTop: '10px'
+                        }}>
+                            💡 <strong>Tip:</strong> Enable 2FA on all important accounts—especially email, banking, and social media.
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            {/* Data Privacy & Strong Passwords */}
-            <section className="card" style={{ marginBottom: '30px' }}>
-                <h2 style={{ borderBottom: '3px solid var(--color-yellow)', paddingBottom: '10px' }}>
-                    Data Privacy & Strong Passwords
-                </h2>
-                <p>
-                    Your data is valuable. Companies, advertisers, and hackers all want it. Taking control of your privacy means being intentional about what you share and how you secure your accounts.
-                </p>
+            {/* Malware & Misinformation Row */}
+            <section style={{ marginBottom: '60px' }}>
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+                    gap: '30px'
+                }}>
+                    {/* Malware */}
+                    <div className="card" style={{
+                        backgroundColor: '#fce4ec',
+                        border: '3px solid #333'
+                    }}>
+                        <h3 style={{
+                            fontSize: '1.5rem',
+                            marginBottom: '20px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '10px'
+                        }}>
+                            🦠 Malware Defense
+                        </h3>
+                        <p style={{ marginBottom: '15px' }}>
+                            <strong>Malware</strong> is malicious software that can steal your data, spy on you, or damage your device.
+                        </p>
+                        <p style={{ fontWeight: 'bold', marginBottom: '10px' }}>Stay safe:</p>
+                        <ul style={{ marginLeft: '20px' }}>
+                            <li>Only download from official app stores</li>
+                            <li>Keep software updated</li>
+                            <li>Don't open suspicious attachments</li>
+                            <li>Back up your important files</li>
+                        </ul>
+                    </div>
 
-                <h3>Password Best Practices</h3>
-                <ul>
-                    <li>Use <strong>strong, unique passwords</strong> for every account. A strong password is long (12+ characters) and mixes letters, numbers, and symbols.</li>
-                    <li>Never reuse passwords. If one account is breached, hackers will try that password everywhere else.</li>
-                    <li>Use a <strong>password manager</strong>—an app that securely stores and generates strong passwords for you.</li>
-                    <li>Enable <strong>two-factor authentication (2FA)</strong> wherever possible. 2FA requires a second verification step (like a code texted to your phone) in addition to your password.</li>
-                </ul>
-
-                <h3>Limiting Data Collection</h3>
-                <ul>
-                    <li>Review privacy settings on apps and social media to limit what data is collected.</li>
-                    <li>Be cautious with apps that ask for unnecessary permissions (e.g., a flashlight app asking for your contacts).</li>
-                    <li>Consider what you post—once something is online, it can be hard to remove.</li>
-                </ul>
+                    {/* Misinformation */}
+                    <div className="card" style={{
+                        backgroundColor: '#e3f2fd',
+                        border: '3px solid #333'
+                    }}>
+                        <h3 style={{
+                            fontSize: '1.5rem',
+                            marginBottom: '20px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '10px'
+                        }}>
+                            🔍 Spotting Misinformation
+                        </h3>
+                        <p style={{ marginBottom: '15px' }}>
+                            False or misleading information spreads fast online. Before you believe or share:
+                        </p>
+                        <ul style={{ marginLeft: '20px' }}>
+                            <li>Check the source—is it reputable?</li>
+                            <li>Look for multiple credible reports</li>
+                            <li>Check the date—old news reshared?</li>
+                            <li>Read beyond the headline</li>
+                            <li>Content making you angry? That's often the point.</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
-            {/* Malware and Safe Downloads */}
-            <section className="card" style={{ marginBottom: '30px' }}>
-                <h2 style={{ borderBottom: '3px solid var(--color-yellow)', paddingBottom: '10px' }}>
-                    Malware and Safe Downloads
+            {/* FAQ Section with Accordion */}
+            <section style={{ marginBottom: '60px' }}>
+                <h2 style={{
+                    fontSize: '2rem',
+                    marginBottom: '25px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '10px'
+                }}>
+                    <span style={{
+                        backgroundColor: '#e1bee7',
+                        padding: '8px 16px',
+                        borderRadius: '8px',
+                        border: '2px solid black'
+                    }}>
+                        ❓ What If...? (FAQ)
+                    </span>
                 </h2>
-                <p>
-                    <strong>Malware</strong> is malicious software designed to damage your device, steal your data, or spy on your activity. It can come from downloads, email attachments, or infected websites.
+                <p style={{ marginBottom: '20px', fontSize: '1.1rem' }}>
+                    Click any question to see what you should do.
                 </p>
 
-                <h3>How to Avoid Malware</h3>
-                <ul>
-                    <li><strong>Only download from trusted sources:</strong> Use official app stores and verified websites.</li>
-                    <li><strong>Keep software updated:</strong> Updates often include security patches that fix vulnerabilities hackers exploit.</li>
-                    <li><strong>Avoid suspicious links and attachments:</strong> Don't open files or click links from unknown senders.</li>
-                    <li><strong>Back up important data:</strong> Regular backups mean you won't lose everything if your device is compromised.</li>
-                    <li><strong>Use antivirus software:</strong> While not foolproof, it adds another layer of protection.</li>
-                </ul>
+                {faqItems.map((faq) => (
+                    <div key={faq.id} style={{ marginBottom: '12px' }}>
+                        <div
+                            onClick={() => toggleFaq(faq.id)}
+                            style={{
+                                backgroundColor: expandedFaq === faq.id ? 'var(--color-yellow)' : 'white',
+                                padding: '18px 24px',
+                                borderRadius: expandedFaq === faq.id ? '12px 12px 0 0' : '12px',
+                                border: '2px solid #333',
+                                cursor: 'pointer',
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                fontWeight: 'bold',
+                                fontSize: '1.1rem',
+                                transition: 'background-color 0.2s'
+                            }}
+                        >
+                            {faq.question}
+                            <span style={{ fontSize: '1.5rem' }}>
+                                {expandedFaq === faq.id ? '−' : '+'}
+                            </span>
+                        </div>
+                        {expandedFaq === faq.id && (
+                            <div style={{
+                                backgroundColor: '#f8f9fa',
+                                padding: '20px 24px',
+                                borderRadius: '0 0 12px 12px',
+                                border: '2px solid #333',
+                                borderTop: 'none',
+                                lineHeight: '1.6'
+                            }}>
+                                {faq.answer}
+                            </div>
+                        )}
+                    </div>
+                ))}
             </section>
 
-            {/* Spotting Misinformation */}
-            <section className="card" style={{ marginBottom: '30px' }}>
-                <h2 style={{ borderBottom: '3px solid var(--color-yellow)', paddingBottom: '10px' }}>
-                    Spotting Misinformation
-                </h2>
-                <p>
-                    <strong>Misinformation</strong> is false or misleading information that spreads online, sometimes by accident and sometimes on purpose. Learning to evaluate what you see helps you make informed decisions and avoid being manipulated.
-                </p>
-
-                <h3>How to Check If Something Is True</h3>
-                <ul>
-                    <li>Check the source: Is it a reputable news organization or an unknown blog?</li>
-                    <li>Look for other reports: Are multiple credible sources reporting the same thing?</li>
-                    <li>Check the date: Old stories are sometimes reshared as if they're new.</li>
-                    <li>Read beyond the headline: Headlines can be misleading or exaggerated.</li>
-                    <li>Be skeptical of strong emotions: Content designed to make you angry or scared often spreads faster, regardless of accuracy.</li>
-                </ul>
+            {/* Digital Citizenship Footer */}
+            <section style={{ marginBottom: '40px' }}>
+                <div style={{
+                    backgroundColor: '#333',
+                    color: 'white',
+                    borderRadius: '16px',
+                    padding: '40px',
+                    textAlign: 'center'
+                }}>
+                    <h3 style={{ fontSize: '1.8rem', marginBottom: '15px', color: 'var(--color-yellow)' }}>
+                        🌐 Be a Good Digital Citizen
+                    </h3>
+                    <p style={{ fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 20px', lineHeight: '1.6' }}>
+                        Online safety isn't just about protecting yourself. Think before you post, respect others' privacy,
+                        stand up against bullying, and remember: there's a real person behind every screen.
+                    </p>
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        gap: '30px',
+                        flexWrap: 'wrap',
+                        marginTop: '25px'
+                    }}>
+                        <div style={{ textAlign: 'center' }}>
+                            <div style={{ fontSize: '2rem' }}>💭</div>
+                            <div style={{ fontSize: '0.9rem' }}>Think before posting</div>
+                        </div>
+                        <div style={{ textAlign: 'center' }}>
+                            <div style={{ fontSize: '2rem' }}>🤝</div>
+                            <div style={{ fontSize: '0.9rem' }}>Respect privacy</div>
+                        </div>
+                        <div style={{ textAlign: 'center' }}>
+                            <div style={{ fontSize: '2rem' }}>💪</div>
+                            <div style={{ fontSize: '0.9rem' }}>Stand up to bullying</div>
+                        </div>
+                        <div style={{ textAlign: 'center' }}>
+                            <div style={{ fontSize: '2rem' }}>✅</div>
+                            <div style={{ fontSize: '0.9rem' }}>Verify before sharing</div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            {/* Being a Good Digital Citizen */}
-            <section className="card" style={{ marginBottom: '30px' }}>
-                <h2 style={{ borderBottom: '3px solid var(--color-yellow)', paddingBottom: '10px' }}>
-                    Being a Good Digital Citizen
-                </h2>
-                <p>
-                    Being safe online isn't just about protecting yourself—it's also about treating others with respect and contributing positively to online communities.
-                </p>
-
-                <h3>Tips for Positive Online Behavior</h3>
-                <ul>
-                    <li><strong>Think before you post:</strong> Would you say it to someone's face? Could it hurt someone?</li>
-                    <li><strong>Respect others' privacy:</strong> Don't share photos or information about others without their permission.</li>
-                    <li><strong>Stand up against cyberbullying:</strong> Support those being targeted and report harmful behavior.</li>
-                    <li><strong>Don't spread unverified information:</strong> Check facts before sharing.</li>
-                    <li><strong>Remember the human:</strong> Behind every screen is a real person with real feelings.</li>
-                </ul>
-                <p style={{ marginTop: '20px', fontStyle: 'italic' }}>
-                    By staying informed and practicing good habits, you can enjoy the benefits of the internet while staying safe. Knowledge is your best defense!
-                </p>
+            {/* Helpful Links */}
+            <section style={{ marginBottom: '40px' }}>
+                <div className="card" style={{ textAlign: 'center' }}>
+                    <h3 style={{ marginBottom: '15px' }}>📚 Official Resources</h3>
+                    <p style={{ marginBottom: '20px' }}>
+                        If you or someone you know has been scammed, these official resources can help:
+                    </p>
+                    <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+                        <div style={{
+                            backgroundColor: '#e3f2fd',
+                            padding: '15px 25px',
+                            borderRadius: '8px',
+                            border: '2px solid #333'
+                        }}>
+                            <strong>IdentityTheft.gov</strong><br />
+                            <span style={{ fontSize: '0.9rem' }}>Report identity theft</span>
+                        </div>
+                        <div style={{
+                            backgroundColor: '#e3f2fd',
+                            padding: '15px 25px',
+                            borderRadius: '8px',
+                            border: '2px solid #333'
+                        }}>
+                            <strong>ReportFraud.ftc.gov</strong><br />
+                            <span style={{ fontSize: '0.9rem' }}>Report scams & fraud</span>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     );
