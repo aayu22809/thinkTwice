@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = ({ scenarios, onSelect, completedScenarios = [] }) => {
+const Home = ({ scenarios, onSelect, completedScenarios = [], onResources }) => {
     return (
         <div>
             <div style={{ textAlign: 'center', marginBottom: '40px' }}>
@@ -8,6 +8,13 @@ const Home = ({ scenarios, onSelect, completedScenarios = [] }) => {
                 <p style={{ fontSize: '1.2rem' }}>
                     Learn how to spot and stop scams before they happen. Choose a scenario below to start.
                 </p>
+                <button
+                    onClick={onResources}
+                    className="btn btn-secondary"
+                    style={{ marginTop: '20px' }}
+                >
+                    📚 View Resources & Learn More
+                </button>
             </div>
 
             <div style={{

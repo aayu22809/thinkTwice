@@ -3,6 +3,7 @@ import Layout from './components/Layout';
 import Home from './components/Home';
 import Simulation from './components/Simulation';
 import Summary from './components/Summary';
+import Resources from './components/Resources';
 import { scenarios } from './data/scenarios';
 
 function App() {
@@ -88,6 +89,7 @@ function App() {
                     scenarios={scenarios}
                     onSelect={startScenario}
                     completedScenarios={completedScenarios}
+                    onResources={() => setCurrentView('resources')}
                 />
             )}
             {currentView === 'simulation' && activeScenarioId && (
@@ -110,6 +112,9 @@ function App() {
                         startScenario(activeScenarioId);
                     }}
                 />
+            )}
+            {currentView === 'resources' && (
+                <Resources onBack={goHome} />
             )}
         </Layout>
     );
