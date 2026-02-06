@@ -1,20 +1,16 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-const Home = ({ scenarios, onSelect, completedScenarios = [], onResources }) => {
+const GameSelection = ({ scenarios, onSelect, completedScenarios = [] }) => {
+    const { t } = useTranslation();
+
     return (
         <div>
             <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-                <h2 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>Scam Escape Room</h2>
+                <h2 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>{t('gameSelection.title')}</h2>
                 <p style={{ fontSize: '1.2rem' }}>
-                    Learn how to spot and stop scams before they happen. Choose a scenario below to start.
+                    {t('gameSelection.subtitle')}
                 </p>
-                <button
-                    onClick={onResources}
-                    className="btn btn-secondary"
-                    style={{ marginTop: '20px' }}
-                >
-                    📚 View Resources & Learn More
-                </button>
             </div>
 
             <div style={{
@@ -26,14 +22,18 @@ const Home = ({ scenarios, onSelect, completedScenarios = [], onResources }) => 
                     const isCompleted = completedScenarios.includes(scenario.id);
                     return (
                         <div key={scenario.id} className="card">
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>{scenario.title}</h3>
-                            <p style={{ marginBottom: '20px' }}>{scenario.description}</p>
+                            <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>
+                                {t(`scenarios.${scenario.id}.title`)}
+                            </h3>
+                            <p style={{ marginBottom: '20px' }}>
+                                {t(`scenarios.${scenario.id}.description`)}
+                            </p>
                             <button
                                 onClick={() => onSelect(scenario.id)}
                                 className="btn"
                                 style={{ width: '100%', backgroundColor: isCompleted ? '#e0e0e0' : 'var(--color-yellow)' }}
                             >
-                                {isCompleted ? 'Play Again' : 'Start Simulation'}
+                                {isCompleted ? t('gameSelection.retry') : t('gameSelection.start')}
                             </button>
                         </div>
                     );
@@ -43,4 +43,4 @@ const Home = ({ scenarios, onSelect, completedScenarios = [], onResources }) => 
     );
 };
 
-export default Home;
+export default GameSelection;

@@ -1,6 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
-const Layout = ({ children, onHome, score, totalScenarios, onReset }) => {
+const Layout = ({ children, onHome, onGameSelection, score, totalScenarios, onReset }) => {
+    const { t } = useTranslation();
+
     return (
         <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
             <header style={{
@@ -12,7 +16,7 @@ const Layout = ({ children, onHome, score, totalScenarios, onReset }) => {
                 alignItems: 'center'
             }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                    <h1 style={{ fontSize: '1.5rem', fontWeight: '900', margin: 0 }}>SCAM ESCAPE ROOM</h1>
+                    <h1 style={{ fontSize: '1.5rem', fontWeight: '900', margin: 0 }}>{t('layout.title')}</h1>
                     {score !== undefined && (
                         <div style={{
                             fontSize: '1.2rem',
@@ -22,26 +26,34 @@ const Layout = ({ children, onHome, score, totalScenarios, onReset }) => {
                             borderRadius: '8px',
                             border: '2px solid black'
                         }}>
-                            Score: {score} / {totalScenarios}
+                            {t('layout.score')}: {score} / {totalScenarios}
                         </div>
                     )}
                 </div>
-                <div style={{ display: 'flex', gap: '10px' }}>
+                <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                    <LanguageSwitcher />
                     {onReset && (
                         <button
                             onClick={onReset}
                             className="btn btn-secondary"
                             style={{ padding: '8px 16px', fontSize: '1rem' }}
                         >
-                            Reset
+                            {t('layout.reset')}
                         </button>
                     )}
+                    <button
+                        onClick={onGameSelection}
+                        className="btn btn-secondary"
+                        style={{ padding: '8px 16px', fontSize: '1rem' }}
+                    >
+                        {t('layout.escapeRoom')}
+                    </button>
                     <button
                         onClick={onHome}
                         className="btn btn-secondary"
                         style={{ padding: '8px 16px', fontSize: '1rem' }}
                     >
-                        Home
+                        {t('layout.home')}
                     </button>
                 </div>
             </header>
@@ -58,10 +70,11 @@ const Layout = ({ children, onHome, score, totalScenarios, onReset }) => {
                 backgroundColor: 'var(--color-black)',
                 color: 'var(--color-white)'
             }}>
-                <p>Scam Prevention Simulator • Educational Purpose Only</p>
+                <p>{t('layout.footer')}</p>
             </footer>
         </div>
     );
 };
 
 export default Layout;
+

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Layout from './components/Layout';
-import Home from './components/Home';
+import GameSelection from './components/GameSelection';
 import Simulation from './components/Simulation';
 import Summary from './components/Summary';
 import Resources from './components/Resources';
@@ -9,7 +9,7 @@ import { scenarios } from './data/scenarios';
 function App() {
     // Initialize state from localStorage or defaults
     const [currentView, setCurrentView] = useState(() => {
-        return localStorage.getItem('currentView') || 'home';
+        return localStorage.getItem('currentView') || 'resources';
     });
 
     const [activeScenarioId, setActiveScenarioId] = useState(() => {
@@ -30,7 +30,7 @@ function App() {
     // Redirect to home if on summary but no result (e.g. after refresh)
     useEffect(() => {
         if (currentView === 'summary' && !simulationResult) {
-            setCurrentView('home');
+            setCurrentView('resources');
         }
     }, [currentView, simulationResult]);
 
@@ -63,7 +63,13 @@ function App() {
     };
 
     const goHome = () => {
-        setCurrentView('home');
+        setCurrentView('resources');
+        setActiveScenarioId(null);
+        setSimulationResult(null);
+    };
+
+    const goGameSelection = () => {
+        setCurrentView('escape_room');
         setActiveScenarioId(null);
         setSimulationResult(null);
     };
@@ -71,7 +77,7 @@ function App() {
     const resetGame = () => {
         setScore(0);
         setCompletedScenarios([]);
-        setCurrentView('home');
+        setCurrentView('resources');
         setActiveScenarioId(null);
         setSimulationResult(null);
         localStorage.clear();
@@ -80,16 +86,19 @@ function App() {
     return (
         <Layout
             onHome={goHome}
+            onGameSelection={goGameSelection}
             score={score}
             totalScenarios={6}
             onReset={resetGame}
         >
-            {currentView === 'home' && (
-                <Home
+            {currentView === 'resources' && (
+                <Resources />
+            )}
+            {currentView === 'escape_room' && (
+                <GameSelection
                     scenarios={scenarios}
                     onSelect={startScenario}
                     completedScenarios={completedScenarios}
-                    onResources={() => setCurrentView('resources')}
                 />
             )}
             {currentView === 'simulation' && activeScenarioId && (
@@ -104,6 +113,7 @@ function App() {
                     result={simulationResult}
                     scenario={scenarios.find(s => s.id === activeScenarioId)}
                     onHome={goHome}
+                    onGameSelection={goGameSelection}
                     onRetry={() => {
                         // Retry logic: Just restart the scenario.
                         // Since we only update score if NOT in completedScenarios, 
@@ -113,9 +123,7 @@ function App() {
                     }}
                 />
             )}
-            {currentView === 'resources' && (
-                <Resources onBack={goHome} />
-            )}
+
         </Layout>
     );
 }

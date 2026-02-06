@@ -1,0 +1,262 @@
+{
+    "layout": {
+        "title": "SCAM ESCAPE ROOM",
+        "score": "Score",
+        "reset": "Reset",
+        "escapeRoom": "Scam Escape Room",
+        "home": "Home",
+        "footer": "Scam Prevention Simulator • Educational Purpose Only"
+    },
+    "resources": {
+        "title": "🛡️ Safety Resources",
+        "subtitle": "Everything you need to know to protect yourself online. Knowledge is your best defense.",
+        "scamTypes": {
+            "title": "Common Scam Types",
+            "phishing": {
+                "title": "Phishing & Smishing",
+                "description": "Fake emails or texts pretending to be from banks, employers, or services you use—trying to steal your login info or personal details."
+            },
+            "techSupport": {
+                "title": "Tech Support Scams",
+                "description": "Pop-ups or calls claiming your computer has a virus. They want money for fake 'repairs' or remote access to steal your data."
+            },
+            "prize": {
+                "title": "Prize & Lottery Scams",
+                "description": "Messages saying you won money or a prize you never entered to win. They'll ask for fees or personal info to 'claim' it."
+            },
+            "fakeJob": {
+                "title": "Fake Job Offers",
+                "description": "Jobs requiring no interview, offering high pay, or asking you to deposit checks and wire money back. Too easy = too fake."
+            },
+            "romance": {
+                "title": "Romance Scams",
+                "description": "Fake online relationships where someone gains your trust, then invents emergencies to ask for money."
+            },
+            "grandparent": {
+                "title": "Grandparent Scams",
+                "description": "Callers pretending to be a grandchild or family member in trouble, begging for money and secrecy."
+            },
+            "investment": {
+                "title": "Investment Scams",
+                "description": "Promises of guaranteed high returns, often involving cryptocurrency. If it sounds too good to be true, it is."
+            },
+            "debt": {
+                "title": "Debt Scams",
+                "description": "Fake collectors threatening legal action, or companies promising to erase debt for upfront fees."
+            }
+        },
+        "redFlags": {
+            "title": "🚩 Red Flags to Watch For",
+            "urgency": {
+                "text": "Urgency & pressure tactics",
+                "detail": "\"Act NOW or your account will be closed!\""
+            },
+            "generic": {
+                "text": "Generic greetings",
+                "detail": "\"Dear Customer\" instead of your actual name"
+            },
+            "sender": {
+                "text": "Suspicious sender address",
+                "detail": "Look for misspellings like 'amaz0n' or weird domains"
+            },
+            "urls": {
+                "text": "Mismatched or sketchy URLs",
+                "detail": "Hover before you click—where does it really go?"
+            },
+            "passwords": {
+                "text": "Requests for passwords or PINs",
+                "detail": "Legitimate companies never ask for these via email/text"
+            },
+            "spelling": {
+                "text": "Spelling & grammar errors",
+                "detail": "Professional companies proofread their messages"
+            },
+            "attachments": {
+                "text": "Suspicious attachments",
+                "detail": "Especially .exe, .zip, or files asking to 'enable macros'"
+            },
+            "emotional": {
+                "text": "Strong emotional triggers",
+                "detail": "Fear, excitement, or sympathy designed to override your judgment"
+            }
+        },
+        "protection": {
+            "title": "✅ How to Protect Yourself",
+            "pause": {
+                "title": "Pause Before You Click",
+                "text": "Urgency is a scammer's weapon. Take a breath and think."
+            },
+            "hover": {
+                "title": "Hover Over Links",
+                "text": "On desktop, hover to see where a link actually goes before clicking."
+            },
+            "direct": {
+                "title": "Go Direct",
+                "text": "Type the website URL yourself instead of clicking links in messages."
+            },
+            "verify": {
+                "title": "Verify by Phone",
+                "text": "Call companies using numbers from their official website or your card."
+            },
+            "block": {
+                "title": "Block & Report",
+                "text": "Don't engage with scammers. Block them and report to the platform."
+            },
+            "twoFactor": {
+                "title": "Enable 2FA",
+                "text": "Two-factor authentication adds an extra lock even if your password is stolen."
+            }
+        },
+        "identityTheft": {
+            "title": "🆔 Identity Theft",
+            "what": "What it is:",
+            "whatText": "When someone uses your personal information (name, SSN, credit card) without permission.",
+            "how": "How it happens:",
+            "howItems": [
+                "Phishing attacks",
+                "Card skimmers on ATMs",
+                "Data breaches",
+                "Stolen mail",
+                "Oversharing on social media"
+            ],
+            "warning": "Warning signs:",
+            "warningItems": [
+                "Unexplained charges",
+                "Bills for accounts you didn't open",
+                "Credit denials for no reason"
+            ]
+        },
+        "passwords": {
+            "title": "🔐 Passwords & Security",
+            "strong": "Strong passwords:",
+            "strongText": "12+ characters mixing letters, numbers, and symbols. Never reuse passwords.",
+            "manager": "Password managers:",
+            "managerText": "Apps that securely store and generate passwords so you don't have to remember them all.",
+            "twoFactor": "Two-Factor Authentication (2FA):",
+            "twoFactorText": "An extra verification step (like a text code) when logging in. Even if someone steals your password, they can't get in without the second factor.",
+            "tip": "💡 Tip:",
+            "tipText": "Enable 2FA on all important accounts—especially email, banking, and social media."
+        },
+        "malware": {
+            "title": "🦠 Malware Defense",
+            "description": "Malware is malicious software that can steal your data, spy on you, or damage your device.",
+            "staySafe": "Stay safe:",
+            "items": [
+                "Only download from official app stores",
+                "Keep software updated",
+                "Don't open suspicious attachments",
+                "Back up your important files"
+            ]
+        },
+        "misinformation": {
+            "title": "🔍 Spotting Misinformation",
+            "description": "False or misleading information spreads fast online. Before you believe or share:",
+            "items": [
+                "Check the source—is it reputable?",
+                "Look for multiple credible reports",
+                "Check the date—old news reshared?",
+                "Read beyond the headline",
+                "Content making you angry? That's often the point."
+            ]
+        },
+        "faq": {
+            "title": "❓ What If...? (FAQ)",
+            "subtitle": "Click any question to see what you should do.",
+            "q1": {
+                "question": "What if I already clicked a suspicious link?",
+                "answer": "Don't panic. Close the page immediately without entering any information. Run a virus scan on your device. If you entered any passwords, change them right away starting with email and banking. Monitor your accounts for unusual activity."
+            },
+            "q2": {
+                "question": "What if I gave someone my password?",
+                "answer": "Change that password immediately, plus any other accounts where you used the same password. Enable two-factor authentication. Contact the service (bank, email, etc.) to let them know. Monitor for suspicious activity."
+            },
+            "q3": {
+                "question": "What if I sent money to a scammer?",
+                "answer": "Contact your bank or payment service (Venmo, CashApp, Zelle) immediately—they may be able to stop or reverse the transaction. File a report at reportfraud.ftc.gov. Unfortunately, money sent via wire transfer or gift cards is very hard to recover."
+            },
+            "q4": {
+                "question": "What if someone is asking me to keep something secret from my family?",
+                "answer": "This is a major red flag. Scammers use secrecy to isolate you. Real emergencies don't require hiding from family. Always verify by calling the person directly on a number you already have—not one they give you."
+            },
+            "q5": {
+                "question": "What if a 'friend' on social media is asking for money?",
+                "answer": "Their account may be hacked. Contact them through a different method (call or text their real number) to verify it's actually them before sending anything. Real friends will understand you being careful."
+            },
+            "q6": {
+                "question": "What if I think my identity has been stolen?",
+                "answer": "Go to IdentityTheft.gov (the official FTC resource) to report it and get a personalized recovery plan. Contact your bank and credit card companies. Consider placing a fraud alert or credit freeze with the three credit bureaus."
+            }
+        },
+        "citizenship": {
+            "title": "🌐 Be a Good Digital Citizen",
+            "description": "Online safety isn't just about protecting yourself. Think before you post, respect others' privacy, stand up against bullying, and remember: there's a real person behind every screen.",
+            "think": "Think before posting",
+            "respect": "Respect privacy",
+            "standUp": "Stand up to bullying",
+            "verify": "Verify before sharing"
+        },
+        "officialResources": {
+            "title": "📚 Official Resources",
+            "description": "If you or someone you know has been scammed, these official resources can help:",
+            "identityTheft": "IdentityTheft.gov",
+            "identityTheftDesc": "Report identity theft",
+            "reportFraud": "ReportFraud.ftc.gov",
+            "reportFraudDesc": "Report scams & fraud"
+        }
+    },
+    "scenarios": {
+        "bank_scam": {
+            "title": "Bank of America High Interest Offer",
+            "description": "You receive an exclusive offer for a high-yield savings account."
+        },
+        "social_security": {
+            "title": "Urgent: Social Security Suspension",
+            "description": "You receive a call claiming your Social Security number has been flagged."
+        },
+        "job_offer": {
+            "title": "Remote Data Entry Job",
+            "description": "You applied for a job and got an immediate response."
+        },
+        "tech_support": {
+            "title": "Virus Alert Popup",
+            "description": "A loud alarm starts playing on your computer."
+        },
+        "social_legit": {
+            "title": "Friend in Need?",
+            "description": "You get a DM from your friend Sarah on Instagram."
+        },
+        "service_legit": {
+            "title": "Bank Fraud Alert",
+            "description": "You receive a text message about a suspicious charge."
+        }
+    },
+    "gameSelection": {
+        "title": "Choose Your Scenario",
+        "subtitle": "Select a scam scenario to practice identifying red flags",
+        "completed": "✓ Completed",
+        "start": "Start",
+        "retry": "Retry"
+    },
+    "simulation": {
+        "redFlags": "Red Flags Found",
+        "timeElapsed": "Time Elapsed",
+        "clickRedFlags": "Click on red flags in the message",
+        "submit": "Submit Answer",
+        "giveUp": "Give Up",
+        "resetSession": "Reset Session"
+    },
+    "summary": {
+        "success": "Success!",
+        "failed": "Scam Detected Too Late",
+        "youFound": "You found",
+        "of": "of",
+        "redFlags": "red flags",
+        "explanation": "Explanation",
+        "home": "Home",
+        "nextScenario": "Next Scenario",
+        "retry": "Retry"
+    },
+    "languageSwitcher": {
+        "label": "Language"
+    }
+}

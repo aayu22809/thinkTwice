@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Resources = ({ onBack }) => {
+    const { t } = useTranslation();
     const [expandedFaq, setExpandedFaq] = useState(null);
 
     const toggleFaq = (id) => {
@@ -9,86 +11,55 @@ const Resources = ({ onBack }) => {
 
     // Scam type data with icons and colors
     const scamTypes = [
-        { icon: "📧", title: "Phishing & Smishing", color: "#e3f2fd", description: "Fake emails or texts pretending to be from banks, employers, or services you use—trying to steal your login info or personal details." },
-        { icon: "💻", title: "Tech Support Scams", color: "#fce4ec", description: "Pop-ups or calls claiming your computer has a virus. They want money for fake 'repairs' or remote access to steal your data." },
-        { icon: "🎁", title: "Prize & Lottery Scams", color: "#fff3e0", description: "Messages saying you won money or a prize you never entered to win. They'll ask for fees or personal info to 'claim' it." },
-        { icon: "💼", title: "Fake Job Offers", color: "#e8f5e9", description: "Jobs requiring no interview, offering high pay, or asking you to deposit checks and wire money back. Too easy = too fake." },
-        { icon: "💕", title: "Romance Scams", color: "#fce4ec", description: "Fake online relationships where someone gains your trust, then invents emergencies to ask for money." },
-        { icon: "👵", title: "Grandparent Scams", color: "#f3e5f5", description: "Callers pretending to be a grandchild or family member in trouble, begging for money and secrecy." },
-        { icon: "📈", title: "Investment Scams", color: "#e0f2f1", description: "Promises of guaranteed high returns, often involving cryptocurrency. If it sounds too good to be true, it is." },
-        { icon: "💳", title: "Debt Scams", color: "#fff8e1", description: "Fake collectors threatening legal action, or companies promising to erase debt for upfront fees." }
+        { icon: "📧", key: "phishing", color: "#e3f2fd" },
+        { icon: "💻", key: "techSupport", color: "#fce4ec" },
+        { icon: "🎁", key: "prize", color: "#fff3e0" },
+        { icon: "💼", key: "fakeJob", color: "#e8f5e9" },
+        { icon: "💕", key: "romance", color: "#fce4ec" },
+        { icon: "👵", key: "grandparent", color: "#f3e5f5" },
+        { icon: "📈", key: "investment", color: "#e0f2f1" },
+        { icon: "💳", key: "debt", color: "#fff8e1" }
     ];
 
     const redFlags = [
-        { icon: "⚠️", text: "Urgency & pressure tactics", detail: '"Act NOW or your account will be closed!"' },
-        { icon: "👤", text: "Generic greetings", detail: '"Dear Customer" instead of your actual name' },
-        { icon: "📧", text: "Suspicious sender address", detail: "Look for misspellings like 'amaz0n' or weird domains" },
-        { icon: "🔗", text: "Mismatched or sketchy URLs", detail: "Hover before you click—where does it really go?" },
-        { icon: "🔐", text: "Requests for passwords or PINs", detail: "Legitimate companies never ask for these via email/text" },
-        { icon: "✏️", text: "Spelling & grammar errors", detail: "Professional companies proofread their messages" },
-        { icon: "📎", text: "Suspicious attachments", detail: "Especially .exe, .zip, or files asking to 'enable macros'" },
-        { icon: "😰", text: "Strong emotional triggers", detail: "Fear, excitement, or sympathy designed to override your judgment" }
+        { icon: "⚠️", key: "urgency" },
+        { icon: "👤", key: "generic" },
+        { icon: "📧", key: "sender" },
+        { icon: "🔗", key: "urls" },
+        { icon: "🔐", key: "passwords" },
+        { icon: "✏️", key: "spelling" },
+        { icon: "📎", key: "attachments" },
+        { icon: "😰", key: "emotional" }
     ];
 
     const protectionTips = [
-        { icon: "🛑", title: "Pause Before You Click", text: "Urgency is a scammer's weapon. Take a breath and think." },
-        { icon: "🔍", title: "Hover Over Links", text: "On desktop, hover to see where a link actually goes before clicking." },
-        { icon: "🌐", title: "Go Direct", text: "Type the website URL yourself instead of clicking links in messages." },
-        { icon: "📞", title: "Verify by Phone", text: "Call companies using numbers from their official website or your card." },
-        { icon: "🚫", title: "Block & Report", text: "Don't engage with scammers. Block them and report to the platform." },
-        { icon: "🔒", title: "Enable 2FA", text: "Two-factor authentication adds an extra lock even if your password is stolen." }
+        { icon: "🛑", key: "pause" },
+        { icon: "🔍", key: "hover" },
+        { icon: "🌐", key: "direct" },
+        { icon: "📞", key: "verify" },
+        { icon: "🚫", key: "block" },
+        { icon: "🔒", key: "twoFactor" }
     ];
 
     const faqItems = [
-        {
-            id: 1,
-            question: "What if I already clicked a suspicious link?",
-            answer: "Don't panic. Close the page immediately without entering any information. Run a virus scan on your device. If you entered any passwords, change them right away starting with email and banking. Monitor your accounts for unusual activity."
-        },
-        {
-            id: 2,
-            question: "What if I gave someone my password?",
-            answer: "Change that password immediately, plus any other accounts where you used the same password. Enable two-factor authentication. Contact the service (bank, email, etc.) to let them know. Monitor for suspicious activity."
-        },
-        {
-            id: 3,
-            question: "What if I sent money to a scammer?",
-            answer: "Contact your bank or payment service (Venmo, CashApp, Zelle) immediately—they may be able to stop or reverse the transaction. File a report at reportfraud.ftc.gov. Unfortunately, money sent via wire transfer or gift cards is very hard to recover."
-        },
-        {
-            id: 4,
-            question: "What if someone is asking me to keep something secret from my family?",
-            answer: "This is a major red flag. Scammers use secrecy to isolate you. Real emergencies don't require hiding from family. Always verify by calling the person directly on a number you already have—not one they give you."
-        },
-        {
-            id: 5,
-            question: "What if a 'friend' on social media is asking for money?",
-            answer: "Their account may be hacked. Contact them through a different method (call or text their real number) to verify it's actually them before sending anything. Real friends will understand you being careful."
-        },
-        {
-            id: 6,
-            question: "What if I think my identity has been stolen?",
-            answer: "Go to IdentityTheft.gov (the official FTC resource) to report it and get a personalized recovery plan. Contact your bank and credit card companies. Consider placing a fraud alert or credit freeze with the three credit bureaus."
-        }
+        { id: 1, key: "q1" },
+        { id: 2, key: "q2" },
+        { id: 3, key: "q3" },
+        { id: 4, key: "q4" },
+        { id: 5, key: "q5" },
+        { id: 6, key: "q6" }
     ];
 
     return (
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             {/* Header */}
-            <button
-                onClick={onBack}
-                className="btn btn-secondary"
-                style={{ marginBottom: '20px' }}
-            >
-                ← Back to Home
-            </button>
 
             <div style={{ textAlign: 'center', marginBottom: '50px' }}>
                 <h1 style={{ fontSize: '2.8rem', marginBottom: '15px' }}>
-                    🛡️ Safety Resources
+                    {t('resources.title')}
                 </h1>
                 <p style={{ fontSize: '1.3rem', color: '#555', maxWidth: '600px', margin: '0 auto' }}>
-                    Everything you need to know to protect yourself online. Knowledge is your best defense.
+                    {t('resources.subtitle')}
                 </p>
             </div>
 
@@ -107,7 +78,7 @@ const Resources = ({ onBack }) => {
                         borderRadius: '8px',
                         border: '2px solid black'
                     }}>
-                        Common Scam Types
+                        {t('resources.scamTypes.title')}
                     </span>
                 </h2>
 
@@ -125,9 +96,11 @@ const Resources = ({ onBack }) => {
                             transition: 'transform 0.2s, box-shadow 0.2s'
                         }}>
                             <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>{scam.icon}</div>
-                            <h3 style={{ fontSize: '1.2rem', marginBottom: '10px' }}>{scam.title}</h3>
+                            <h3 style={{ fontSize: '1.2rem', marginBottom: '10px' }}>
+                                {t(`resources.scamTypes.${scam.key}.title`)}
+                            </h3>
                             <p style={{ fontSize: '0.95rem', color: '#333', lineHeight: '1.5' }}>
-                                {scam.description}
+                                {t(`resources.scamTypes.${scam.key}.description`)}
                             </p>
                         </div>
                     ))}
@@ -149,7 +122,7 @@ const Resources = ({ onBack }) => {
                         borderRadius: '8px',
                         border: '2px solid black'
                     }}>
-                        🚩 Red Flags to Watch For
+                        {t('resources.redFlags.title')}
                     </span>
                 </h2>
 
@@ -171,9 +144,11 @@ const Resources = ({ onBack }) => {
                         }}>
                             <span style={{ fontSize: '1.8rem' }}>{flag.icon}</span>
                             <div>
-                                <div style={{ fontWeight: 'bold', marginBottom: '5px' }}>{flag.text}</div>
+                                <div style={{ fontWeight: 'bold', marginBottom: '5px' }}>
+                                    {t(`resources.redFlags.${flag.key}.text`)}
+                                </div>
                                 <div style={{ fontSize: '0.9rem', color: '#666', fontStyle: 'italic' }}>
-                                    {flag.detail}
+                                    {t(`resources.redFlags.${flag.key}.detail`)}
                                 </div>
                             </div>
                         </div>
@@ -196,7 +171,7 @@ const Resources = ({ onBack }) => {
                         borderRadius: '8px',
                         border: '2px solid black'
                     }}>
-                        ✅ How to Protect Yourself
+                        {t('resources.protection.title')}
                     </span>
                 </h2>
 
@@ -227,8 +202,12 @@ const Resources = ({ onBack }) => {
                             }}>
                                 {tip.icon}
                             </div>
-                            <h3 style={{ fontSize: '1.1rem', marginBottom: '8px' }}>{tip.title}</h3>
-                            <p style={{ fontSize: '0.95rem', color: '#555' }}>{tip.text}</p>
+                            <h3 style={{ fontSize: '1.1rem', marginBottom: '8px' }}>
+                                {t(`resources.protection.${tip.key}.title`)}
+                            </h3>
+                            <p style={{ fontSize: '0.95rem', color: '#555' }}>
+                                {t(`resources.protection.${tip.key}.text`)}
+                            </p>
                         </div>
                     ))}
                 </div>
@@ -253,24 +232,22 @@ const Resources = ({ onBack }) => {
                             alignItems: 'center',
                             gap: '10px'
                         }}>
-                            🆔 Identity Theft
+                            {t('resources.identityTheft.title')}
                         </h3>
                         <p style={{ marginBottom: '15px' }}>
-                            <strong>What it is:</strong> When someone uses your personal information (name, SSN, credit card) without permission.
+                            <strong>{t('resources.identityTheft.what')}</strong> {t('resources.identityTheft.whatText')}
                         </p>
-                        <p style={{ marginBottom: '15px', fontWeight: 'bold' }}>How it happens:</p>
+                        <p style={{ marginBottom: '15px', fontWeight: 'bold' }}>{t('resources.identityTheft.how')}</p>
                         <ul style={{ marginLeft: '20px', marginBottom: '15px' }}>
-                            <li>Phishing attacks</li>
-                            <li>Card skimmers on ATMs</li>
-                            <li>Data breaches</li>
-                            <li>Stolen mail</li>
-                            <li>Oversharing on social media</li>
+                            {t('resources.identityTheft.howItems', { returnObjects: true }).map((item, idx) => (
+                                <li key={idx}>{item}</li>
+                            ))}
                         </ul>
-                        <p style={{ marginBottom: '10px', fontWeight: 'bold' }}>Warning signs:</p>
+                        <p style={{ marginBottom: '10px', fontWeight: 'bold' }}>{t('resources.identityTheft.warning')}</p>
                         <ul style={{ marginLeft: '20px' }}>
-                            <li>Unexplained charges</li>
-                            <li>Bills for accounts you didn't open</li>
-                            <li>Credit denials for no reason</li>
+                            {t('resources.identityTheft.warningItems', { returnObjects: true }).map((item, idx) => (
+                                <li key={idx}>{item}</li>
+                            ))}
                         </ul>
                     </div>
 
@@ -286,16 +263,16 @@ const Resources = ({ onBack }) => {
                             alignItems: 'center',
                             gap: '10px'
                         }}>
-                            🔐 Passwords & Security
+                            {t('resources.passwords.title')}
                         </h3>
                         <p style={{ marginBottom: '15px' }}>
-                            <strong>Strong passwords:</strong> 12+ characters mixing letters, numbers, and symbols. Never reuse passwords.
+                            <strong>{t('resources.passwords.strong')}</strong> {t('resources.passwords.strongText')}
                         </p>
                         <p style={{ marginBottom: '15px' }}>
-                            <strong>Password managers:</strong> Apps that securely store and generate passwords so you don't have to remember them all.
+                            <strong>{t('resources.passwords.manager')}</strong> {t('resources.passwords.managerText')}
                         </p>
                         <p style={{ marginBottom: '15px' }}>
-                            <strong>Two-Factor Authentication (2FA):</strong> An extra verification step (like a text code) when logging in. Even if someone steals your password, they can't get in without the second factor.
+                            <strong>{t('resources.passwords.twoFactor')}</strong> {t('resources.passwords.twoFactorText')}
                         </p>
                         <div style={{
                             backgroundColor: 'white',
@@ -304,7 +281,7 @@ const Resources = ({ onBack }) => {
                             border: '2px solid #333',
                             marginTop: '10px'
                         }}>
-                            💡 <strong>Tip:</strong> Enable 2FA on all important accounts—especially email, banking, and social media.
+                            {t('resources.passwords.tip')} <strong>{t('resources.passwords.tipText')}</strong>
                         </div>
                     </div>
                 </div>
@@ -329,17 +306,16 @@ const Resources = ({ onBack }) => {
                             alignItems: 'center',
                             gap: '10px'
                         }}>
-                            🦠 Malware Defense
+                            {t('resources.malware.title')}
                         </h3>
                         <p style={{ marginBottom: '15px' }}>
-                            <strong>Malware</strong> is malicious software that can steal your data, spy on you, or damage your device.
+                            <strong>{t('resources.malware.description')}</strong>
                         </p>
-                        <p style={{ fontWeight: 'bold', marginBottom: '10px' }}>Stay safe:</p>
+                        <p style={{ fontWeight: 'bold', marginBottom: '10px' }}>{t('resources.malware.staySafe')}</p>
                         <ul style={{ marginLeft: '20px' }}>
-                            <li>Only download from official app stores</li>
-                            <li>Keep software updated</li>
-                            <li>Don't open suspicious attachments</li>
-                            <li>Back up your important files</li>
+                            {t('resources.malware.items', { returnObjects: true }).map((item, idx) => (
+                                <li key={idx}>{item}</li>
+                            ))}
                         </ul>
                     </div>
 
@@ -355,17 +331,15 @@ const Resources = ({ onBack }) => {
                             alignItems: 'center',
                             gap: '10px'
                         }}>
-                            🔍 Spotting Misinformation
+                            {t('resources.misinformation.title')}
                         </h3>
                         <p style={{ marginBottom: '15px' }}>
-                            False or misleading information spreads fast online. Before you believe or share:
+                            {t('resources.misinformation.description')}
                         </p>
                         <ul style={{ marginLeft: '20px' }}>
-                            <li>Check the source—is it reputable?</li>
-                            <li>Look for multiple credible reports</li>
-                            <li>Check the date—old news reshared?</li>
-                            <li>Read beyond the headline</li>
-                            <li>Content making you angry? That's often the point.</li>
+                            {t('resources.misinformation.items', { returnObjects: true }).map((item, idx) => (
+                                <li key={idx}>{item}</li>
+                            ))}
                         </ul>
                     </div>
                 </div>
@@ -386,11 +360,11 @@ const Resources = ({ onBack }) => {
                         borderRadius: '8px',
                         border: '2px solid black'
                     }}>
-                        ❓ What If...? (FAQ)
+                        {t('resources.faq.title')}
                     </span>
                 </h2>
                 <p style={{ marginBottom: '20px', fontSize: '1.1rem' }}>
-                    Click any question to see what you should do.
+                    {t('resources.faq.subtitle')}
                 </p>
 
                 {faqItems.map((faq) => (
@@ -411,7 +385,7 @@ const Resources = ({ onBack }) => {
                                 transition: 'background-color 0.2s'
                             }}
                         >
-                            {faq.question}
+                            {t(`resources.faq.${faq.key}.question`)}
                             <span style={{ fontSize: '1.5rem' }}>
                                 {expandedFaq === faq.id ? '−' : '+'}
                             </span>
@@ -425,7 +399,7 @@ const Resources = ({ onBack }) => {
                                 borderTop: 'none',
                                 lineHeight: '1.6'
                             }}>
-                                {faq.answer}
+                                {t(`resources.faq.${faq.key}.answer`)}
                             </div>
                         )}
                     </div>
@@ -442,11 +416,10 @@ const Resources = ({ onBack }) => {
                     textAlign: 'center'
                 }}>
                     <h3 style={{ fontSize: '1.8rem', marginBottom: '15px', color: 'var(--color-yellow)' }}>
-                        🌐 Be a Good Digital Citizen
+                        {t('resources.citizenship.title')}
                     </h3>
                     <p style={{ fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 20px', lineHeight: '1.6' }}>
-                        Online safety isn't just about protecting yourself. Think before you post, respect others' privacy,
-                        stand up against bullying, and remember: there's a real person behind every screen.
+                        {t('resources.citizenship.description')}
                     </p>
                     <div style={{
                         display: 'flex',
@@ -457,19 +430,19 @@ const Resources = ({ onBack }) => {
                     }}>
                         <div style={{ textAlign: 'center' }}>
                             <div style={{ fontSize: '2rem' }}>💭</div>
-                            <div style={{ fontSize: '0.9rem' }}>Think before posting</div>
+                            <div style={{ fontSize: '0.9rem' }}>{t('resources.citizenship.think')}</div>
                         </div>
                         <div style={{ textAlign: 'center' }}>
                             <div style={{ fontSize: '2rem' }}>🤝</div>
-                            <div style={{ fontSize: '0.9rem' }}>Respect privacy</div>
+                            <div style={{ fontSize: '0.9rem' }}>{t('resources.citizenship.respect')}</div>
                         </div>
                         <div style={{ textAlign: 'center' }}>
                             <div style={{ fontSize: '2rem' }}>💪</div>
-                            <div style={{ fontSize: '0.9rem' }}>Stand up to bullying</div>
+                            <div style={{ fontSize: '0.9rem' }}>{t('resources.citizenship.standUp')}</div>
                         </div>
                         <div style={{ textAlign: 'center' }}>
                             <div style={{ fontSize: '2rem' }}>✅</div>
-                            <div style={{ fontSize: '0.9rem' }}>Verify before sharing</div>
+                            <div style={{ fontSize: '0.9rem' }}>{t('resources.citizenship.verify')}</div>
                         </div>
                     </div>
                 </div>
@@ -478,9 +451,9 @@ const Resources = ({ onBack }) => {
             {/* Helpful Links */}
             <section style={{ marginBottom: '40px' }}>
                 <div className="card" style={{ textAlign: 'center' }}>
-                    <h3 style={{ marginBottom: '15px' }}>📚 Official Resources</h3>
+                    <h3 style={{ marginBottom: '15px' }}>{t('resources.officialResources.title')}</h3>
                     <p style={{ marginBottom: '20px' }}>
-                        If you or someone you know has been scammed, these official resources can help:
+                        {t('resources.officialResources.description')}
                     </p>
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
                         <div style={{
@@ -489,8 +462,8 @@ const Resources = ({ onBack }) => {
                             borderRadius: '8px',
                             border: '2px solid #333'
                         }}>
-                            <strong>IdentityTheft.gov</strong><br />
-                            <span style={{ fontSize: '0.9rem' }}>Report identity theft</span>
+                            <strong>{t('resources.officialResources.identityTheft')}</strong><br />
+                            <span style={{ fontSize: '0.9rem' }}>{t('resources.officialResources.identityTheftDesc')}</span>
                         </div>
                         <div style={{
                             backgroundColor: '#e3f2fd',
@@ -498,8 +471,8 @@ const Resources = ({ onBack }) => {
                             borderRadius: '8px',
                             border: '2px solid #333'
                         }}>
-                            <strong>ReportFraud.ftc.gov</strong><br />
-                            <span style={{ fontSize: '0.9rem' }}>Report scams & fraud</span>
+                            <strong>{t('resources.officialResources.reportFraud')}</strong><br />
+                            <span style={{ fontSize: '0.9rem' }}>{t('resources.officialResources.reportFraudDesc')}</span>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,262 @@
+{
+    "layout": {
+        "title": "SALA DE ESCAPE DE ESTAFAS",
+        "score": "Puntuación",
+        "reset": "Reiniciar",
+        "escapeRoom": "Sala de Escape de Estafas",
+        "home": "Inicio",
+        "footer": "Simulador de Prevención de Estafas • Solo con Fines Educativos"
+    },
+    "resources": {
+        "title": "🛡️ Recursos de Seguridad",
+        "subtitle": "Todo lo que necesitas saber para protegerte en línea. El conocimiento es tu mejor defensa.",
+        "scamTypes": {
+            "title": "Tipos Comunes de Estafas",
+            "phishing": {
+                "title": "Phishing y Smishing",
+                "description": "Correos electrónicos o mensajes de texto falsos que pretenden ser de bancos, empleadores o servicios que usas, intentando robar tu información de inicio de sesión o datos personales."
+            },
+            "techSupport": {
+                "title": "Estafas de Soporte Técnico",
+                "description": "Ventanas emergentes o llamadas que afirman que tu computadora tiene un virus. Quieren dinero por 'reparaciones' falsas o acceso remoto para robar tus datos."
+            },
+            "prize": {
+                "title": "Estafas de Premios y Loterías",
+                "description": "Mensajes diciendo que ganaste dinero o un premio en el que nunca participaste. Te pedirán tarifas o información personal para 'reclamarlo'."
+            },
+            "fakeJob": {
+                "title": "Ofertas de Trabajo Falsas",
+                "description": "Trabajos que no requieren entrevista, ofrecen salarios altos o te piden depositar cheques y enviar dinero de vuelta. Demasiado fácil = demasiado falso."
+            },
+            "romance": {
+                "title": "Estafas Románticas",
+                "description": "Relaciones en línea falsas donde alguien gana tu confianza, luego inventa emergencias para pedir dinero."
+            },
+            "grandparent": {
+                "title": "Estafas a Abuelos",
+                "description": "Llamadas de personas que fingen ser un nieto o familiar en problemas, rogando por dinero y secreto."
+            },
+            "investment": {
+                "title": "Estafas de Inversión",
+                "description": "Promesas de retornos altos garantizados, a menudo involucrando criptomonedas. Si suena demasiado bueno para ser verdad, lo es."
+            },
+            "debt": {
+                "title": "Estafas de Deudas",
+                "description": "Cobradores falsos que amenazan con acciones legales, o empresas que prometen borrar deudas por tarifas por adelantado."
+            }
+        },
+        "redFlags": {
+            "title": "🚩 Señales de Alerta a Observar",
+            "urgency": {
+                "text": "Urgencia y tácticas de presión",
+                "detail": "\"¡Actúa AHORA o tu cuenta será cerrada!\""
+            },
+            "generic": {
+                "text": "Saludos genéricos",
+                "detail": "\"Estimado Cliente\" en lugar de tu nombre real"
+            },
+            "sender": {
+                "text": "Dirección de remitente sospechosa",
+                "detail": "Busca errores ortográficos como 'amaz0n' o dominios extraños"
+            },
+            "urls": {
+                "text": "URLs no coincidentes o sospechosas",
+                "detail": "Pasa el cursor antes de hacer clic: ¿a dónde va realmente?"
+            },
+            "passwords": {
+                "text": "Solicitudes de contraseñas o PINs",
+                "detail": "Las empresas legítimas nunca piden esto por correo electrónico/texto"
+            },
+            "spelling": {
+                "text": "Errores de ortografía y gramática",
+                "detail": "Las empresas profesionales revisan sus mensajes"
+            },
+            "attachments": {
+                "text": "Archivos adjuntos sospechosos",
+                "detail": "Especialmente .exe, .zip o archivos que piden 'habilitar macros'"
+            },
+            "emotional": {
+                "text": "Desencadenantes emocionales fuertes",
+                "detail": "Miedo, emoción o simpatía diseñados para anular tu juicio"
+            }
+        },
+        "protection": {
+            "title": "✅ Cómo Protegerte",
+            "pause": {
+                "title": "Pausa Antes de Hacer Clic",
+                "text": "La urgencia es el arma de un estafador. Respira y piensa."
+            },
+            "hover": {
+                "title": "Pasa el Cursor Sobre los Enlaces",
+                "text": "En escritorio, pasa el cursor para ver a dónde va realmente un enlace antes de hacer clic."
+            },
+            "direct": {
+                "title": "Ve Directamente",
+                "text": "Escribe la URL del sitio web tú mismo en lugar de hacer clic en enlaces en mensajes."
+            },
+            "verify": {
+                "title": "Verifica por Teléfono",
+                "text": "Llama a las empresas usando números de su sitio web oficial o de tu tarjeta."
+            },
+            "block": {
+                "title": "Bloquea y Reporta",
+                "text": "No interactúes con estafadores. Bloquéalos y repórtalos a la plataforma."
+            },
+            "twoFactor": {
+                "title": "Habilita 2FA",
+                "text": "La autenticación de dos factores añade un candado extra incluso si roban tu contraseña."
+            }
+        },
+        "identityTheft": {
+            "title": "🆔 Robo de Identidad",
+            "what": "Qué es:",
+            "whatText": "Cuando alguien usa tu información personal (nombre, SSN, tarjeta de crédito) sin permiso.",
+            "how": "Cómo sucede:",
+            "howItems": [
+                "Ataques de phishing",
+                "Skimmers de tarjetas en cajeros automáticos",
+                "Violaciones de datos",
+                "Correo robado",
+                "Compartir demasiado en redes sociales"
+            ],
+            "warning": "Señales de advertencia:",
+            "warningItems": [
+                "Cargos inexplicables",
+                "Facturas de cuentas que no abriste",
+                "Denegaciones de crédito sin razón"
+            ]
+        },
+        "passwords": {
+            "title": "🔐 Contraseñas y Seguridad",
+            "strong": "Contraseñas fuertes:",
+            "strongText": "12+ caracteres mezclando letras, números y símbolos. Nunca reutilices contraseñas.",
+            "manager": "Gestores de contraseñas:",
+            "managerText": "Aplicaciones que almacenan y generan contraseñas de forma segura para que no tengas que recordarlas todas.",
+            "twoFactor": "Autenticación de Dos Factores (2FA):",
+            "twoFactorText": "Un paso de verificación adicional (como un código de texto) al iniciar sesión. Incluso si alguien roba tu contraseña, no puede entrar sin el segundo factor.",
+            "tip": "💡 Consejo:",
+            "tipText": "Habilita 2FA en todas las cuentas importantes, especialmente correo electrónico, banca y redes sociales."
+        },
+        "malware": {
+            "title": "🦠 Defensa contra Malware",
+            "description": "El malware es software malicioso que puede robar tus datos, espiarte o dañar tu dispositivo.",
+            "staySafe": "Mantente seguro:",
+            "items": [
+                "Solo descarga de tiendas de aplicaciones oficiales",
+                "Mantén el software actualizado",
+                "No abras archivos adjuntos sospechosos",
+                "Haz copias de seguridad de tus archivos importantes"
+            ]
+        },
+        "misinformation": {
+            "title": "🔍 Detectar Desinformación",
+            "description": "La información falsa o engañosa se propaga rápido en línea. Antes de creer o compartir:",
+            "items": [
+                "Verifica la fuente: ¿es confiable?",
+                "Busca múltiples informes creíbles",
+                "Verifica la fecha: ¿noticias antiguas compartidas de nuevo?",
+                "Lee más allá del titular",
+                "¿El contenido te hace enojar? Ese suele ser el punto."
+            ]
+        },
+        "faq": {
+            "title": "❓ ¿Qué Pasa Si...? (Preguntas Frecuentes)",
+            "subtitle": "Haz clic en cualquier pregunta para ver qué debes hacer.",
+            "q1": {
+                "question": "¿Qué pasa si ya hice clic en un enlace sospechoso?",
+                "answer": "No entres en pánico. Cierra la página inmediatamente sin ingresar ninguna información. Ejecuta un análisis de virus en tu dispositivo. Si ingresaste contraseñas, cámbialas de inmediato comenzando con correo electrónico y banca. Monitorea tus cuentas en busca de actividad inusual."
+            },
+            "q2": {
+                "question": "¿Qué pasa si le di mi contraseña a alguien?",
+                "answer": "Cambia esa contraseña inmediatamente, además de cualquier otra cuenta donde usaste la misma contraseña. Habilita la autenticación de dos factores. Contacta al servicio (banco, correo electrónico, etc.) para informarles. Monitorea actividad sospechosa."
+            },
+            "q3": {
+                "question": "¿Qué pasa si envié dinero a un estafador?",
+                "answer": "Contacta a tu banco o servicio de pago (Venmo, CashApp, Zelle) inmediatamente: pueden detener o revertir la transacción. Presenta un informe en reportfraud.ftc.gov. Desafortunadamente, el dinero enviado por transferencia bancaria o tarjetas de regalo es muy difícil de recuperar."
+            },
+            "q4": {
+                "question": "¿Qué pasa si alguien me pide que mantenga algo en secreto de mi familia?",
+                "answer": "Esta es una señal de alerta importante. Los estafadores usan el secreto para aislarte. Las emergencias reales no requieren ocultarse de la familia. Siempre verifica llamando a la persona directamente a un número que ya tengas, no uno que te den."
+            },
+            "q5": {
+                "question": "¿Qué pasa si un 'amigo' en redes sociales me pide dinero?",
+                "answer": "Su cuenta puede estar hackeada. Contáctalos por un método diferente (llama o envía un mensaje de texto a su número real) para verificar que realmente son ellos antes de enviar algo. Los amigos reales entenderán que seas cuidadoso."
+            },
+            "q6": {
+                "question": "¿Qué pasa si creo que me robaron la identidad?",
+                "answer": "Ve a IdentityTheft.gov (el recurso oficial de la FTC) para reportarlo y obtener un plan de recuperación personalizado. Contacta a tu banco y compañías de tarjetas de crédito. Considera colocar una alerta de fraude o congelación de crédito con las tres agencias de crédito."
+            }
+        },
+        "citizenship": {
+            "title": "🌐 Sé un Buen Ciudadano Digital",
+            "description": "La seguridad en línea no se trata solo de protegerte a ti mismo. Piensa antes de publicar, respeta la privacidad de los demás, defiéndete contra el acoso y recuerda: hay una persona real detrás de cada pantalla.",
+            "think": "Piensa antes de publicar",
+            "respect": "Respeta la privacidad",
+            "standUp": "Defiéndete contra el acoso",
+            "verify": "Verifica antes de compartir"
+        },
+        "officialResources": {
+            "title": "📚 Recursos Oficiales",
+            "description": "Si tú o alguien que conoces ha sido estafado, estos recursos oficiales pueden ayudar:",
+            "identityTheft": "IdentityTheft.gov",
+            "identityTheftDesc": "Reportar robo de identidad",
+            "reportFraud": "ReportFraud.ftc.gov",
+            "reportFraudDesc": "Reportar estafas y fraudes"
+        }
+    },
+    "scenarios": {
+        "bank_scam": {
+            "title": "Oferta de Alto Interés de Bank of America",
+            "description": "Recibes una oferta exclusiva para una cuenta de ahorros de alto rendimiento."
+        },
+        "social_security": {
+            "title": "Urgente: Suspensión del Seguro Social",
+            "description": "Recibes una llamada que afirma que tu número de Seguro Social ha sido marcado."
+        },
+        "job_offer": {
+            "title": "Trabajo Remoto de Entrada de Datos",
+            "description": "Solicitaste un trabajo y obtuviste una respuesta inmediata."
+        },
+        "tech_support": {
+            "title": "Alerta de Virus Emergente",
+            "description": "Una alarma fuerte comienza a sonar en tu computadora."
+        },
+        "social_legit": {
+            "title": "¿Amigo en Necesidad?",
+            "description": "Recibes un mensaje directo de tu amiga Sarah en Instagram."
+        },
+        "service_legit": {
+            "title": "Alerta de Fraude Bancario",
+            "description": "Recibes un mensaje de texto sobre un cargo sospechoso."
+        }
+    },
+    "gameSelection": {
+        "title": "Elige Tu Escenario",
+        "subtitle": "Selecciona un escenario de estafa para practicar la identificación de señales de alerta",
+        "completed": "✓ Completado",
+        "start": "Comenzar",
+        "retry": "Reintentar"
+    },
+    "simulation": {
+        "redFlags": "Señales de Alerta Encontradas",
+        "timeElapsed": "Tiempo Transcurrido",
+        "clickRedFlags": "Haz clic en las señales de alerta en el mensaje",
+        "submit": "Enviar Respuesta",
+        "giveUp": "Rendirse",
+        "resetSession": "Reiniciar Sesión"
+    },
+    "summary": {
+        "success": "¡Éxito!",
+        "failed": "Estafa Detectada Demasiado Tarde",
+        "youFound": "Encontraste",
+        "of": "de",
+        "redFlags": "señales de alerta",
+        "explanation": "Explicación",
+        "home": "Inicio",
+        "nextScenario": "Siguiente Escenario",
+        "retry": "Reintentar"
+    },
+    "languageSwitcher": {
+        "label": "Idioma"
+    }
+}

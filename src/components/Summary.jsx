@@ -1,6 +1,8 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-const Summary = ({ result, scenario, onHome, onRetry }) => {
+const Summary = ({ result, scenario, onHome, onRetry, onGameSelection }) => {
+    const { t } = useTranslation();
     const isSuccess = result.success;
 
     return (
@@ -18,7 +20,7 @@ const Summary = ({ result, scenario, onHome, onRetry }) => {
                     color: isSuccess ? '#155724' : '#721c24',
                     marginBottom: '20px'
                 }}>
-                    {isSuccess ? 'SAFE!' : 'SCAMMED!'}
+                    {isSuccess ? t('summary.success') : t('summary.failed')}
                 </h2>
                 <p style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
                     {result.message}
@@ -27,7 +29,7 @@ const Summary = ({ result, scenario, onHome, onRetry }) => {
 
             <div className="card" style={{ marginBottom: '40px' }}>
                 <h3 style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '20px' }}>
-                    What happened?
+                    {t('summary.explanation')}
                 </h3>
                 <p style={{ fontSize: '1.2rem', lineHeight: '1.6' }}>
                     {result.feedback}
@@ -59,10 +61,13 @@ const Summary = ({ result, scenario, onHome, onRetry }) => {
 
             <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
                 <button onClick={onRetry} className="btn btn-primary" style={{ minWidth: '150px' }}>
-                    Retry Scenario
+                    {t('summary.retry')}
+                </button>
+                <button onClick={onGameSelection} className="btn btn-secondary" style={{ minWidth: '150px' }}>
+                    {t('summary.nextScenario')}
                 </button>
                 <button onClick={onHome} className="btn btn-secondary" style={{ minWidth: '150px' }}>
-                    Back to Home
+                    {t('summary.home')}
                 </button>
             </div>
         </div>
@@ -70,3 +75,4 @@ const Summary = ({ result, scenario, onHome, onRetry }) => {
 };
 
 export default Summary;
+
