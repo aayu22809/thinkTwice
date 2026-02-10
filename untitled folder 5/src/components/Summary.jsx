@@ -1,8 +1,8 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../context/LanguageContext';
 
-const Summary = ({ result, scenario, onHome, onRetry, onGameSelection }) => {
-    const { t } = useTranslation();
+const Summary = ({ result, scenario, onHome, onRetry }) => {
+    const { t } = useLanguage();
     const isSuccess = result.success;
 
     return (
@@ -20,7 +20,7 @@ const Summary = ({ result, scenario, onHome, onRetry, onGameSelection }) => {
                     color: isSuccess ? '#155724' : '#721c24',
                     marginBottom: '20px'
                 }}>
-                    {isSuccess ? t('summary.success') : t('summary.failed')}
+                    {isSuccess ? t('safe_status') : t('scammed_status')}
                 </h2>
                 <p style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
                     {result.message}
@@ -29,7 +29,7 @@ const Summary = ({ result, scenario, onHome, onRetry, onGameSelection }) => {
 
             <div className="card" style={{ marginBottom: '40px' }}>
                 <h3 style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '20px' }}>
-                    {t('summary.explanation')}
+                    {t('what_happened')}
                 </h3>
                 <p style={{ fontSize: '1.2rem', lineHeight: '1.6' }}>
                     {result.feedback}
@@ -38,7 +38,7 @@ const Summary = ({ result, scenario, onHome, onRetry, onGameSelection }) => {
 
             <div className="card" style={{ marginBottom: '40px' }}>
                 <h3 style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '20px' }}>
-                    {t('summary.timeline')}
+                    {t('timeline_title')}
                 </h3>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                     {result.history.map((item, index) => (
@@ -49,10 +49,10 @@ const Summary = ({ result, scenario, onHome, onRetry, onGameSelection }) => {
                             borderRadius: '8px',
                             borderLeft: '4px solid var(--color-yellow)'
                         }}>
-                            <div style={{ fontWeight: 'bold', marginBottom: '5px' }}>{t('summary.step')} {index + 1}</div>
-                            <div>{t('summary.youChose')}: <strong>"{item.choice}"</strong></div>
+                            <div style={{ fontWeight: 'bold', marginBottom: '5px' }}>{t('step')} {index + 1}</div>
+                            <div>{t('you_chose')}: <strong>"{item.choice}"</strong></div>
                             <div style={{ fontSize: '0.9rem', color: '#666', marginTop: '5px' }}>
-                                {t('summary.timeTaken')}: {item.timeSpent} {t('summary.seconds')}
+                                {t('time_taken')}: {item.timeSpent}s
                             </div>
                         </li>
                     ))}
@@ -60,14 +60,8 @@ const Summary = ({ result, scenario, onHome, onRetry, onGameSelection }) => {
             </div>
 
             <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
-                <button onClick={onRetry} className="btn btn-primary" style={{ minWidth: '150px' }}>
-                    {t('summary.retry')}
-                </button>
-                <button onClick={onGameSelection} className="btn btn-secondary" style={{ minWidth: '150px' }}>
-                    {t('summary.nextScenario')}
-                </button>
-                <button onClick={onHome} className="btn btn-secondary" style={{ minWidth: '150px' }}>
-                    {t('summary.home')}
+                <button onClick={onHome} className="btn btn-secondary">
+                    {t('back_home')}
                 </button>
             </div>
         </div>
@@ -75,4 +69,3 @@ const Summary = ({ result, scenario, onHome, onRetry, onGameSelection }) => {
 };
 
 export default Summary;
-

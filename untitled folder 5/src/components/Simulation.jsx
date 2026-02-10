@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../context/LanguageContext';
 
 const Simulation = ({ scenario, onEnd, onResetSession }) => {
-    const { t } = useTranslation();
+    const { t } = useLanguage();
+
     // Initialize state from localStorage or defaults
     const [currentStepId, setCurrentStepId] = useState(() => {
         const saved = localStorage.getItem(`sim_step_${scenario.id}`);
@@ -83,9 +84,9 @@ const Simulation = ({ scenario, onEnd, onResetSession }) => {
 
             onEnd({
                 success: true,
-                message: t('simulation.winMessage'),
-                feedback: t('simulation.winFeedback'),
-                history: [...history, { step: currentStepId, choice: t('simulation.choiceEmergencyExit'), timeSpent: 90 - timeLeft }]
+                message: t('scam_correct_message'),
+                feedback: t('scam_correct_feedback'),
+                history: [...history, { step: currentStepId, choice: 'Emergency Exit', timeSpent: 90 - timeLeft }]
             });
         } else {
             // Legit - Show Modal
@@ -102,9 +103,9 @@ const Simulation = ({ scenario, onEnd, onResetSession }) => {
 
             onEnd({
                 success: true, // Safe choice
-                message: t('simulation.legitSafeMessage'),
-                feedback: t('simulation.legitSafeFeedback'),
-                history: [...history, { step: currentStepId, choice: `${t('simulation.choiceEmergencyExit')} (Legit)`, timeSpent: 90 - timeLeft }]
+                message: t('legit_escape_message'),
+                feedback: t('legit_escape_feedback'),
+                history: [...history, { step: currentStepId, choice: 'Emergency Exit (Legit)', timeSpent: 90 - timeLeft }]
             });
         } else {
             // Continue - do nothing, timer resumes
@@ -122,9 +123,9 @@ const Simulation = ({ scenario, onEnd, onResetSession }) => {
 
             onEnd({
                 success: false,
-                message: t('simulation.timeoutMessage'),
-                feedback: t('simulation.timeoutFeedback'),
-                history: [...history, { step: currentStepId, choice: t('simulation.choiceTimeout'), timeSpent: 90 }]
+                message: t('timeout_message'),
+                feedback: t('timeout_feedback'),
+                history: [...history, { step: currentStepId, choice: 'Timeout', timeSpent: 90 }]
             });
         } else if (action === 'reset') {
             localStorage.clear(); // Clear all
@@ -140,9 +141,9 @@ const Simulation = ({ scenario, onEnd, onResetSession }) => {
                 display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
                 zIndex: 1000
             }}>
-                <h1 style={{ color: 'red', fontSize: '3rem' }}>{t('simulation.timeUp')}</h1>
+                <h1 style={{ color: 'red', fontSize: '3rem' }}>{t('time_up')}</h1>
                 <p style={{ fontSize: '1.5rem', maxWidth: '600px', textAlign: 'center' }}>
-                    {t('simulation.timeUpMsg')}
+                    {t('time_up_msg')}
                 </p>
                 <div style={{ display: 'flex', gap: '20px', marginTop: '40px' }}>
                     <button
@@ -150,21 +151,21 @@ const Simulation = ({ scenario, onEnd, onResetSession }) => {
                         className="btn btn-primary"
                         style={{ fontSize: '1.2rem', padding: '15px 30px' }}
                     >
-                        {t('simulation.retryStep')}
+                        {t('retry_step')}
                     </button>
                     <button
                         onClick={() => handleTimeoutAction('home')}
                         className="btn btn-secondary"
                         style={{ fontSize: '1.2rem', padding: '15px 30px' }}
                     >
-                        {t('simulation.goHomeFail')}
+                        {t('go_home_fail')}
                     </button>
                     <button
                         onClick={() => handleTimeoutAction('reset')}
                         className="btn btn-danger"
                         style={{ fontSize: '1.2rem', padding: '15px 30px' }}
                     >
-                        {t('simulation.fullReset')}
+                        {t('full_reset')}
                     </button>
                 </div>
             </div>
@@ -180,21 +181,21 @@ const Simulation = ({ scenario, onEnd, onResetSession }) => {
                 zIndex: 1000
             }}>
                 <div style={{ backgroundColor: 'white', color: 'black', padding: '40px', borderRadius: '10px', maxWidth: '500px', textAlign: 'center' }}>
-                    <h2>{t('simulation.wait')}</h2>
-                    <p>{t('simulation.legitMsg')}</p>
-                    <p>{t('simulation.legitDetail')}</p>
+                    <h2>{t('wait_modal_title')}</h2>
+                    <p>{t('legit_modal_msg')}</p>
+                    <p>{t('legit_modal_instruction')}</p>
                     <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', marginTop: '30px' }}>
                         <button
                             onClick={() => handleLegitEscapeConfirm(false)}
                             className="btn btn-primary"
                         >
-                            {t('simulation.continue')}
+                            {t('continue_scenario')}
                         </button>
                         <button
                             onClick={() => handleLegitEscapeConfirm(true)}
                             className="btn btn-secondary"
                         >
-                            {t('simulation.leave')}
+                            {t('leave_anyway')}
                         </button>
                     </div>
                 </div>
@@ -219,8 +220,8 @@ const Simulation = ({ scenario, onEnd, onResetSession }) => {
                 return (
                     <div style={boxStyle}>
                         <div style={{ borderBottom: '1px solid #ccc', paddingBottom: '10px', marginBottom: '10px' }}>
-                            <strong>From:</strong> {content.sender}<br />
-                            <strong>Subject:</strong> {content.subject}
+                            <strong>{t('from')}:</strong> {content.sender}<br />
+                            <strong>{t('subject')}:</strong> {content.subject}
                         </div>
                         <div>{content.body}</div>
                     </div>
@@ -228,17 +229,17 @@ const Simulation = ({ scenario, onEnd, onResetSession }) => {
             case 'phone':
                 return (
                     <div style={{ ...boxStyle, backgroundColor: '#f8f9fa', textAlign: 'center' }}>
-                        <div style={{ fontSize: '1.5rem', marginBottom: '10px' }}>📞 Incoming Call</div>
+                        <div style={{ fontSize: '1.5rem', marginBottom: '10px' }}>📞 {t('incoming_call')}</div>
                         <div style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{content.caller}</div>
                         <div style={{ marginTop: '20px', fontStyle: 'italic', color: '#555' }}>
-                            (Voice): {content.audio_text}
+                            ({t('voice')}): {content.audio_text}
                         </div>
                     </div>
                 );
             case 'social':
                 return (
                     <div style={{ ...boxStyle, border: '1px solid #ddd' }}>
-                        <div style={{ color: '#3b5998', fontWeight: 'bold', marginBottom: '5px' }}>{content.platform} Message</div>
+                        <div style={{ color: '#3b5998', fontWeight: 'bold', marginBottom: '5px' }}>{content.platform} {t('message')}</div>
                         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
                             <div style={{ width: '40px', height: '40px', backgroundColor: '#ccc', borderRadius: '50%', marginRight: '10px' }}></div>
                             <strong>{content.sender}</strong>
@@ -310,7 +311,7 @@ const Simulation = ({ scenario, onEnd, onResetSession }) => {
                     onClick={handleEmergencyExit}
                     className="btn btn-danger"
                 >
-                    {t('simulation.escape')}
+                    🚨 {t('emergency_escape_btn')}
                 </button>
             </div>
         </div>

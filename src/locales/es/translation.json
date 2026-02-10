@@ -243,7 +243,26 @@
         "clickRedFlags": "Haz clic en las señales de alerta en el mensaje",
         "submit": "Enviar Respuesta",
         "giveUp": "Rendirse",
-        "resetSession": "Reiniciar Sesión"
+        "resetSession": "Reiniciar Sesión",
+        "escape": "🚨 Creo que es una estafa. Escapar ahora.",
+        "timeUp": "TIEMPO AGOTADO",
+        "timeUpMsg": "Se te acabó el tiempo. En la vida real, tomarse su tiempo es bueno, pero la indecisión a veces puede dejarte vulnerable.",
+        "retryStep": "Reintentar paso",
+        "goHomeFail": "Ir a Inicio (Fallo)",
+        "fullReset": "Reinicio completo",
+        "wait": "¡Espera!",
+        "legitMsg": "Esta situación es realmente legítima.",
+        "legitDetail": "Sin embargo, tu precaución es válida. Si alguna vez no estás seguro, irse es una opción segura.",
+        "continue": "Continuar escenario",
+        "leave": "Irse de todos modos (Seguro)",
+        "winMessage": "¡Identificaste correctamente una estafa!",
+        "winFeedback": "Usar el botón \"Salir\" es un gran hábito. Si algo se siente mal, detente inmediatamente.",
+        "legitSafeMessage": "Elección segura, pero esto era realmente legítimo.",
+        "legitSafeFeedback": "Elegiste escapar. Aunque este escenario era realmente seguro (legítimo), ser cauteloso nunca está mal.",
+        "timeoutMessage": "Se acabó el tiempo.",
+        "timeoutFeedback": "Los estafadores a menudo usan la urgencia para que entres en pánico.",
+        "choiceEmergencyExit": "Salida de emergencia",
+        "choiceTimeout": "Tiempo agotado"
     },
     "summary": {
         "success": "¡Éxito!",
@@ -253,8 +272,13 @@
         "redFlags": "señales de alerta",
         "explanation": "Explicación",
         "home": "Inicio",
-        "nextScenario": "Siguiente Escenario",
-        "retry": "Reintentar"
+        "nextScenario": "Siguiente escenario",
+        "retry": "Reintentar",
+        "timeline": "Tu línea de tiempo de decisiones",
+        "step": "Paso",
+        "youChose": "Elegiste",
+        "timeTaken": "Tiempo tomado",
+        "seconds": "segundos"
     },
     "languageSwitcher": {
         "label": "Idioma"

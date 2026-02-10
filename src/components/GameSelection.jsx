@@ -23,10 +23,10 @@ const GameSelection = ({ scenarios, onSelect, completedScenarios = [] }) => {
                     return (
                         <div key={scenario.id} className="card">
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>
-                                {t(`scenarios.${scenario.id}.title`)}
+                                {scenario.title}
                             </h3>
                             <p style={{ marginBottom: '20px' }}>
-                                {t(`scenarios.${scenario.id}.description`)}
+                                {scenario.description}
                             </p>
                             <button
                                 onClick={() => onSelect(scenario.id)}

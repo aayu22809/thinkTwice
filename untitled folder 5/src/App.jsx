@@ -1,26 +1,23 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from './components/Layout';
-import GameSelection from './components/GameSelection';
+import Home from './components/Home';
 import Simulation from './components/Simulation';
 import Summary from './components/Summary';
-import Resources from './components/Resources';
-import { getScenarios } from './data';
-import { useTranslation } from 'react-i18next';
+import { LanguageProvider, useLanguage } from './context/LanguageContext';
 
-function App() {
-    const { i18n } = useTranslation();
-    const scenarios = getScenarios(i18n.language);
+const AppContent = () => {
+    const { scenarios } = useLanguage();
 
     // Initialize state from localStorage or defaults
     const [currentView, setCurrentView] = useState(() => {
-        return localStorage.getItem('currentView') || 'resources';
+        return localStorage.getItem('currentView') || 'home';
     });
 
     const [activeScenarioId, setActiveScenarioId] = useState(() => {
         return localStorage.getItem('activeScenarioId') || null;
     });
 
-    const [simulationResult, setSimulationResult] = useState(null); // Don't persist result for now, simple enough to reset on reload if mid-summary
+    const [simulationResult, setSimulationResult] = useState(null);
 
     const [score, setScore] = useState(() => {
         return parseInt(localStorage.getItem('score') || '0', 10);
@@ -30,13 +27,6 @@ function App() {
         const saved = localStorage.getItem('completedScenarios');
         return saved ? JSON.parse(saved) : [];
     });
-
-    // Redirect to home if on summary but no result (e.g. after refresh)
-    useEffect(() => {
-        if (currentView === 'summary' && !simulationResult) {
-            setCurrentView('resources');
-        }
-    }, [currentView, simulationResult]);
 
     // Persist state changes
     useEffect(() => {
@@ -48,7 +38,7 @@ function App() {
     }, [currentView, activeScenarioId, score, completedScenarios]);
 
     const startScenario = (id) => {
-        // if (completedScenarios.includes(id)) return; // Removed to allow Retry logic. Score is protected in endScenario.
+        if (completedScenarios.includes(id)) return;
         setActiveScenarioId(id);
         setCurrentView('simulation');
         setSimulationResult(null);
@@ -67,13 +57,7 @@ function App() {
     };
 
     const goHome = () => {
-        setCurrentView('resources');
-        setActiveScenarioId(null);
-        setSimulationResult(null);
-    };
-
-    const goGameSelection = () => {
-        setCurrentView('escape_room');
+        setCurrentView('home');
         setActiveScenarioId(null);
         setSimulationResult(null);
     };
@@ -81,25 +65,32 @@ function App() {
     const resetGame = () => {
         setScore(0);
         setCompletedScenarios([]);
-        setCurrentView('resources');
+        setCurrentView('home');
         setActiveScenarioId(null);
         setSimulationResult(null);
         localStorage.clear();
+        // Maybe we want to persist language? Language is handled by context, so clearing localStorage might wipe it.
+        // But LanguageContext persists to 'appLanguage'. We should be careful not to wipe that if we want it to stay.
+        // logic in LanguageContext: const storedLang = localStorage.getItem('appLanguage');
+        // valid point. But resetGame is for game state.
+        // Let's restore language after clear if needed?
+        // Actually localStorage.clear() wipes EVERYTHING.
+        // Let's only remove game keys.
+        localStorage.removeItem('currentView');
+        localStorage.removeItem('activeScenarioId');
+        localStorage.removeItem('score');
+        localStorage.removeItem('completedScenarios');
     };
 
     return (
         <Layout
             onHome={goHome}
-            onGameSelection={goGameSelection}
             score={score}
-            totalScenarios={6}
+            totalScenarios={6} // Approx
             onReset={resetGame}
         >
-            {currentView === 'resources' && (
-                <Resources />
-            )}
-            {currentView === 'escape_room' && (
-                <GameSelection
+            {currentView === 'home' && (
+                <Home
                     scenarios={scenarios}
                     onSelect={startScenario}
                     completedScenarios={completedScenarios}
@@ -117,18 +108,20 @@ function App() {
                     result={simulationResult}
                     scenario={scenarios.find(s => s.id === activeScenarioId)}
                     onHome={goHome}
-                    onGameSelection={goGameSelection}
                     onRetry={() => {
-                        // Retry logic: Just restart the scenario.
-                        // Since we only update score if NOT in completedScenarios, 
-                        // retrying won't double-count unless we remove it from completedScenarios.
-                        // For now, let's keep it simple: Retry allows you to play again, but score is locked.
                         startScenario(activeScenarioId);
                     }}
                 />
             )}
-
         </Layout>
+    );
+};
+
+function App() {
+    return (
+        <LanguageProvider>
+            <AppContent />
+        </LanguageProvider>
     );
 }
 
