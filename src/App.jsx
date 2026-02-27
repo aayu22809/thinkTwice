@@ -91,7 +91,7 @@ function App() {
         <Layout
             onHome={goHome}
             onGameSelection={goGameSelection}
-            score={score}
+            score={currentView === 'resources' ? undefined : score}
             totalScenarios={6}
             onReset={resetGame}
         >

@@ -1,6 +1,6 @@
 {
     "layout": {
-        "title": "诈骗逃生室",
+        "title": "防诈骗意识",
         "score": "得分",
         "reset": "重置",
         "escapeRoom": "诈骗逃生室",
@@ -238,12 +238,12 @@
         "retry": "重试"
     },
     "simulation": {
-        "redFlags": "Red Flags Found",
+        "redFlags": "发现的危险信号",
         "timeElapsed": "耗时",
-        "clickRedFlags": "Click on red flags in the message",
-        "submit": "Submit Answer",
-        "giveUp": "Give Up",
-        "resetSession": "Reset Session",
+        "clickRedFlags": "点击消息中的危险信号",
+        "submit": "提交答案",
+        "giveUp": "放弃",
+        "resetSession": "重置进度",
         "escape": "🚨 我认为这是一个骗局。现在逃离。",
         "timeUp": "时间到",
         "timeUpMsg": "您的时间用尽了。在现实生活中，慢慢来是好事，但犹豫不决有时会让您处于弱势。",
@@ -267,9 +267,9 @@
     "summary": {
         "success": "安全！",
         "failed": "被骗了！",
-        "youFound": "You found",
-        "of": "of",
-        "redFlags": "red flags",
+        "youFound": "您找出了",
+        "of": "/",
+        "redFlags": "个危险信号",
         "explanation": "发生了什么？",
         "home": "首页",
         "nextScenario": "下一个场景",

@@ -1,6 +1,6 @@
 {
     "layout": {
-        "title": "사기 탈출 룸",
+        "title": "사기 예방 인식",
         "score": "점수",
         "reset": "초기화",
         "escapeRoom": "사기 탈출 룸",
@@ -8,200 +8,187 @@
         "footer": "사기 예방 시뮬레이터 • 교육 목적 전용"
     },
     "resources": {
-        "title": "🛡️ Safety Resources",
-        "subtitle": "Everything you need to know to protect yourself online. Knowledge is your best defense.",
+        "title": "🛡️ 안전 리소스",
+        "subtitle": "온라인 안전을 위한 모든 것.",
         "scamTypes": {
-            "title": "Common Scam Types",
+            "title": "사기 유형",
             "phishing": {
-                "title": "Phishing & Smishing",
-                "description": "Fake emails or texts pretending to be from banks, employers, or services you use—trying to steal your login info or personal details."
+                "title": "피싱",
+                "description": "가짜 이메일."
             },
             "techSupport": {
-                "title": "Tech Support Scams",
-                "description": "Pop-ups or calls claiming your computer has a virus. They want money for fake 'repairs' or remote access to steal your data."
+                "title": "기술 지원",
+                "description": "가짜 수리."
             },
             "prize": {
-                "title": "Prize & Lottery Scams",
-                "description": "Messages saying you won money or a prize you never entered to win. They'll ask for fees or personal info to 'claim' it."
+                "title": "복권",
+                "description": "가짜 당첨."
             },
             "fakeJob": {
-                "title": "Fake Job Offers",
-                "description": "Jobs requiring no interview, offering high pay, or asking you to deposit checks and wire money back. Too easy = too fake."
+                "title": "가짜 구직",
+                "description": "너무 좋은 조건."
             },
             "romance": {
-                "title": "Romance Scams",
-                "description": "Fake online relationships where someone gains your trust, then invents emergencies to ask for money."
+                "title": "로맨스 사기",
+                "description": "가짜 연인."
             },
             "grandparent": {
-                "title": "Grandparent Scams",
-                "description": "Callers pretending to be a grandchild or family member in trouble, begging for money and secrecy."
+                "title": "가족 사칭",
+                "description": "가족 사칭 전화."
             },
             "investment": {
-                "title": "Investment Scams",
-                "description": "Promises of guaranteed high returns, often involving cryptocurrency. If it sounds too good to be true, it is."
+                "title": "투자 사기",
+                "description": "가짜 고수익."
             },
             "debt": {
-                "title": "Debt Scams",
-                "description": "Fake collectors threatening legal action, or companies promising to erase debt for upfront fees."
+                "title": "채무 사기",
+                "description": "가짜 채권자."
             }
         },
         "redFlags": {
-            "title": "🚩 Red Flags to Watch For",
+            "title": "🚩 위험 신호",
             "urgency": {
-                "text": "Urgency & pressure tactics",
-                "detail": "\"Act NOW or your account will be closed!\""
+                "text": "긴박감",
+                "detail": "당장 행동하세요!"
             },
             "generic": {
-                "text": "Generic greetings",
-                "detail": "\"Dear Customer\" instead of your actual name"
+                "text": "일반적 인사",
+                "detail": "고객님께"
             },
             "sender": {
-                "text": "Suspicious sender address",
-                "detail": "Look for misspellings like 'amaz0n' or weird domains"
+                "text": "의심스러운 주소",
+                "detail": "오타"
             },
             "urls": {
-                "text": "Mismatched or sketchy URLs",
-                "detail": "Hover before you click—where does it really go?"
+                "text": "수상한 링크",
+                "detail": "확인 전 클릭 금지"
             },
             "passwords": {
-                "text": "Requests for passwords or PINs",
-                "detail": "Legitimate companies never ask for these via email/text"
+                "text": "비밀번호 요구",
+                "detail": "절대 주지 마세요"
             },
             "spelling": {
-                "text": "Spelling & grammar errors",
-                "detail": "Professional companies proofread their messages"
+                "text": "맞춤법 오류",
+                "detail": "문법 오류"
             },
             "attachments": {
-                "text": "Suspicious attachments",
-                "detail": "Especially .exe, .zip, or files asking to 'enable macros'"
+                "text": "수상한 첨부",
+                "detail": ".exe 파일"
             },
             "emotional": {
-                "text": "Strong emotional triggers",
-                "detail": "Fear, excitement, or sympathy designed to override your judgment"
+                "text": "감정 자극",
+                "detail": "분노 유발"
             }
         },
         "protection": {
-            "title": "✅ How to Protect Yourself",
+            "title": "✅ 보호 방법",
             "pause": {
-                "title": "Pause Before You Click",
-                "text": "Urgency is a scammer's weapon. Take a breath and think."
+                "title": "멈추기",
+                "text": "심호흡 하세요."
             },
             "hover": {
-                "title": "Hover Over Links",
-                "text": "On desktop, hover to see where a link actually goes before clicking."
+                "title": "마우스 올리기",
+                "text": "링크 확인."
             },
             "direct": {
-                "title": "Go Direct",
-                "text": "Type the website URL yourself instead of clicking links in messages."
+                "title": "직접 접속",
+                "text": "URL 입력."
             },
             "verify": {
-                "title": "Verify by Phone",
-                "text": "Call companies using numbers from their official website or your card."
+                "title": "확인하기",
+                "text": "전화하세요."
             },
             "block": {
-                "title": "Block & Report",
-                "text": "Don't engage with scammers. Block them and report to the platform."
+                "title": "차단",
+                "text": "신고하세요."
             },
             "twoFactor": {
-                "title": "Enable 2FA",
-                "text": "Two-factor authentication adds an extra lock even if your password is stolen."
+                "title": "2단계 인증 (2FA)",
+                "text": "보안 강화."
             }
         },
         "identityTheft": {
-            "title": "🆔 Identity Theft",
-            "what": "What it is:",
-            "whatText": "When someone uses your personal information (name, SSN, credit card) without permission.",
-            "how": "How it happens:",
+            "title": "🆔 명의 도용",
+            "what": "무엇인가요:",
+            "whatText": "개인 정보 무단 사용.",
+            "how": "어떻게:",
             "howItems": [
-                "Phishing attacks",
-                "Card skimmers on ATMs",
-                "Data breaches",
-                "Stolen mail",
-                "Oversharing on social media"
+                "피싱"
             ],
-            "warning": "Warning signs:",
+            "warning": "경고:",
             "warningItems": [
-                "Unexplained charges",
-                "Bills for accounts you didn't open",
-                "Credit denials for no reason"
+                "알 수 없는 청구"
             ]
         },
         "passwords": {
-            "title": "🔐 Passwords & Security",
-            "strong": "Strong passwords:",
-            "strongText": "12+ characters mixing letters, numbers, and symbols. Never reuse passwords.",
-            "manager": "Password managers:",
-            "managerText": "Apps that securely store and generate passwords so you don't have to remember them all.",
-            "twoFactor": "Two-Factor Authentication (2FA):",
-            "twoFactorText": "An extra verification step (like a text code) when logging in. Even if someone steals your password, they can't get in without the second factor.",
-            "tip": "💡 Tip:",
-            "tipText": "Enable 2FA on all important accounts—especially email, banking, and social media."
+            "title": "🔐 비밀번호",
+            "strong": "강력한 비밀번호:",
+            "strongText": "길고 복잡하게.",
+            "manager": "비밀번호 관리자:",
+            "managerText": "안전하게 보관.",
+            "twoFactor": "2단계 인증:",
+            "twoFactorText": "추가 보안.",
+            "tip": "💡 팁:",
+            "tipText": "항상 켜세요."
         },
         "malware": {
-            "title": "🦠 Malware Defense",
-            "description": "Malware is malicious software that can steal your data, spy on you, or damage your device.",
-            "staySafe": "Stay safe:",
+            "title": "🦠 악성코드",
+            "description": "악의적인 소프트웨어.",
+            "staySafe": "안전 수칙:",
             "items": [
-                "Only download from official app stores",
-                "Keep software updated",
-                "Don't open suspicious attachments",
-                "Back up your important files"
+                "최신 유지"
             ]
         },
         "misinformation": {
-            "title": "🔍 Spotting Misinformation",
-            "description": "False or misleading information spreads fast online. Before you believe or share:",
+            "title": "🔍 가짜 뉴스",
+            "description": "허위 정보.",
             "items": [
-                "Check the source—is it reputable?",
-                "Look for multiple credible reports",
-                "Check the date—old news reshared?",
-                "Read beyond the headline",
-                "Content making you angry? That's often the point."
+                "출처 확인"
             ]
         },
         "faq": {
-            "title": "❓ What If...? (FAQ)",
-            "subtitle": "Click any question to see what you should do.",
+            "title": "❓ FAQ",
+            "subtitle": "질문 클릭.",
             "q1": {
-                "question": "What if I already clicked a suspicious link?",
-                "answer": "Don't panic. Close the page immediately without entering any information. Run a virus scan on your device. If you entered any passwords, change them right away starting with email and banking. Monitor your accounts for unusual activity."
+                "question": "링크 클릭?",
+                "answer": "비밀번호 변경."
             },
             "q2": {
-                "question": "What if I gave someone my password?",
-                "answer": "Change that password immediately, plus any other accounts where you used the same password. Enable two-factor authentication. Contact the service (bank, email, etc.) to let them know. Monitor for suspicious activity."
+                "question": "비밀번호 유출?",
+                "answer": "즉시 변경."
             },
             "q3": {
-                "question": "What if I sent money to a scammer?",
-                "answer": "Contact your bank or payment service (Venmo, CashApp, Zelle) immediately—they may be able to stop or reverse the transaction. File a report at reportfraud.ftc.gov. Unfortunately, money sent via wire transfer or gift cards is very hard to recover."
+                "question": "돈을 보냈나요?",
+                "answer": "은행 연락."
             },
             "q4": {
-                "question": "What if someone is asking me to keep something secret from my family?",
-                "answer": "This is a major red flag. Scammers use secrecy to isolate you. Real emergencies don't require hiding from family. Always verify by calling the person directly on a number you already have—not one they give you."
+                "question": "비밀로 하라고?",
+                "answer": "사기입니다."
             },
             "q5": {
-                "question": "What if a 'friend' on social media is asking for money?",
-                "answer": "Their account may be hacked. Contact them through a different method (call or text their real number) to verify it's actually them before sending anything. Real friends will understand you being careful."
+                "question": "친구가 돈 요구?",
+                "answer": "전화 확인."
             },
             "q6": {
-                "question": "What if I think my identity has been stolen?",
-                "answer": "Go to IdentityTheft.gov (the official FTC resource) to report it and get a personalized recovery plan. Contact your bank and credit card companies. Consider placing a fraud alert or credit freeze with the three credit bureaus."
+                "question": "명의 도용?",
+                "answer": "신고하세요."
             }
         },
         "citizenship": {
-            "title": "🌐 Be a Good Digital Citizen",
-            "description": "Online safety isn't just about protecting yourself. Think before you post, respect others' privacy, stand up against bullying, and remember: there's a real person behind every screen.",
-            "think": "Think before posting",
-            "respect": "Respect privacy",
-            "standUp": "Stand up to bullying",
-            "verify": "Verify before sharing"
+            "title": "🌐 디지털 시민",
+            "description": "온라인 예절.",
+            "think": "생각하기",
+            "respect": "존중",
+            "standUp": "대항하기",
+            "verify": "확인"
         },
         "officialResources": {
-            "title": "📚 Official Resources",
-            "description": "If you or someone you know has been scammed, these official resources can help:",
+            "title": "📚 공식 리소스",
+            "description": "링크:",
             "identityTheft": "IdentityTheft.gov",
-            "identityTheftDesc": "Report identity theft",
+            "identityTheftDesc": "도용 신고",
             "reportFraud": "ReportFraud.ftc.gov",
-            "reportFraudDesc": "Report scams & fraud"
+            "reportFraudDesc": "사기 신고"
         }
     },
     "scenarios": {
@@ -238,12 +225,12 @@
         "retry": "재시도"
     },
     "simulation": {
-        "redFlags": "Red Flags Found",
+        "redFlags": "발견된 위험 신호",
         "timeElapsed": "소요 시간",
-        "clickRedFlags": "Click on red flags in the message",
-        "submit": "Submit Answer",
-        "giveUp": "Give Up",
-        "resetSession": "Reset Session",
+        "clickRedFlags": "메시지에서 위험 신호를 클릭하세요",
+        "submit": "답변 제출",
+        "giveUp": "포기하기",
+        "resetSession": "세션 초기화",
         "escape": "🚨 이건 사기 같아요. 지금 탈출.",
         "timeUp": "시간 종료",
         "timeUpMsg": "시간이 다 되었습니다. 실제 생활에서는 시간을 갖는 것이 좋지만, 우유부단함은 때로 당신을 취약하게 만들 수 있습니다.",
@@ -267,9 +254,9 @@
     "summary": {
         "success": "안전!",
         "failed": "사기 당함!",
-        "youFound": "You found",
-        "of": "of",
-        "redFlags": "red flags",
+        "youFound": "찾은 수:",
+        "of": "/",
+        "redFlags": "개의 위험 신호",
         "explanation": "무슨 일이 있었나요?",
         "home": "홈",
         "nextScenario": "다음 시나리오",

@@ -1,6 +1,6 @@
 {
     "layout": {
-        "title": "詐欺脱出ゲーム",
+        "title": "詐欺啓発",
         "score": "スコア",
         "reset": "リセット",
         "escapeRoom": "詐欺脱出ゲーム",
@@ -8,200 +8,187 @@
         "footer": "詐欺防止シミュレーター • 教育目的のみ"
     },
     "resources": {
-        "title": "🛡️ Safety Resources",
-        "subtitle": "Everything you need to know to protect yourself online. Knowledge is your best defense.",
+        "title": "🛡️ 安全リソース",
+        "subtitle": "オンラインで身を守るための知識。",
         "scamTypes": {
-            "title": "Common Scam Types",
+            "title": "詐欺の種類",
             "phishing": {
-                "title": "Phishing & Smishing",
-                "description": "Fake emails or texts pretending to be from banks, employers, or services you use—trying to steal your login info or personal details."
+                "title": "フィッシング",
+                "description": "偽のメールやテキスト。"
             },
             "techSupport": {
-                "title": "Tech Support Scams",
-                "description": "Pop-ups or calls claiming your computer has a virus. They want money for fake 'repairs' or remote access to steal your data."
+                "title": "サポート詐欺",
+                "description": "ウイルス感染を装うポップアップ。"
             },
             "prize": {
-                "title": "Prize & Lottery Scams",
-                "description": "Messages saying you won money or a prize you never entered to win. They'll ask for fees or personal info to 'claim' it."
+                "title": "宝くじ詐欺",
+                "description": "偽の当選通知。"
             },
             "fakeJob": {
-                "title": "Fake Job Offers",
-                "description": "Jobs requiring no interview, offering high pay, or asking you to deposit checks and wire money back. Too easy = too fake."
+                "title": "偽の求人",
+                "description": "簡単すぎる仕事。"
             },
             "romance": {
-                "title": "Romance Scams",
-                "description": "Fake online relationships where someone gains your trust, then invents emergencies to ask for money."
+                "title": "ロマンス詐欺",
+                "description": "偽の恋愛関係。"
             },
             "grandparent": {
-                "title": "Grandparent Scams",
-                "description": "Callers pretending to be a grandchild or family member in trouble, begging for money and secrecy."
+                "title": "オレオレ詐欺",
+                "description": "家族を装う電話。"
             },
             "investment": {
-                "title": "Investment Scams",
-                "description": "Promises of guaranteed high returns, often involving cryptocurrency. If it sounds too good to be true, it is."
+                "title": "投資詐欺",
+                "description": "高利回りの約束。"
             },
             "debt": {
-                "title": "Debt Scams",
-                "description": "Fake collectors threatening legal action, or companies promising to erase debt for upfront fees."
+                "title": "借金詐欺",
+                "description": "偽の取り立て。"
             }
         },
         "redFlags": {
-            "title": "🚩 Red Flags to Watch For",
+            "title": "🚩 危険信号",
             "urgency": {
-                "text": "Urgency & pressure tactics",
-                "detail": "\"Act NOW or your account will be closed!\""
+                "text": "緊急性と圧力",
+                "detail": "今すぐ行動して！"
             },
             "generic": {
-                "text": "Generic greetings",
-                "detail": "\"Dear Customer\" instead of your actual name"
+                "text": "一般的な挨拶",
+                "detail": "お客様へ"
             },
             "sender": {
-                "text": "Suspicious sender address",
-                "detail": "Look for misspellings like 'amaz0n' or weird domains"
+                "text": "不審な送信元",
+                "detail": "奇妙なドメイン"
             },
             "urls": {
-                "text": "Mismatched or sketchy URLs",
-                "detail": "Hover before you click—where does it really go?"
+                "text": "不審なURL",
+                "detail": "確認前にクリックしない"
             },
             "passwords": {
-                "text": "Requests for passwords or PINs",
-                "detail": "Legitimate companies never ask for these via email/text"
+                "text": "パスワード要求",
+                "detail": "絶対に教えない"
             },
             "spelling": {
-                "text": "Spelling & grammar errors",
-                "detail": "Professional companies proofread their messages"
+                "text": "スペルミス",
+                "detail": "文法的な誤り"
             },
             "attachments": {
-                "text": "Suspicious attachments",
-                "detail": "Especially .exe, .zip, or files asking to 'enable macros'"
+                "text": "不審な添付",
+                "detail": "特に.exe"
             },
             "emotional": {
-                "text": "Strong emotional triggers",
-                "detail": "Fear, excitement, or sympathy designed to override your judgment"
+                "text": "感情を煽る",
+                "detail": "恐怖や興奮"
             }
         },
         "protection": {
-            "title": "✅ How to Protect Yourself",
+            "title": "✅ 守る方法",
             "pause": {
-                "title": "Pause Before You Click",
-                "text": "Urgency is a scammer's weapon. Take a breath and think."
+                "title": "立ち止まる",
+                "text": "深呼吸する。"
             },
             "hover": {
-                "title": "Hover Over Links",
-                "text": "On desktop, hover to see where a link actually goes before clicking."
+                "title": "ホバー",
+                "text": "リンクを確認。"
             },
             "direct": {
-                "title": "Go Direct",
-                "text": "Type the website URL yourself instead of clicking links in messages."
+                "title": "直接アクセス",
+                "text": "URLを入力。"
             },
             "verify": {
-                "title": "Verify by Phone",
-                "text": "Call companies using numbers from their official website or your card."
+                "title": "電話で確認",
+                "text": "公式サイトへ。"
             },
             "block": {
-                "title": "Block & Report",
-                "text": "Don't engage with scammers. Block them and report to the platform."
+                "title": "ブロック",
+                "text": "報告する。"
             },
             "twoFactor": {
-                "title": "Enable 2FA",
-                "text": "Two-factor authentication adds an extra lock even if your password is stolen."
+                "title": "二段階認証",
+                "text": "2FAを有効に。"
             }
         },
         "identityTheft": {
-            "title": "🆔 Identity Theft",
-            "what": "What it is:",
-            "whatText": "When someone uses your personal information (name, SSN, credit card) without permission.",
-            "how": "How it happens:",
+            "title": "🆔 個人情報盗難",
+            "what": "概要:",
+            "whatText": "個人情報の無断使用。",
+            "how": "発生原因:",
             "howItems": [
-                "Phishing attacks",
-                "Card skimmers on ATMs",
-                "Data breaches",
-                "Stolen mail",
-                "Oversharing on social media"
+                "フィッシング"
             ],
-            "warning": "Warning signs:",
+            "warning": "警告サイン:",
             "warningItems": [
-                "Unexplained charges",
-                "Bills for accounts you didn't open",
-                "Credit denials for no reason"
+                "身に覚えのない請求"
             ]
         },
         "passwords": {
-            "title": "🔐 Passwords & Security",
-            "strong": "Strong passwords:",
-            "strongText": "12+ characters mixing letters, numbers, and symbols. Never reuse passwords.",
-            "manager": "Password managers:",
-            "managerText": "Apps that securely store and generate passwords so you don't have to remember them all.",
-            "twoFactor": "Two-Factor Authentication (2FA):",
-            "twoFactorText": "An extra verification step (like a text code) when logging in. Even if someone steals your password, they can't get in without the second factor.",
-            "tip": "💡 Tip:",
-            "tipText": "Enable 2FA on all important accounts—especially email, banking, and social media."
+            "title": "🔐 パスワード",
+            "strong": "強力なパスワード:",
+            "strongText": "長く複雑に。",
+            "manager": "マネージャー:",
+            "managerText": "安全に保存。",
+            "twoFactor": "二段階認証:",
+            "twoFactorText": "追加の保護。",
+            "tip": "💡 ヒント:",
+            "tipText": "必ず有効に。"
         },
         "malware": {
-            "title": "🦠 Malware Defense",
-            "description": "Malware is malicious software that can steal your data, spy on you, or damage your device.",
-            "staySafe": "Stay safe:",
+            "title": "🦠 マルウェア",
+            "description": "悪意あるソフトウェア。",
+            "staySafe": "安全対策:",
             "items": [
-                "Only download from official app stores",
-                "Keep software updated",
-                "Don't open suspicious attachments",
-                "Back up your important files"
+                "最新に保つ"
             ]
         },
         "misinformation": {
-            "title": "🔍 Spotting Misinformation",
-            "description": "False or misleading information spreads fast online. Before you believe or share:",
+            "title": "🔍 誤情報",
+            "description": "フェイクニュース。",
             "items": [
-                "Check the source—is it reputable?",
-                "Look for multiple credible reports",
-                "Check the date—old news reshared?",
-                "Read beyond the headline",
-                "Content making you angry? That's often the point."
+                "情報源を確認"
             ]
         },
         "faq": {
-            "title": "❓ What If...? (FAQ)",
-            "subtitle": "Click any question to see what you should do.",
+            "title": "❓ Q&A",
+            "subtitle": "質問をクリック。",
             "q1": {
-                "question": "What if I already clicked a suspicious link?",
-                "answer": "Don't panic. Close the page immediately without entering any information. Run a virus scan on your device. If you entered any passwords, change them right away starting with email and banking. Monitor your accounts for unusual activity."
+                "question": "リンクを押した？",
+                "answer": "パスワード変更。"
             },
             "q2": {
-                "question": "What if I gave someone my password?",
-                "answer": "Change that password immediately, plus any other accounts where you used the same password. Enable two-factor authentication. Contact the service (bank, email, etc.) to let them know. Monitor for suspicious activity."
+                "question": "パスワード教えた？",
+                "answer": "すぐ変更。"
             },
             "q3": {
-                "question": "What if I sent money to a scammer?",
-                "answer": "Contact your bank or payment service (Venmo, CashApp, Zelle) immediately—they may be able to stop or reverse the transaction. File a report at reportfraud.ftc.gov. Unfortunately, money sent via wire transfer or gift cards is very hard to recover."
+                "question": "お金を送った？",
+                "answer": "銀行へ連絡。"
             },
             "q4": {
-                "question": "What if someone is asking me to keep something secret from my family?",
-                "answer": "This is a major red flag. Scammers use secrecy to isolate you. Real emergencies don't require hiding from family. Always verify by calling the person directly on a number you already have—not one they give you."
+                "question": "内緒にして？",
+                "answer": "詐欺です。"
             },
             "q5": {
-                "question": "What if a 'friend' on social media is asking for money?",
-                "answer": "Their account may be hacked. Contact them through a different method (call or text their real number) to verify it's actually them before sending anything. Real friends will understand you being careful."
+                "question": "友人がお金を？",
+                "answer": "直接電話。"
             },
             "q6": {
-                "question": "What if I think my identity has been stolen?",
-                "answer": "Go to IdentityTheft.gov (the official FTC resource) to report it and get a personalized recovery plan. Contact your bank and credit card companies. Consider placing a fraud alert or credit freeze with the three credit bureaus."
+                "question": "情報が盗まれた？",
+                "answer": "通報する。"
             }
         },
         "citizenship": {
-            "title": "🌐 Be a Good Digital Citizen",
-            "description": "Online safety isn't just about protecting yourself. Think before you post, respect others' privacy, stand up against bullying, and remember: there's a real person behind every screen.",
-            "think": "Think before posting",
-            "respect": "Respect privacy",
-            "standUp": "Stand up to bullying",
-            "verify": "Verify before sharing"
+            "title": "🌐 デジタル市民",
+            "description": "マナー。",
+            "think": "考える",
+            "respect": "尊重",
+            "standUp": "反対する",
+            "verify": "確認"
         },
         "officialResources": {
-            "title": "📚 Official Resources",
-            "description": "If you or someone you know has been scammed, these official resources can help:",
+            "title": "📚 公式リソース",
+            "description": "リンク:",
             "identityTheft": "IdentityTheft.gov",
-            "identityTheftDesc": "Report identity theft",
+            "identityTheftDesc": "盗難報告",
             "reportFraud": "ReportFraud.ftc.gov",
-            "reportFraudDesc": "Report scams & fraud"
+            "reportFraudDesc": "詐欺報告"
         }
     },
     "scenarios": {
@@ -238,12 +225,12 @@
         "retry": "再試行"
     },
     "simulation": {
-        "redFlags": "Red Flags Found",
+        "redFlags": "発見された危険信号",
         "timeElapsed": "所要時間",
-        "clickRedFlags": "Click on red flags in the message",
-        "submit": "Submit Answer",
-        "giveUp": "Give Up",
-        "resetSession": "Reset Session",
+        "clickRedFlags": "メッセージ内の危険信号をクリック",
+        "submit": "回答を送信する",
+        "giveUp": "諦める",
+        "resetSession": "セッションをリセット",
         "escape": "🚨 これは詐欺だと思います。今すぐ脱出。",
         "timeUp": "時間切れ",
         "timeUpMsg": "時間がなくなりました。実生活では時間をかけることは良いことですが、優柔不断は時にあなたを危険にさらすことがあります。",
@@ -267,9 +254,9 @@
     "summary": {
         "success": "安全!",
         "failed": "詐欺被害!",
-        "youFound": "You found",
-        "of": "of",
-        "redFlags": "red flags",
+        "youFound": "発見:",
+        "of": "/",
+        "redFlags": "の危険信号",
         "explanation": "何が起きたのか?",
         "home": "ホーム",
         "nextScenario": "次のシナリオ",
