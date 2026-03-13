@@ -2,6 +2,49 @@ import { render, screen, fireEvent, act } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import Simulation from '../Simulation';
 
+// Mock react-i18next to return the translation key as the value
+vi.mock('react-i18next', () => ({
+    useTranslation: () => ({
+        t: (key) => {
+            // Return English values for test assertions
+            const translations = {
+                'simulation.escape': '🚨 I think this is a scam. Escape now.',
+                'simulation.timeUp': 'TIME UP',
+                'simulation.timeUpMsg': 'Your time ran out.',
+                'simulation.retryStep': 'Retry Step',
+                'simulation.goHomeFail': 'Go Home (Fail)',
+                'simulation.fullReset': 'Full Reset',
+                'simulation.wait': 'Wait!',
+                'simulation.legitMsg': 'This situation is actually legitimate.',
+                'simulation.legitDetail': 'However your caution is justified.',
+                'simulation.continue': 'Continue Scenario',
+                'simulation.leave': 'Leave Anyway (Safe)',
+                'simulation.winMessage': 'You correctly identified a scam!',
+                'simulation.winFeedback': 'Using the "Escape" button is a great habit.',
+                'simulation.legitSafeMessage': 'Safe choice, but this was actually legitimate.',
+                'simulation.legitSafeFeedback': 'You chose to escape.',
+                'simulation.timeoutMessage': 'Time ran out.',
+                'simulation.timeoutFeedback': 'Scammers often use urgency.',
+                'simulation.choiceEmergencyExit': 'Emergency Exit',
+                'simulation.choiceTimeout': 'Timeout',
+                'simulation.redFlags': 'Red Flags Found',
+                'simulation.timeElapsed': 'Time Elapsed',
+                'simulation.clickRedFlags': 'Click the red flags in the message',
+                'simulation.submit': 'Submit Answers',
+                'simulation.giveUp': 'Give Up',
+                'simulation.resetSession': 'Reset Session',
+                'simulation.from': 'From',
+                'simulation.subject': 'Subject',
+                'simulation.incomingCall': 'Incoming Call',
+                'simulation.voice': 'Voice',
+                'simulation.platformMessage': 'Message',
+            };
+            return translations[key] || key;
+        },
+        i18n: { language: 'en', changeLanguage: vi.fn() }
+    })
+}));
+
 const mockScenarioScam = {
     id: 'test_scam',
     type: 'scam',

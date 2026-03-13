@@ -9,212 +9,225 @@
     },
     "resources": {
         "title": "🛡️ 안전 리소스",
-        "subtitle": "온라인 안전을 위한 모든 것.",
+        "subtitle": "온라인에서 자신을 보호하기 위해 알아야 할 모든 것. 지식이 최고의 방어입니다.",
         "scamTypes": {
-            "title": "사기 유형",
+            "title": "일반적인 사기 유형",
             "phishing": {
-                "title": "피싱",
-                "description": "가짜 이메일."
+                "title": "피싱 & 스미싱",
+                "description": "은행, 고용주 또는 사용하는 서비스를 사칭하는 가짜 이메일이나 문자 — 로그인 정보나 개인정보를 훔치려 합니다."
             },
             "techSupport": {
-                "title": "기술 지원",
-                "description": "가짜 수리."
+                "title": "기술 지원 사기",
+                "description": "컴퓨터에 바이러스가 있다고 주장하는 팝업이나 전화. 가짜 '수리'에 돈을 요구하거나 데이터를 훔치기 위해 원격 접속을 요구합니다."
             },
             "prize": {
-                "title": "복권",
-                "description": "가짜 당첨."
+                "title": "상금 & 복권 사기",
+                "description": "참여한 적 없는 상금이나 상품에 당첨되었다는 메시지. '수령'을 위해 수수료나 개인정보를 요구합니다."
             },
             "fakeJob": {
-                "title": "가짜 구직",
-                "description": "너무 좋은 조건."
+                "title": "가짜 구직 제안",
+                "description": "면접 불필요, 높은 급여 제공, 또는 수표를 입금하고 돈을 송금하라는 요구. 너무 쉬우면 = 너무 가짜입니다."
             },
             "romance": {
                 "title": "로맨스 사기",
-                "description": "가짜 연인."
+                "description": "신뢰를 쌓은 후 긴급 상황을 꾸며내 돈을 요구하는 가짜 온라인 연애."
             },
             "grandparent": {
-                "title": "가족 사칭",
-                "description": "가족 사칭 전화."
+                "title": "가족 사칭 사기",
+                "description": "손자나 가족을 사칭하여 곤경에 처했다며 돈과 비밀을 요구하는 전화."
             },
             "investment": {
                 "title": "투자 사기",
-                "description": "가짜 고수익."
+                "description": "암호화폐를 포함한 보장된 고수익 약속. 너무 좋아 보이면 사기입니다."
             },
             "debt": {
                 "title": "채무 사기",
-                "description": "가짜 채권자."
+                "description": "법적 조치를 위협하는 가짜 채권 추심자, 또는 선불 수수료로 채무를 없애주겠다는 회사."
             }
         },
         "redFlags": {
-            "title": "🚩 위험 신호",
+            "title": "🚩 주의해야 할 위험 신호",
             "urgency": {
-                "text": "긴박감",
-                "detail": "당장 행동하세요!"
+                "text": "긴박감과 압박 전술",
+                "detail": "\"지금 바로 행동하지 않으면 계정이 폐쇄됩니다!\""
             },
             "generic": {
-                "text": "일반적 인사",
-                "detail": "고객님께"
+                "text": "일반적인 인사말",
+                "detail": "실제 이름 대신 \"고객님께\""
             },
             "sender": {
-                "text": "의심스러운 주소",
-                "detail": "오타"
+                "text": "의심스러운 발신자 주소",
+                "detail": "'amaz0n'과 같은 오타나 이상한 도메인을 주의하세요"
             },
             "urls": {
-                "text": "수상한 링크",
-                "detail": "확인 전 클릭 금지"
+                "text": "불일치하거나 수상한 URL",
+                "detail": "클릭하기 전에 마우스를 올려보세요 — 실제로 어디로 가나요?"
             },
             "passwords": {
-                "text": "비밀번호 요구",
-                "detail": "절대 주지 마세요"
+                "text": "비밀번호나 PIN 요청",
+                "detail": "합법적인 회사는 이메일/문자로 이것을 요구하지 않습니다"
             },
             "spelling": {
-                "text": "맞춤법 오류",
-                "detail": "문법 오류"
+                "text": "맞춤법 및 문법 오류",
+                "detail": "전문 기업은 메시지를 교정합니다"
             },
             "attachments": {
-                "text": "수상한 첨부",
-                "detail": ".exe 파일"
+                "text": "수상한 첨부파일",
+                "detail": "특히 .exe, .zip 또는 '매크로 사용'을 요청하는 파일"
             },
             "emotional": {
-                "text": "감정 자극",
-                "detail": "분노 유발"
+                "text": "강한 감정적 트리거",
+                "detail": "판단력을 무력화시키기 위한 공포, 흥분 또는 동정"
             }
         },
         "protection": {
-            "title": "✅ 보호 방법",
+            "title": "✅ 자신을 보호하는 방법",
             "pause": {
-                "title": "멈추기",
-                "text": "심호흡 하세요."
+                "title": "클릭하기 전에 멈추기",
+                "text": "긴급함은 사기꾼의 무기입니다. 심호흡하고 생각하세요."
             },
             "hover": {
-                "title": "마우스 올리기",
-                "text": "링크 확인."
+                "title": "링크에 마우스 올리기",
+                "text": "데스크톱에서 클릭하기 전에 링크 위에 마우스를 올려 실제 목적지를 확인하세요."
             },
             "direct": {
-                "title": "직접 접속",
-                "text": "URL 입력."
+                "title": "직접 접속하기",
+                "text": "메시지의 링크를 클릭하지 말고 웹사이트 URL을 직접 입력하세요."
             },
             "verify": {
-                "title": "확인하기",
-                "text": "전화하세요."
+                "title": "전화로 확인하기",
+                "text": "공식 웹사이트나 카드에 있는 번호로 회사에 전화하세요."
             },
             "block": {
-                "title": "차단",
-                "text": "신고하세요."
+                "title": "차단 & 신고",
+                "text": "사기꾼과 대화하지 마세요. 차단하고 플랫폼에 신고하세요."
             },
             "twoFactor": {
-                "title": "2단계 인증 (2FA)",
-                "text": "보안 강화."
+                "title": "2단계 인증(2FA) 활성화",
+                "text": "2단계 인증은 비밀번호가 도난당해도 추가 보안을 제공합니다."
             }
         },
         "identityTheft": {
             "title": "🆔 명의 도용",
             "what": "무엇인가요:",
-            "whatText": "개인 정보 무단 사용.",
-            "how": "어떻게:",
+            "whatText": "누군가가 허가 없이 당신의 개인정보(이름, SSN, 신용카드)를 사용하는 것.",
+            "how": "어떻게 발생하나요:",
             "howItems": [
-                "피싱"
+                "피싱 공격",
+                "ATM 카드 스키머",
+                "데이터 유출",
+                "우편물 도난",
+                "소셜 미디어에서 과도한 정보 공유"
             ],
-            "warning": "경고:",
+            "warning": "경고 신호:",
             "warningItems": [
-                "알 수 없는 청구"
+                "알 수 없는 청구",
+                "개설하지 않은 계좌의 청구서",
+                "이유 없는 신용 거부"
             ]
         },
         "passwords": {
-            "title": "🔐 비밀번호",
+            "title": "🔐 비밀번호와 보안",
             "strong": "강력한 비밀번호:",
-            "strongText": "길고 복잡하게.",
+            "strongText": "문자, 숫자, 기호를 혼합한 12자 이상. 비밀번호를 재사용하지 마세요.",
             "manager": "비밀번호 관리자:",
-            "managerText": "안전하게 보관.",
-            "twoFactor": "2단계 인증:",
-            "twoFactorText": "추가 보안.",
+            "managerText": "비밀번호를 안전하게 저장하고 생성하는 앱. 모두 기억할 필요가 없습니다.",
+            "twoFactor": "2단계 인증(2FA):",
+            "twoFactorText": "로그인 시 추가 확인 단계(예: 문자 코드). 비밀번호가 도난당해도 두 번째 인증 없이는 접근할 수 없습니다.",
             "tip": "💡 팁:",
-            "tipText": "항상 켜세요."
+            "tipText": "모든 중요한 계정에 2FA를 활성화하세요 — 특히 이메일, 은행, 소셜 미디어."
         },
         "malware": {
-            "title": "🦠 악성코드",
-            "description": "악의적인 소프트웨어.",
+            "title": "🦠 악성코드 방어",
+            "description": "악성코드는 데이터를 훔치거나, 감시하거나, 기기를 손상시킬 수 있는 악의적인 소프트웨어입니다.",
             "staySafe": "안전 수칙:",
             "items": [
-                "최신 유지"
+                "공식 앱 스토어에서만 다운로드",
+                "소프트웨어를 최신 상태로 유지",
+                "의심스러운 첨부파일 열지 않기",
+                "중요한 파일 백업하기"
             ]
         },
         "misinformation": {
-            "title": "🔍 가짜 뉴스",
-            "description": "허위 정보.",
+            "title": "🔍 허위 정보 구별하기",
+            "description": "허위 또는 오해의 소지가 있는 정보는 온라인에서 빠르게 퍼집니다. 믿거나 공유하기 전에:",
             "items": [
-                "출처 확인"
+                "출처 확인 — 신뢰할 수 있나?",
+                "여러 신뢰할 수 있는 보도 찾기",
+                "날짜 확인 — 다시 공유된 오래된 뉴스?",
+                "제목 너머까지 읽기",
+                "콘텐츠가 화나게 하나요? 그것이 종종 목적입니다."
             ]
         },
         "faq": {
-            "title": "❓ FAQ",
-            "subtitle": "질문 클릭.",
+            "title": "❓ 만약...이라면? (자주 묻는 질문)",
+            "subtitle": "어떻게 해야 하는지 보려면 질문을 클릭하세요.",
             "q1": {
-                "question": "링크 클릭?",
-                "answer": "비밀번호 변경."
+                "question": "의심스러운 링크를 이미 클릭했다면?",
+                "answer": "당황하지 마세요. 정보를 입력하지 말고 즉시 페이지를 닫으세요. 기기에서 바이러스 검사를 실행하세요. 비밀번호를 입력했다면 이메일과 은행부터 즉시 변경하세요. 비정상적인 활동이 있는지 계정을 모니터링하세요."
             },
             "q2": {
-                "question": "비밀번호 유출?",
-                "answer": "즉시 변경."
+                "question": "누군가에게 비밀번호를 알려줬다면?",
+                "answer": "해당 비밀번호를 즉시 변경하고, 같은 비밀번호를 사용한 다른 계정도 변경하세요. 2단계 인증을 활성화하세요. 서비스(은행, 이메일 등)에 연락하세요. 의심스러운 활동을 모니터링하세요."
             },
             "q3": {
-                "question": "돈을 보냈나요?",
-                "answer": "은행 연락."
+                "question": "사기꾼에게 돈을 보냈다면?",
+                "answer": "즉시 은행이나 결제 서비스(Venmo, CashApp, Zelle)에 연락하세요 — 거래를 중지하거나 취소할 수 있습니다. reportfraud.ftc.gov에 보고서를 제출하세요. 안타깝게도 전신 송금이나 기프트 카드로 보낸 돈은 회수가 매우 어렵습니다."
             },
             "q4": {
-                "question": "비밀로 하라고?",
-                "answer": "사기입니다."
+                "question": "가족에게 비밀로 하라고 요구받았다면?",
+                "answer": "이것은 주요 위험 신호입니다. 사기꾼은 당신을 고립시키기 위해 비밀을 이용합니다. 실제 긴급 상황에서는 가족에게 숨길 필요가 없습니다. 항상 상대방이 준 번호가 아닌, 이미 가지고 있는 번호로 직접 전화하여 확인하세요."
             },
             "q5": {
-                "question": "친구가 돈 요구?",
-                "answer": "전화 확인."
+                "question": "소셜 미디어의 '친구'가 돈을 요구한다면?",
+                "answer": "계정이 해킹되었을 수 있습니다. 무엇이든 보내기 전에 다른 방법(실제 번호로 전화나 문자)으로 연락하여 본인인지 확인하세요. 진짜 친구라면 당신의 신중함을 이해할 것입니다."
             },
             "q6": {
-                "question": "명의 도용?",
-                "answer": "신고하세요."
+                "question": "신원이 도용된 것 같다면?",
+                "answer": "IdentityTheft.gov(FTC 공식 리소스)에 방문하여 신고하고 맞춤형 복구 계획을 받으세요. 은행과 신용카드 회사에 연락하세요. 세 개 신용정보기관에 사기 경보 또는 신용 동결 설정을 고려하세요."
             }
         },
         "citizenship": {
-            "title": "🌐 디지털 시민",
-            "description": "온라인 예절.",
-            "think": "생각하기",
-            "respect": "존중",
-            "standUp": "대항하기",
-            "verify": "확인"
+            "title": "🌐 좋은 디지털 시민 되기",
+            "description": "온라인 안전은 자신을 보호하는 것만이 아닙니다. 게시하기 전에 생각하고, 타인의 개인정보를 존중하며, 괴롭힘에 맞서고, 모든 화면 뒤에는 실제 사람이 있다는 것을 기억하세요.",
+            "think": "게시 전에 생각하기",
+            "respect": "개인정보 존중",
+            "standUp": "괴롭힘에 맞서기",
+            "verify": "공유 전에 확인"
         },
         "officialResources": {
             "title": "📚 공식 리소스",
-            "description": "링크:",
+            "description": "당신이나 아는 사람이 사기를 당했다면, 다음 공식 리소스가 도움이 될 수 있습니다:",
             "identityTheft": "IdentityTheft.gov",
-            "identityTheftDesc": "도용 신고",
+            "identityTheftDesc": "명의 도용 신고",
             "reportFraud": "ReportFraud.ftc.gov",
             "reportFraudDesc": "사기 신고"
         }
     },
     "scenarios": {
         "bank_scam": {
-            "title": "Bank of America High Interest Offer",
-            "description": "You receive an exclusive offer for a high-yield savings account."
+            "title": "뱅크 오브 아메리카 고금리 제안",
+            "description": "고수익 저축 계좌에 대한 특별 제안을 받습니다."
         },
         "social_security": {
-            "title": "Urgent: Social Security Suspension",
-            "description": "You receive a call claiming your Social Security number has been flagged."
+            "title": "긴급: 사회보장번호 정지",
+            "description": "사회보장번호가 신고되었다는 전화를 받습니다."
         },
         "job_offer": {
-            "title": "Remote Data Entry Job",
-            "description": "You applied for a job and got an immediate response."
+            "title": "원격 데이터 입력 일자리",
+            "description": "일자리에 지원했더니 즉각적인 답변을 받았습니다."
         },
         "tech_support": {
-            "title": "Virus Alert Popup",
-            "description": "A loud alarm starts playing on your computer."
+            "title": "바이러스 경고 팝업",
+            "description": "컴퓨터에서 큰 경고음이 울리기 시작합니다."
         },
         "social_legit": {
-            "title": "Friend in Need?",
-            "description": "You get a DM from your friend Sarah on Instagram."
+            "title": "도움이 필요한 친구?",
+            "description": "인스타그램에서 친구 Sarah로부터 DM을 받습니다."
         },
         "service_legit": {
-            "title": "Bank Fraud Alert",
-            "description": "You receive a text message about a suspicious charge."
+            "title": "은행 사기 경보",
+            "description": "의심스러운 결제에 관한 문자 메시지를 받습니다."
         }
     },
     "gameSelection": {
@@ -249,7 +262,12 @@
         "timeoutMessage": "시간이 초과되었습니다.",
         "timeoutFeedback": "사기꾼들은 종종 당신을 당황하게 만들기 위해 긴급함을 사용합니다. 너무 오래 걸리는 것이 서두르는 것보다 낫지만, 이 시뮬레이션에서는 실패로 간주됩니다.",
         "choiceEmergencyExit": "비상 탈출",
-        "choiceTimeout": "시간 초과"
+        "choiceTimeout": "시간 초과",
+        "from": "보낸 사람",
+        "subject": "제목",
+        "incomingCall": "수신 전화",
+        "voice": "음성",
+        "platformMessage": "메시지"
     },
     "summary": {
         "success": "안전!",
@@ -268,6 +286,6 @@
         "seconds": "초"
     },
     "languageSwitcher": {
-        "label": "Language"
+        "label": "언어"
     }
 }

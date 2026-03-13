@@ -8,226 +8,226 @@
         "footer": "स्कैम रोकथाम सिम्युलेटर • केवल शैक्षिक उद्देश्य"
     },
     "resources": {
-        "title": "🛡️ Safety Resources",
-        "subtitle": "Everything you need to know to protect yourself online. Knowledge is your best defense.",
+        "title": "🛡️ सुरक्षा संसाधन",
+        "subtitle": "ऑनलाइन सुरक्षित रहने के लिए आपको जो कुछ भी जानना चाहिए। ज्ञान आपका सबसे अच्छा बचाव है।",
         "scamTypes": {
-            "title": "Common Scam Types",
+            "title": "सामान्य स्कैम प्रकार",
             "phishing": {
-                "title": "Phishing & Smishing",
-                "description": "Fake emails or texts pretending to be from banks, employers, or services you use—trying to steal your login info or personal details."
+                "title": "फ़िशिंग और स्मिशिंग",
+                "description": "बैंकों, नियोक्ताओं या आपकी उपयोग की जाने वाली सेवाओं से होने का दिखावा करने वाले नकली ईमेल या टेक्स्ट — आपकी लॉगिन जानकारी या व्यक्तिगत विवरण चुराने की कोशिश।"
             },
             "techSupport": {
-                "title": "Tech Support Scams",
-                "description": "Pop-ups or calls claiming your computer has a virus. They want money for fake 'repairs' or remote access to steal your data."
+                "title": "टेक सपोर्ट स्कैम",
+                "description": "पॉप-अप या कॉल जो दावा करते हैं कि आपके कंप्यूटर में वायरस है। वे नकली 'मरम्मत' के लिए पैसे या आपका डेटा चुराने के लिए रिमोट एक्सेस चाहते हैं।"
             },
             "prize": {
-                "title": "Prize & Lottery Scams",
-                "description": "Messages saying you won money or a prize you never entered to win. They'll ask for fees or personal info to 'claim' it."
+                "title": "पुरस्कार और लॉटरी स्कैम",
+                "description": "संदेश जो कहते हैं कि आपने पैसे या कोई पुरस्कार जीता है जिसमें आपने कभी भाग नहीं लिया। वे इसे 'प्राप्त' करने के लिए शुल्क या व्यक्तिगत जानकारी मांगेंगे।"
             },
             "fakeJob": {
-                "title": "Fake Job Offers",
-                "description": "Jobs requiring no interview, offering high pay, or asking you to deposit checks and wire money back. Too easy = too fake."
+                "title": "नकली नौकरी के प्रस्ताव",
+                "description": "ऐसी नौकरियां जिनमें कोई इंटरव्यू नहीं, ऊंचा वेतन, या चेक जमा करके पैसे वापस भेजने को कहा जाए। बहुत आसान = बहुत नकली।"
             },
             "romance": {
-                "title": "Romance Scams",
-                "description": "Fake online relationships where someone gains your trust, then invents emergencies to ask for money."
+                "title": "रोमांस स्कैम",
+                "description": "नकली ऑनलाइन रिश्ते जहां कोई आपका विश्वास जीतता है, फिर पैसे मांगने के लिए आपातकालीन स्थिति बनाता है।"
             },
             "grandparent": {
-                "title": "Grandparent Scams",
-                "description": "Callers pretending to be a grandchild or family member in trouble, begging for money and secrecy."
+                "title": "दादा-दादी स्कैम",
+                "description": "पोते या परिवार के सदस्य होने का दिखावा करने वाले कॉलर, मुसीबत में होने का बहाना बनाकर पैसे और गोपनीयता मांगते हैं।"
             },
             "investment": {
-                "title": "Investment Scams",
-                "description": "Promises of guaranteed high returns, often involving cryptocurrency. If it sounds too good to be true, it is."
+                "title": "निवेश स्कैम",
+                "description": "गारंटीड उच्च रिटर्न का वादा, अक्सर क्रिप्टोकरेंसी से जुड़ा। अगर यह सच होने के लिए बहुत अच्छा लगता है, तो यह नकली है।"
             },
             "debt": {
-                "title": "Debt Scams",
-                "description": "Fake collectors threatening legal action, or companies promising to erase debt for upfront fees."
+                "title": "ऋण स्कैम",
+                "description": "कानूनी कार्रवाई की धमकी देने वाले नकली वसूली करने वाले, या अग्रिम शुल्क पर ऋण मिटाने का वादा करने वाली कंपनियां।"
             }
         },
         "redFlags": {
-            "title": "🚩 Red Flags to Watch For",
+            "title": "🚩 ध्यान रखने योग्य खतरे के संकेत",
             "urgency": {
-                "text": "Urgency & pressure tactics",
-                "detail": "\"Act NOW or your account will be closed!\""
+                "text": "तात्कालिकता और दबाव की रणनीति",
+                "detail": "\"अभी कार्रवाई करें नहीं तो आपका खाता बंद हो जाएगा!\""
             },
             "generic": {
-                "text": "Generic greetings",
-                "detail": "\"Dear Customer\" instead of your actual name"
+                "text": "सामान्य अभिवादन",
+                "detail": "\"प्रिय ग्राहक\" आपके वास्तविक नाम के बजाय"
             },
             "sender": {
-                "text": "Suspicious sender address",
-                "detail": "Look for misspellings like 'amaz0n' or weird domains"
+                "text": "संदेहास्पद प्रेषक पता",
+                "detail": "'amaz0n' जैसी गलत वर्तनी या अजीब डोमेन देखें"
             },
             "urls": {
-                "text": "Mismatched or sketchy URLs",
-                "detail": "Hover before you click—where does it really go?"
+                "text": "बेमेल या संदेहास्पद URLs",
+                "detail": "क्लिक करने से पहले होवर करें — यह वास्तव में कहां जाता है?"
             },
             "passwords": {
-                "text": "Requests for passwords or PINs",
-                "detail": "Legitimate companies never ask for these via email/text"
+                "text": "पासवर्ड या PIN की मांग",
+                "detail": "वैध कंपनियां कभी भी ईमेल/टेक्स्ट के माध्यम से ये नहीं मांगतीं"
             },
             "spelling": {
-                "text": "Spelling & grammar errors",
-                "detail": "Professional companies proofread their messages"
+                "text": "वर्तनी और व्याकरण की गलतियां",
+                "detail": "पेशेवर कंपनियां अपने संदेशों को प्रूफरीड करती हैं"
             },
             "attachments": {
-                "text": "Suspicious attachments",
-                "detail": "Especially .exe, .zip, or files asking to 'enable macros'"
+                "text": "संदेहास्पद अटैचमेंट",
+                "detail": "विशेष रूप से .exe, .zip, या 'मैक्रो सक्षम करें' मांगने वाली फ़ाइलें"
             },
             "emotional": {
-                "text": "Strong emotional triggers",
-                "detail": "Fear, excitement, or sympathy designed to override your judgment"
+                "text": "मजबूत भावनात्मक ट्रिगर",
+                "detail": "आपके निर्णय को प्रभावित करने के लिए डिज़ाइन किया गया भय, उत्साह या सहानुभूति"
             }
         },
         "protection": {
-            "title": "✅ How to Protect Yourself",
+            "title": "✅ अपनी सुरक्षा कैसे करें",
             "pause": {
-                "title": "Pause Before You Click",
-                "text": "Urgency is a scammer's weapon. Take a breath and think."
+                "title": "क्लिक करने से पहले रुकें",
+                "text": "तात्कालिकता एक स्कैमर का हथियार है। गहरी सांस लें और सोचें।"
             },
             "hover": {
-                "title": "Hover Over Links",
-                "text": "On desktop, hover to see where a link actually goes before clicking."
+                "title": "लिंक पर होवर करें",
+                "text": "डेस्कटॉप पर, क्लिक करने से पहले लिंक पर होवर करके देखें कि वह वास्तव में कहां जाता है।"
             },
             "direct": {
-                "title": "Go Direct",
-                "text": "Type the website URL yourself instead of clicking links in messages."
+                "title": "सीधे जाएं",
+                "text": "संदेशों में लिंक पर क्लिक करने के बजाय वेबसाइट का URL स्वयं टाइप करें।"
             },
             "verify": {
-                "title": "Verify by Phone",
-                "text": "Call companies using numbers from their official website or your card."
+                "title": "फोन से सत्यापित करें",
+                "text": "कंपनियों को उनकी आधिकारिक वेबसाइट या आपके कार्ड पर दिए गए नंबरों से कॉल करें।"
             },
             "block": {
-                "title": "Block & Report",
-                "text": "Don't engage with scammers. Block them and report to the platform."
+                "title": "ब्लॉक करें और रिपोर्ट करें",
+                "text": "स्कैमर्स के साथ बातचीत न करें। उन्हें ब्लॉक करें और प्लेटफ़ॉर्म पर रिपोर्ट करें।"
             },
             "twoFactor": {
-                "title": "Enable 2FA",
-                "text": "Two-factor authentication adds an extra lock even if your password is stolen."
+                "title": "2FA सक्षम करें",
+                "text": "दो-कारक प्रमाणीकरण आपके पासवर्ड चोरी होने पर भी एक अतिरिक्त सुरक्षा जोड़ता है।"
             }
         },
         "identityTheft": {
-            "title": "🆔 Identity Theft",
-            "what": "What it is:",
-            "whatText": "When someone uses your personal information (name, SSN, credit card) without permission.",
-            "how": "How it happens:",
+            "title": "🆔 पहचान की चोरी",
+            "what": "यह क्या है:",
+            "whatText": "जब कोई बिना अनुमति के आपकी व्यक्तिगत जानकारी (नाम, SSN, क्रेडिट कार्ड) का उपयोग करता है।",
+            "how": "यह कैसे होता है:",
             "howItems": [
-                "Phishing attacks",
-                "Card skimmers on ATMs",
-                "Data breaches",
-                "Stolen mail",
-                "Oversharing on social media"
+                "फ़िशिंग हमले",
+                "ATM पर कार्ड स्किमर",
+                "डेटा उल्लंघन",
+                "डाक चोरी",
+                "सोशल मीडिया पर अत्यधिक साझाकरण"
             ],
-            "warning": "Warning signs:",
+            "warning": "चेतावनी के संकेत:",
             "warningItems": [
-                "Unexplained charges",
-                "Bills for accounts you didn't open",
-                "Credit denials for no reason"
+                "अस्पष्ट शुल्क",
+                "उन खातों के बिल जो आपने नहीं खोले",
+                "बिना किसी कारण के क्रेडिट से इनकार"
             ]
         },
         "passwords": {
-            "title": "🔐 Passwords & Security",
-            "strong": "Strong passwords:",
-            "strongText": "12+ characters mixing letters, numbers, and symbols. Never reuse passwords.",
-            "manager": "Password managers:",
-            "managerText": "Apps that securely store and generate passwords so you don't have to remember them all.",
-            "twoFactor": "Two-Factor Authentication (2FA):",
-            "twoFactorText": "An extra verification step (like a text code) when logging in. Even if someone steals your password, they can't get in without the second factor.",
-            "tip": "💡 Tip:",
-            "tipText": "Enable 2FA on all important accounts—especially email, banking, and social media."
+            "title": "🔐 पासवर्ड और सुरक्षा",
+            "strong": "मजबूत पासवर्ड:",
+            "strongText": "12+ अक्षर जिनमें अक्षर, संख्याएं और प्रतीक मिश्रित हों। पासवर्ड कभी दोबारा उपयोग न करें।",
+            "manager": "पासवर्ड प्रबंधक:",
+            "managerText": "ऐसे ऐप जो सुरक्षित रूप से पासवर्ड संग्रहीत और उत्पन्न करते हैं ताकि आपको सभी याद रखने की जरूरत न हो।",
+            "twoFactor": "दो-कारक प्रमाणीकरण (2FA):",
+            "twoFactorText": "लॉग इन करते समय एक अतिरिक्त सत्यापन चरण (जैसे टेक्स्ट कोड)। भले ही कोई आपका पासवर्ड चुरा ले, दूसरे कारक के बिना वे अंदर नहीं आ सकते।",
+            "tip": "💡 सुझाव:",
+            "tipText": "सभी महत्वपूर्ण खातों पर 2FA सक्षम करें — विशेष रूप से ईमेल, बैंकिंग और सोशल मीडिया।"
         },
         "malware": {
-            "title": "🦠 Malware Defense",
-            "description": "Malware is malicious software that can steal your data, spy on you, or damage your device.",
-            "staySafe": "Stay safe:",
+            "title": "🦠 मैलवेयर रक्षा",
+            "description": "मैलवेयर दुर्भावनापूर्ण सॉफ़्टवेयर है जो आपका डेटा चुरा सकता है, आप पर जासूसी कर सकता है, या आपके उपकरण को नुकसान पहुंचा सकता है।",
+            "staySafe": "सुरक्षित रहें:",
             "items": [
-                "Only download from official app stores",
-                "Keep software updated",
-                "Don't open suspicious attachments",
-                "Back up your important files"
+                "केवल आधिकारिक ऐप स्टोर से डाउनलोड करें",
+                "सॉफ़्टवेयर अपडेट रखें",
+                "संदेहास्पद अटैचमेंट न खोलें",
+                "अपनी महत्वपूर्ण फ़ाइलों का बैकअप लें"
             ]
         },
         "misinformation": {
-            "title": "🔍 Spotting Misinformation",
-            "description": "False or misleading information spreads fast online. Before you believe or share:",
+            "title": "🔍 भ्रामक जानकारी की पहचान",
+            "description": "झूठी या भ्रामक जानकारी ऑनलाइन तेजी से फैलती है। विश्वास करने या साझा करने से पहले:",
             "items": [
-                "Check the source—is it reputable?",
-                "Look for multiple credible reports",
-                "Check the date—old news reshared?",
-                "Read beyond the headline",
-                "Content making you angry? That's often the point."
+                "स्रोत जांचें — क्या यह विश्वसनीय है?",
+                "कई विश्वसनीय रिपोर्ट देखें",
+                "तारीख जांचें — पुरानी खबर फिर से साझा की गई?",
+                "शीर्षक से आगे पढ़ें",
+                "क्या सामग्री आपको गुस्सा दिला रही है? यही अक्सर उद्देश्य होता है।"
             ]
         },
         "faq": {
-            "title": "❓ What If...? (FAQ)",
-            "subtitle": "Click any question to see what you should do.",
+            "title": "❓ अगर...तो क्या करें? (अक्सर पूछे जाने वाले प्रश्न)",
+            "subtitle": "यह जानने के लिए किसी भी प्रश्न पर क्लिक करें कि आपको क्या करना चाहिए।",
             "q1": {
-                "question": "What if I already clicked a suspicious link?",
-                "answer": "Don't panic. Close the page immediately without entering any information. Run a virus scan on your device. If you entered any passwords, change them right away starting with email and banking. Monitor your accounts for unusual activity."
+                "question": "अगर मैंने पहले ही किसी संदिग्ध लिंक पर क्लिक कर दिया तो?",
+                "answer": "घबराएं नहीं। कोई भी जानकारी दर्ज किए बिना तुरंत पेज बंद करें। अपने डिवाइस पर वायरस स्कैन चलाएं। अगर आपने कोई पासवर्ड दर्ज किया है, तो ईमेल और बैंकिंग से शुरू करते हुए तुरंत बदलें। असामान्य गतिविधि के लिए अपने खातों की निगरानी करें।"
             },
             "q2": {
-                "question": "What if I gave someone my password?",
-                "answer": "Change that password immediately, plus any other accounts where you used the same password. Enable two-factor authentication. Contact the service (bank, email, etc.) to let them know. Monitor for suspicious activity."
+                "question": "अगर मैंने किसी को अपना पासवर्ड दे दिया तो?",
+                "answer": "उस पासवर्ड को तुरंत बदलें, साथ ही उन सभी खातों का भी जहां आपने वही पासवर्ड इस्तेमाल किया। दो-कारक प्रमाणीकरण सक्षम करें। सेवा (बैंक, ईमेल, आदि) से संपर्क करके उन्हें बताएं। संदिग्ध गतिविधि की निगरानी करें।"
             },
             "q3": {
-                "question": "What if I sent money to a scammer?",
-                "answer": "Contact your bank or payment service (Venmo, CashApp, Zelle) immediately—they may be able to stop or reverse the transaction. File a report at reportfraud.ftc.gov. Unfortunately, money sent via wire transfer or gift cards is very hard to recover."
+                "question": "अगर मैंने किसी स्कैमर को पैसे भेज दिए तो?",
+                "answer": "तुरंत अपने बैंक या भुगतान सेवा (Venmo, CashApp, Zelle) से संपर्क करें — वे लेनदेन रोक या वापस कर सकते हैं। reportfraud.ftc.gov पर रिपोर्ट दर्ज करें। दुर्भाग्य से, वायर ट्रांसफर या गिफ्ट कार्ड से भेजा गया पैसा वापस पाना बहुत मुश्किल है।"
             },
             "q4": {
-                "question": "What if someone is asking me to keep something secret from my family?",
-                "answer": "This is a major red flag. Scammers use secrecy to isolate you. Real emergencies don't require hiding from family. Always verify by calling the person directly on a number you already have—not one they give you."
+                "question": "अगर कोई मुझसे अपने परिवार से कुछ छुपाने को कह रहा है?",
+                "answer": "यह एक प्रमुख खतरे का संकेत है। स्कैमर आपको अलग करने के लिए गोपनीयता का उपयोग करते हैं। वास्तविक आपात स्थितियों में परिवार से छुपाने की आवश्यकता नहीं होती। हमेशा उस व्यक्ति को उस नंबर पर सीधे कॉल करके सत्यापित करें जो आपके पास पहले से है — जो उन्होंने आपको दिया है वह नहीं।"
             },
             "q5": {
-                "question": "What if a 'friend' on social media is asking for money?",
-                "answer": "Their account may be hacked. Contact them through a different method (call or text their real number) to verify it's actually them before sending anything. Real friends will understand you being careful."
+                "question": "अगर सोशल मीडिया पर कोई 'दोस्त' पैसे मांग रहा है?",
+                "answer": "उनका खाता हैक हो सकता है। कुछ भी भेजने से पहले यह सत्यापित करने के लिए किसी अन्य तरीके (उनके असली नंबर पर कॉल या टेक्स्ट करें) से उनसे संपर्क करें कि वह वास्तव में वही हैं। असली दोस्त आपकी सावधानी समझेंगे।"
             },
             "q6": {
-                "question": "What if I think my identity has been stolen?",
-                "answer": "Go to IdentityTheft.gov (the official FTC resource) to report it and get a personalized recovery plan. Contact your bank and credit card companies. Consider placing a fraud alert or credit freeze with the three credit bureaus."
+                "question": "अगर मुझे लगता है कि मेरी पहचान चोरी हो गई है?",
+                "answer": "रिपोर्ट करने और व्यक्तिगत पुनर्प्राप्ति योजना प्राप्त करने के लिए IdentityTheft.gov (FTC का आधिकारिक संसाधन) पर जाएं। अपने बैंक और क्रेडिट कार्ड कंपनियों से संपर्क करें। तीन क्रेडिट ब्यूरो के साथ धोखाधड़ी चेतावनी या क्रेडिट फ्रीज लगाने पर विचार करें।"
             }
         },
         "citizenship": {
-            "title": "🌐 Be a Good Digital Citizen",
-            "description": "Online safety isn't just about protecting yourself. Think before you post, respect others' privacy, stand up against bullying, and remember: there's a real person behind every screen.",
-            "think": "Think before posting",
-            "respect": "Respect privacy",
-            "standUp": "Stand up to bullying",
-            "verify": "Verify before sharing"
+            "title": "🌐 एक अच्छे डिजिटल नागरिक बनें",
+            "description": "ऑनलाइन सुरक्षा केवल अपनी रक्षा के बारे में नहीं है। पोस्ट करने से पहले सोचें, दूसरों की गोपनीयता का सम्मान करें, बदमाशी के खिलाफ खड़े हों, और याद रखें: हर स्क्रीन के पीछे एक असली इंसान है।",
+            "think": "पोस्ट करने से पहले सोचें",
+            "respect": "गोपनीयता का सम्मान करें",
+            "standUp": "बदमाशी के खिलाफ खड़े हों",
+            "verify": "साझा करने से पहले सत्यापित करें"
         },
         "officialResources": {
-            "title": "📚 Official Resources",
-            "description": "If you or someone you know has been scammed, these official resources can help:",
+            "title": "📚 आधिकारिक संसाधन",
+            "description": "अगर आपके या आपके किसी परिचित के साथ स्कैम हुआ है, तो ये आधिकारिक संसाधन मदद कर सकते हैं:",
             "identityTheft": "IdentityTheft.gov",
-            "identityTheftDesc": "Report identity theft",
+            "identityTheftDesc": "पहचान की चोरी की रिपोर्ट करें",
             "reportFraud": "ReportFraud.ftc.gov",
-            "reportFraudDesc": "Report scams & fraud"
+            "reportFraudDesc": "स्कैम और धोखाधड़ी की रिपोर्ट करें"
         }
     },
     "scenarios": {
         "bank_scam": {
-            "title": "Bank of America High Interest Offer",
-            "description": "You receive an exclusive offer for a high-yield savings account."
+            "title": "बैंक ऑफ अमेरिका उच्च ब्याज प्रस्ताव",
+            "description": "आपको उच्च-उपज बचत खाते का एक विशेष प्रस्ताव प्राप्त होता है।"
         },
         "social_security": {
-            "title": "Urgent: Social Security Suspension",
-            "description": "You receive a call claiming your Social Security number has been flagged."
+            "title": "तत्काल: सामाजिक सुरक्षा निलंबन",
+            "description": "आपको एक कॉल आती है जिसमें दावा किया जाता है कि आपका सामाजिक सुरक्षा नंबर फ्लैग किया गया है।"
         },
         "job_offer": {
-            "title": "Remote Data Entry Job",
-            "description": "You applied for a job and got an immediate response."
+            "title": "रिमोट डेटा एंट्री नौकरी",
+            "description": "आपने नौकरी के लिए आवेदन किया और तुरंत जवाब मिला।"
         },
         "tech_support": {
-            "title": "Virus Alert Popup",
-            "description": "A loud alarm starts playing on your computer."
+            "title": "वायरस अलर्ट पॉपअप",
+            "description": "आपके कंप्यूटर पर एक जोर से अलार्म बजने लगता है।"
         },
         "social_legit": {
-            "title": "Friend in Need?",
-            "description": "You get a DM from your friend Sarah on Instagram."
+            "title": "दोस्त को मदद चाहिए?",
+            "description": "आपको इंस्टाग्राम पर अपनी दोस्त Sarah से DM मिलता है।"
         },
         "service_legit": {
-            "title": "Bank Fraud Alert",
-            "description": "You receive a text message about a suspicious charge."
+            "title": "बैंक धोखाधड़ी अलर्ट",
+            "description": "आपको एक संदिग्ध शुल्क के बारे में एक टेक्स्ट संदेश प्राप्त होता है।"
         }
     },
     "gameSelection": {
@@ -262,7 +262,12 @@
         "timeoutMessage": "समय समाप्त हो गया।",
         "timeoutFeedback": "स्कैमर्स अक्सर आपको घबराने के लिए तात्कालिकता का उपयोग करते हैं। बहुत देर करना जल्दबाजी से बेहतर है, लेकिन इस सिमुलेशन में, इसे विफल माना जाता है।",
         "choiceEmergencyExit": "आपातकालीन निकास",
-        "choiceTimeout": "समय समाप्त"
+        "choiceTimeout": "समय समाप्त",
+        "from": "से",
+        "subject": "विषय",
+        "incomingCall": "आने वाली कॉल",
+        "voice": "आवाज़",
+        "platformMessage": "संदेश"
     },
     "summary": {
         "success": "सुरक्षित!",
@@ -281,6 +286,6 @@
         "seconds": "सेकंड"
     },
     "languageSwitcher": {
-        "label": "Language"
+        "label": "भाषा"
     }
 }

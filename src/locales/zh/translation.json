@@ -8,226 +8,226 @@
         "footer": "防诈骗模拟器 • 仅供教育目的"
     },
     "resources": {
-        "title": "🛡️ Safety Resources",
-        "subtitle": "Everything you need to know to protect yourself online. Knowledge is your best defense.",
+        "title": "🛡️ 安全资源",
+        "subtitle": "保护自己在线安全所需的一切知识。知识是你最好的防御。",
         "scamTypes": {
-            "title": "Common Scam Types",
+            "title": "常见诈骗类型",
             "phishing": {
-                "title": "Phishing & Smishing",
-                "description": "Fake emails or texts pretending to be from banks, employers, or services you use—trying to steal your login info or personal details."
+                "title": "网络钓鱼和短信诈骗",
+                "description": "伪装成银行、雇主或你使用的服务发送的虚假邮件或短信——试图窃取你的登录信息或个人资料。"
             },
             "techSupport": {
-                "title": "Tech Support Scams",
-                "description": "Pop-ups or calls claiming your computer has a virus. They want money for fake 'repairs' or remote access to steal your data."
+                "title": "技术支持诈骗",
+                "description": "弹出窗口或电话声称你的电脑有病毒。他们想要收费进行虚假'修理'或远程访问来窃取你的数据。"
             },
             "prize": {
-                "title": "Prize & Lottery Scams",
-                "description": "Messages saying you won money or a prize you never entered to win. They'll ask for fees or personal info to 'claim' it."
+                "title": "中奖和彩票诈骗",
+                "description": "消息声称你赢得了你从未参加过的奖金或奖品。他们会要求你支付费用或提供个人信息来'领取'。"
             },
             "fakeJob": {
-                "title": "Fake Job Offers",
-                "description": "Jobs requiring no interview, offering high pay, or asking you to deposit checks and wire money back. Too easy = too fake."
+                "title": "虚假工作机会",
+                "description": "不需要面试、提供高薪、或要求你存入支票然后汇款的工作。太容易了=太假了。"
             },
             "romance": {
-                "title": "Romance Scams",
-                "description": "Fake online relationships where someone gains your trust, then invents emergencies to ask for money."
+                "title": "恋爱诈骗",
+                "description": "虚假的网络恋爱关系，某人先赢得你的信任，然后编造紧急情况来骗钱。"
             },
             "grandparent": {
-                "title": "Grandparent Scams",
-                "description": "Callers pretending to be a grandchild or family member in trouble, begging for money and secrecy."
+                "title": "祖父母诈骗",
+                "description": "冒充孙子或家庭成员有困难的来电者，恳求汇钱并保密。"
             },
             "investment": {
-                "title": "Investment Scams",
-                "description": "Promises of guaranteed high returns, often involving cryptocurrency. If it sounds too good to be true, it is."
+                "title": "投资诈骗",
+                "description": "承诺保证高回报，通常涉及加密货币。如果听起来好得令人难以置信，那就是假的。"
             },
             "debt": {
-                "title": "Debt Scams",
-                "description": "Fake collectors threatening legal action, or companies promising to erase debt for upfront fees."
+                "title": "债务诈骗",
+                "description": "冒充催收人员威胁采取法律行动，或承诺预付费用后消除债务的公司。"
             }
         },
         "redFlags": {
-            "title": "🚩 Red Flags to Watch For",
+            "title": "🚩 需要注意的危险信号",
             "urgency": {
-                "text": "Urgency & pressure tactics",
-                "detail": "\"Act NOW or your account will be closed!\""
+                "text": "紧迫感和施压策略",
+                "detail": "\"现在就行动，否则你的账户将被关闭！\""
             },
             "generic": {
-                "text": "Generic greetings",
-                "detail": "\"Dear Customer\" instead of your actual name"
+                "text": "通用称呼",
+                "detail": "\"尊敬的客户\" 而不是你的真实姓名"
             },
             "sender": {
-                "text": "Suspicious sender address",
-                "detail": "Look for misspellings like 'amaz0n' or weird domains"
+                "text": "可疑的发件人地址",
+                "detail": "注意拼写错误，如 'amaz0n' 或奇怪的域名"
             },
             "urls": {
-                "text": "Mismatched or sketchy URLs",
-                "detail": "Hover before you click—where does it really go?"
+                "text": "不匹配或可疑的网址",
+                "detail": "点击之前先悬停查看——它真正指向哪里？"
             },
             "passwords": {
-                "text": "Requests for passwords or PINs",
-                "detail": "Legitimate companies never ask for these via email/text"
+                "text": "要求提供密码或PIN码",
+                "detail": "合法公司绝不会通过邮件/短信要求这些信息"
             },
             "spelling": {
-                "text": "Spelling & grammar errors",
-                "detail": "Professional companies proofread their messages"
+                "text": "拼写和语法错误",
+                "detail": "专业公司会仔细校对他们的消息"
             },
             "attachments": {
-                "text": "Suspicious attachments",
-                "detail": "Especially .exe, .zip, or files asking to 'enable macros'"
+                "text": "可疑的附件",
+                "detail": "特别是 .exe、.zip 或要求'启用宏'的文件"
             },
             "emotional": {
-                "text": "Strong emotional triggers",
-                "detail": "Fear, excitement, or sympathy designed to override your judgment"
+                "text": "强烈的情感触发",
+                "detail": "恐惧、兴奋或同情——旨在压过你的判断力"
             }
         },
         "protection": {
-            "title": "✅ How to Protect Yourself",
+            "title": "✅ 如何保护自己",
             "pause": {
-                "title": "Pause Before You Click",
-                "text": "Urgency is a scammer's weapon. Take a breath and think."
+                "title": "点击前暂停",
+                "text": "紧迫感是骗子的武器。深呼吸，想一想。"
             },
             "hover": {
-                "title": "Hover Over Links",
-                "text": "On desktop, hover to see where a link actually goes before clicking."
+                "title": "悬停查看链接",
+                "text": "在电脑上，将鼠标悬停在链接上查看它真正指向哪里。"
             },
             "direct": {
-                "title": "Go Direct",
-                "text": "Type the website URL yourself instead of clicking links in messages."
+                "title": "直接访问",
+                "text": "自己输入网站网址，而不是点击消息中的链接。"
             },
             "verify": {
-                "title": "Verify by Phone",
-                "text": "Call companies using numbers from their official website or your card."
+                "title": "电话验证",
+                "text": "使用公司官方网站或你银行卡上的号码打电话确认。"
             },
             "block": {
-                "title": "Block & Report",
-                "text": "Don't engage with scammers. Block them and report to the platform."
+                "title": "屏蔽并举报",
+                "text": "不要与骗子互动。屏蔽他们并向平台举报。"
             },
             "twoFactor": {
-                "title": "Enable 2FA",
-                "text": "Two-factor authentication adds an extra lock even if your password is stolen."
+                "title": "启用双重认证",
+                "text": "双重认证即使密码被盗也能增加一道额外保护。"
             }
         },
         "identityTheft": {
-            "title": "🆔 Identity Theft",
-            "what": "What it is:",
-            "whatText": "When someone uses your personal information (name, SSN, credit card) without permission.",
-            "how": "How it happens:",
+            "title": "🆔 身份盗窃",
+            "what": "什么是身份盗窃：",
+            "whatText": "当有人未经许可使用你的个人信息（姓名、社保号、信用卡）。",
+            "how": "如何发生：",
             "howItems": [
-                "Phishing attacks",
-                "Card skimmers on ATMs",
-                "Data breaches",
-                "Stolen mail",
-                "Oversharing on social media"
+                "网络钓鱼攻击",
+                "ATM机上的银行卡盗刷器",
+                "数据泄露",
+                "邮件被盗",
+                "在社交媒体上过度分享"
             ],
-            "warning": "Warning signs:",
+            "warning": "警告信号：",
             "warningItems": [
-                "Unexplained charges",
-                "Bills for accounts you didn't open",
-                "Credit denials for no reason"
+                "无法解释的扣款",
+                "你未开立的账户账单",
+                "无故被拒绝信贷"
             ]
         },
         "passwords": {
-            "title": "🔐 Passwords & Security",
-            "strong": "Strong passwords:",
-            "strongText": "12+ characters mixing letters, numbers, and symbols. Never reuse passwords.",
-            "manager": "Password managers:",
-            "managerText": "Apps that securely store and generate passwords so you don't have to remember them all.",
-            "twoFactor": "Two-Factor Authentication (2FA):",
-            "twoFactorText": "An extra verification step (like a text code) when logging in. Even if someone steals your password, they can't get in without the second factor.",
-            "tip": "💡 Tip:",
-            "tipText": "Enable 2FA on all important accounts—especially email, banking, and social media."
+            "title": "🔐 密码与安全",
+            "strong": "强密码：",
+            "strongText": "12个以上字符，混合使用字母、数字和符号。切勿重复使用密码。",
+            "manager": "密码管理器：",
+            "managerText": "安全存储和生成密码的应用程序，这样你就不必记住所有密码。",
+            "twoFactor": "双重认证（2FA）：",
+            "twoFactorText": "登录时的额外验证步骤（如短信验证码）。即使有人窃取了你的密码，没有第二重验证也无法登入。",
+            "tip": "💡 提示：",
+            "tipText": "在所有重要账户上启用双重认证——尤其是电子邮件、银行和社交媒体。"
         },
         "malware": {
-            "title": "🦠 Malware Defense",
-            "description": "Malware is malicious software that can steal your data, spy on you, or damage your device.",
-            "staySafe": "Stay safe:",
+            "title": "🦠 恶意软件防御",
+            "description": "恶意软件是可以窃取你的数据、监视你或损坏你设备的恶意程序。",
+            "staySafe": "保持安全：",
             "items": [
-                "Only download from official app stores",
-                "Keep software updated",
-                "Don't open suspicious attachments",
-                "Back up your important files"
+                "只从官方应用商店下载",
+                "保持软件更新",
+                "不要打开可疑附件",
+                "备份你的重要文件"
             ]
         },
         "misinformation": {
-            "title": "🔍 Spotting Misinformation",
-            "description": "False or misleading information spreads fast online. Before you believe or share:",
+            "title": "🔍 识别虚假信息",
+            "description": "虚假或误导性信息在网上传播很快。在相信或分享之前：",
             "items": [
-                "Check the source—is it reputable?",
-                "Look for multiple credible reports",
-                "Check the date—old news reshared?",
-                "Read beyond the headline",
-                "Content making you angry? That's often the point."
+                "检查来源——是否可靠？",
+                "查找多个可信的报告",
+                "检查日期——是旧新闻重新分享的吗？",
+                "阅读标题之外的内容",
+                "内容让你愤怒？这通常就是目的。"
             ]
         },
         "faq": {
-            "title": "❓ What If...? (FAQ)",
-            "subtitle": "Click any question to see what you should do.",
+            "title": "❓ 如果...怎么办？（常见问题）",
+            "subtitle": "点击任意问题查看你应该怎么做。",
             "q1": {
-                "question": "What if I already clicked a suspicious link?",
-                "answer": "Don't panic. Close the page immediately without entering any information. Run a virus scan on your device. If you entered any passwords, change them right away starting with email and banking. Monitor your accounts for unusual activity."
+                "question": "如果我已经点击了可疑链接怎么办？",
+                "answer": "不要恐慌。立即关闭页面，不要输入任何信息。对设备进行病毒扫描。如果你输入了密码，请立即更改，从电子邮件和银行开始。监控你的账户是否有异常活动。"
             },
             "q2": {
-                "question": "What if I gave someone my password?",
-                "answer": "Change that password immediately, plus any other accounts where you used the same password. Enable two-factor authentication. Contact the service (bank, email, etc.) to let them know. Monitor for suspicious activity."
+                "question": "如果我把密码告诉了别人怎么办？",
+                "answer": "立即更改该密码，以及使用相同密码的其他账户。启用双重认证。联系相关服务（银行、电子邮件等）通知他们。监控是否有可疑活动。"
             },
             "q3": {
-                "question": "What if I sent money to a scammer?",
-                "answer": "Contact your bank or payment service (Venmo, CashApp, Zelle) immediately—they may be able to stop or reverse the transaction. File a report at reportfraud.ftc.gov. Unfortunately, money sent via wire transfer or gift cards is very hard to recover."
+                "question": "如果我给骗子汇了款怎么办？",
+                "answer": "立即联系你的银行或支付服务（Venmo、CashApp、Zelle）——他们可能能够停止或撤销交易。在 reportfraud.ftc.gov 提交报告。不幸的是，通过电汇或礼品卡发送的钱很难追回。"
             },
             "q4": {
-                "question": "What if someone is asking me to keep something secret from my family?",
-                "answer": "This is a major red flag. Scammers use secrecy to isolate you. Real emergencies don't require hiding from family. Always verify by calling the person directly on a number you already have—not one they give you."
+                "question": "如果有人让我对家人保密怎么办？",
+                "answer": "这是一个重要的危险信号。骗子利用保密来孤立你。真正的紧急情况不会要求对家人隐瞒。始终使用你已有的号码直接给对方打电话验证——而不是他们给你的号码。"
             },
             "q5": {
-                "question": "What if a 'friend' on social media is asking for money?",
-                "answer": "Their account may be hacked. Contact them through a different method (call or text their real number) to verify it's actually them before sending anything. Real friends will understand you being careful."
+                "question": "如果社交媒体上的'朋友'请求汇款怎么办？",
+                "answer": "他们的账户可能被黑客入侵了。通过其他方式联系他们（打电话或发短信到他们的真实号码）验证是否真是他们本人。真正的朋友会理解你的谨慎。"
             },
             "q6": {
-                "question": "What if I think my identity has been stolen?",
-                "answer": "Go to IdentityTheft.gov (the official FTC resource) to report it and get a personalized recovery plan. Contact your bank and credit card companies. Consider placing a fraud alert or credit freeze with the three credit bureaus."
+                "question": "如果我认为我的身份已被盗怎么办？",
+                "answer": "访问 IdentityTheft.gov（FTC官方资源）进行报告并获取个性化恢复计划。联系你的银行和信用卡公司。考虑向三大信用机构设置欺诈警报或信用冻结。"
             }
         },
         "citizenship": {
-            "title": "🌐 Be a Good Digital Citizen",
-            "description": "Online safety isn't just about protecting yourself. Think before you post, respect others' privacy, stand up against bullying, and remember: there's a real person behind every screen.",
-            "think": "Think before posting",
-            "respect": "Respect privacy",
-            "standUp": "Stand up to bullying",
-            "verify": "Verify before sharing"
+            "title": "🌐 做一个好的数字公民",
+            "description": "网络安全不仅仅是保护自己。发布前思考，尊重他人隐私，反对网络欺凌，记住：每个屏幕背后都是一个真实的人。",
+            "think": "发布前思考",
+            "respect": "尊重隐私",
+            "standUp": "反对网络欺凌",
+            "verify": "分享前验证"
         },
         "officialResources": {
-            "title": "📚 Official Resources",
-            "description": "If you or someone you know has been scammed, these official resources can help:",
+            "title": "📚 官方资源",
+            "description": "如果你或你认识的人被骗了，这些官方资源可以提供帮助：",
             "identityTheft": "IdentityTheft.gov",
-            "identityTheftDesc": "Report identity theft",
+            "identityTheftDesc": "举报身份盗窃",
             "reportFraud": "ReportFraud.ftc.gov",
-            "reportFraudDesc": "Report scams & fraud"
+            "reportFraudDesc": "举报诈骗和欺诈"
         }
     },
     "scenarios": {
         "bank_scam": {
-            "title": "Bank of America High Interest Offer",
-            "description": "You receive an exclusive offer for a high-yield savings account."
+            "title": "美国银行高利率优惠",
+            "description": "你收到一份高收益储蓄账户的专属优惠。"
         },
         "social_security": {
-            "title": "Urgent: Social Security Suspension",
-            "description": "You receive a call claiming your Social Security number has been flagged."
+            "title": "紧急：社会保障号暂停",
+            "description": "你接到电话称你的社会保障号已被标记。"
         },
         "job_offer": {
-            "title": "Remote Data Entry Job",
-            "description": "You applied for a job and got an immediate response."
+            "title": "远程数据录入工作",
+            "description": "你申请了一份工作并立即收到了回复。"
         },
         "tech_support": {
-            "title": "Virus Alert Popup",
-            "description": "A loud alarm starts playing on your computer."
+            "title": "病毒警报弹窗",
+            "description": "你的电脑开始响起刺耳的警报声。"
         },
         "social_legit": {
-            "title": "Friend in Need?",
-            "description": "You get a DM from your friend Sarah on Instagram."
+            "title": "朋友需要帮助？",
+            "description": "你在Instagram上收到朋友Sarah的私信。"
         },
         "service_legit": {
-            "title": "Bank Fraud Alert",
-            "description": "You receive a text message about a suspicious charge."
+            "title": "银行欺诈警报",
+            "description": "你收到一条关于可疑消费的短信。"
         }
     },
     "gameSelection": {
@@ -256,13 +256,18 @@
         "continue": "继续场景",
         "leave": "无论如何都要离开 (安全)",
         "winMessage": "您正确识别了一个骗局！",
-        "winFeedback": "使用“退出”按钮是一个很好的习惯。如果感觉不对劲，立即停止。",
+        "winFeedback": "使用「退出」按钮是一个很好的习惯。如果感觉不对劲，立即停止。",
         "legitSafeMessage": "安全的选择，但这实际上是合法的。",
         "legitSafeFeedback": "您选择了逃离。虽然这种情况实际上是安全的（合法的），但谨慎永远没有错。",
         "timeoutMessage": "时间到了。",
         "timeoutFeedback": "骗子经常利用紧迫感让您恐慌。花太长时间总比匆忙好，但在这次模拟中，这算作失败。",
         "choiceEmergencyExit": "紧急出口",
-        "choiceTimeout": "超时"
+        "choiceTimeout": "超时",
+        "from": "来自",
+        "subject": "主题",
+        "incomingCall": "来电",
+        "voice": "语音",
+        "platformMessage": "消息"
     },
     "summary": {
         "success": "安全！",
@@ -281,6 +286,6 @@
         "seconds": "秒"
     },
     "languageSwitcher": {
-        "label": "Language"
+        "label": "语言"
     }
 }

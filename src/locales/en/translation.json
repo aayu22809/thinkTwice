@@ -262,7 +262,12 @@
         "timeoutMessage": "Time ran out.",
         "timeoutFeedback": "Scammers often use urgency to make you panic. Taking too long is better than rushing, but in this simulation, it counts as a fail.",
         "choiceEmergencyExit": "Emergency Exit",
-        "choiceTimeout": "Timeout"
+        "choiceTimeout": "Timeout",
+        "from": "From",
+        "subject": "Subject",
+        "incomingCall": "Incoming Call",
+        "voice": "Voice",
+        "platformMessage": "Message"
     },
     "summary": {
         "success": "Success!",

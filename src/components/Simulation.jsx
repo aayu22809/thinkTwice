@@ -219,8 +219,8 @@ const Simulation = ({ scenario, onEnd, onResetSession }) => {
                 return (
                     <div style={boxStyle}>
                         <div style={{ borderBottom: '1px solid #ccc', paddingBottom: '10px', marginBottom: '10px' }}>
-                            <strong>From:</strong> {content.sender}<br />
-                            <strong>Subject:</strong> {content.subject}
+                            <strong>{t('simulation.from')}:</strong> {content.sender}<br />
+                            <strong>{t('simulation.subject')}:</strong> {content.subject}
                         </div>
                         <div>{content.body}</div>
                     </div>
@@ -228,17 +228,17 @@ const Simulation = ({ scenario, onEnd, onResetSession }) => {
             case 'phone':
                 return (
                     <div style={{ ...boxStyle, backgroundColor: '#f8f9fa', textAlign: 'center' }}>
-                        <div style={{ fontSize: '1.5rem', marginBottom: '10px' }}>📞 Incoming Call</div>
+                        <div style={{ fontSize: '1.5rem', marginBottom: '10px' }}>📞 {t('simulation.incomingCall')}</div>
                         <div style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{content.caller}</div>
                         <div style={{ marginTop: '20px', fontStyle: 'italic', color: '#555' }}>
-                            (Voice): {content.audio_text}
+                            ({t('simulation.voice')}): {content.audio_text}
                         </div>
                     </div>
                 );
             case 'social':
                 return (
                     <div style={{ ...boxStyle, border: '1px solid #ddd' }}>
-                        <div style={{ color: '#3b5998', fontWeight: 'bold', marginBottom: '5px' }}>{content.platform} Message</div>
+                        <div style={{ color: '#3b5998', fontWeight: 'bold', marginBottom: '5px' }}>{content.platform} {t('simulation.platformMessage')}</div>
                         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
                             <div style={{ width: '40px', height: '40px', backgroundColor: '#ccc', borderRadius: '50%', marginRight: '10px' }}></div>
                             <strong>{content.sender}</strong>

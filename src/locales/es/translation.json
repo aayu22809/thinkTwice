@@ -262,7 +262,12 @@
         "timeoutMessage": "Se acabó el tiempo.",
         "timeoutFeedback": "Los estafadores a menudo usan la urgencia para que entres en pánico.",
         "choiceEmergencyExit": "Salida de emergencia",
-        "choiceTimeout": "Tiempo agotado"
+        "choiceTimeout": "Tiempo agotado",
+        "from": "De",
+        "subject": "Asunto",
+        "incomingCall": "Llamada Entrante",
+        "voice": "Voz",
+        "platformMessage": "Mensaje"
     },
     "summary": {
         "success": "¡Éxito!",

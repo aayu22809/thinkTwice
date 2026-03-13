@@ -9,212 +9,225 @@
     },
     "resources": {
         "title": "🛡️ 安全リソース",
-        "subtitle": "オンラインで身を守るための知識。",
+        "subtitle": "オンラインで身を守るために知っておくべきすべてのこと。知識はあなたの最大の防御です。",
         "scamTypes": {
-            "title": "詐欺の種類",
+            "title": "一般的な詐欺の種類",
             "phishing": {
-                "title": "フィッシング",
-                "description": "偽のメールやテキスト。"
+                "title": "フィッシング＆スミッシング",
+                "description": "銀行、雇用主、利用中のサービスを装った偽のメールやテキスト — ログイン情報や個人情報を盗もうとしています。"
             },
             "techSupport": {
-                "title": "サポート詐欺",
-                "description": "ウイルス感染を装うポップアップ。"
+                "title": "テクサポート詐欺",
+                "description": "コンピュータにウイルスがあると主張するポップアップや電話。偽の「修理」にお金を要求したり、データを盗むためにリモートアクセスを求めます。"
             },
             "prize": {
-                "title": "宝くじ詐欺",
-                "description": "偽の当選通知。"
+                "title": "賞品＆宝くじ詐欺",
+                "description": "参加したことのない賞金やプレゼントに当選したというメッセージ。「受け取る」ために手数料や個人情報を求められます。"
             },
             "fakeJob": {
                 "title": "偽の求人",
-                "description": "簡単すぎる仕事。"
+                "description": "面接不要、高給、小切手を預けて送金するよう求める仕事。簡単すぎる=偽物すぎる。"
             },
             "romance": {
                 "title": "ロマンス詐欺",
-                "description": "偽の恋愛関係。"
+                "description": "信頼を得てから、緊急事態をでっち上げてお金を要求する偽のオンライン恋愛。"
             },
             "grandparent": {
                 "title": "オレオレ詐欺",
-                "description": "家族を装う電話。"
+                "description": "孫や家族を装い、困っていると言ってお金と秘密を求める電話をかけてきます。"
             },
             "investment": {
                 "title": "投資詐欺",
-                "description": "高利回りの約束。"
+                "description": "仮想通貨を含む、保証された高利回りの約束。話がうますぎる場合、それは詐欺です。"
             },
             "debt": {
                 "title": "借金詐欺",
-                "description": "偽の取り立て。"
+                "description": "法的措置を脅す偽の取立人、または前払い料金で借金を消すと約束する会社。"
             }
         },
         "redFlags": {
-            "title": "🚩 危険信号",
+            "title": "🚩 注意すべき危険信号",
             "urgency": {
-                "text": "緊急性と圧力",
-                "detail": "今すぐ行動して！"
+                "text": "緊急性と圧力戦術",
+                "detail": "「今すぐ対応しないとアカウントが閉鎖されます！」"
             },
             "generic": {
                 "text": "一般的な挨拶",
-                "detail": "お客様へ"
+                "detail": "あなたの実名ではなく「お客様へ」"
             },
             "sender": {
-                "text": "不審な送信元",
-                "detail": "奇妙なドメイン"
+                "text": "不審な送信元アドレス",
+                "detail": "'amaz0n'のような誤字や奇妙なドメインに注意"
             },
             "urls": {
-                "text": "不審なURL",
-                "detail": "確認前にクリックしない"
+                "text": "不一致または怪しいURL",
+                "detail": "クリック前にホバーして確認 — 実際にどこに行くのか？"
             },
             "passwords": {
-                "text": "パスワード要求",
-                "detail": "絶対に教えない"
+                "text": "パスワードやPINの要求",
+                "detail": "正規の企業はメール/テキストでこれらを求めません"
             },
             "spelling": {
-                "text": "スペルミス",
-                "detail": "文法的な誤り"
+                "text": "スペルと文法の間違い",
+                "detail": "プロの企業はメッセージを校正します"
             },
             "attachments": {
-                "text": "不審な添付",
-                "detail": "特に.exe"
+                "text": "不審な添付ファイル",
+                "detail": "特に .exe、.zip、または「マクロを有効にする」よう求めるファイル"
             },
             "emotional": {
-                "text": "感情を煽る",
-                "detail": "恐怖や興奮"
+                "text": "強い感情的トリガー",
+                "detail": "判断力を鈍らせるように設計された恐怖、興奮、同情"
             }
         },
         "protection": {
-            "title": "✅ 守る方法",
+            "title": "✅ 自分を守る方法",
             "pause": {
-                "title": "立ち止まる",
-                "text": "深呼吸する。"
+                "title": "クリック前に立ち止まる",
+                "text": "緊急性は詐欺師の武器です。深呼吸して考えましょう。"
             },
             "hover": {
-                "title": "ホバー",
-                "text": "リンクを確認。"
+                "title": "リンクにホバーする",
+                "text": "デスクトップでは、クリック前にホバーしてリンク先を確認しましょう。"
             },
             "direct": {
-                "title": "直接アクセス",
-                "text": "URLを入力。"
+                "title": "直接アクセスする",
+                "text": "メッセージ内のリンクをクリックせず、ウェブサイトのURLを自分で入力しましょう。"
             },
             "verify": {
-                "title": "電話で確認",
-                "text": "公式サイトへ。"
+                "title": "電話で確認する",
+                "text": "公式ウェブサイトやカードに記載された番号で企業に電話しましょう。"
             },
             "block": {
-                "title": "ブロック",
-                "text": "報告する。"
+                "title": "ブロック＆通報",
+                "text": "詐欺師と関わらないでください。ブロックしてプラットフォームに通報しましょう。"
             },
             "twoFactor": {
-                "title": "二段階認証",
-                "text": "2FAを有効に。"
+                "title": "二段階認証を有効にする",
+                "text": "二段階認証は、パスワードが盗まれても追加のロックを提供します。"
             }
         },
         "identityTheft": {
             "title": "🆔 個人情報盗難",
-            "what": "概要:",
-            "whatText": "個人情報の無断使用。",
-            "how": "発生原因:",
+            "what": "概要：",
+            "whatText": "誰かがあなたの個人情報（氏名、SSN、クレジットカード）を許可なく使用すること。",
+            "how": "発生原因：",
             "howItems": [
-                "フィッシング"
+                "フィッシング攻撃",
+                "ATMのカードスキマー",
+                "データ侵害",
+                "郵便物の盗難",
+                "ソーシャルメディアでの過度な共有"
             ],
-            "warning": "警告サイン:",
+            "warning": "警告サイン：",
             "warningItems": [
-                "身に覚えのない請求"
+                "身に覚えのない請求",
+                "開設していない口座の請求書",
+                "理由のないクレジット拒否"
             ]
         },
         "passwords": {
-            "title": "🔐 パスワード",
-            "strong": "強力なパスワード:",
-            "strongText": "長く複雑に。",
-            "manager": "マネージャー:",
-            "managerText": "安全に保存。",
-            "twoFactor": "二段階認証:",
-            "twoFactorText": "追加の保護。",
-            "tip": "💡 ヒント:",
-            "tipText": "必ず有効に。"
+            "title": "🔐 パスワードとセキュリティ",
+            "strong": "強力なパスワード：",
+            "strongText": "文字、数字、記号を混ぜた12文字以上。パスワードの使い回しは厳禁。",
+            "manager": "パスワードマネージャー：",
+            "managerText": "パスワードを安全に保存・生成するアプリ。すべて覚える必要がなくなります。",
+            "twoFactor": "二段階認証（2FA）：",
+            "twoFactorText": "ログイン時の追加の確認ステップ（テキストコードなど）。パスワードが盗まれても、二段階目がなければログインできません。",
+            "tip": "💡 ヒント：",
+            "tipText": "すべての重要なアカウントで2FAを有効にしましょう — 特にメール、銀行、ソーシャルメディア。"
         },
         "malware": {
-            "title": "🦠 マルウェア",
-            "description": "悪意あるソフトウェア。",
-            "staySafe": "安全対策:",
+            "title": "🦠 マルウェア防御",
+            "description": "マルウェアは、データを盗んだり、スパイしたり、デバイスを破損させる悪意のあるソフトウェアです。",
+            "staySafe": "安全対策：",
             "items": [
-                "最新に保つ"
+                "公式アプリストアからのみダウンロード",
+                "ソフトウェアを最新の状態に保つ",
+                "不審な添付ファイルを開かない",
+                "重要なファイルをバックアップする"
             ]
         },
         "misinformation": {
-            "title": "🔍 誤情報",
-            "description": "フェイクニュース。",
+            "title": "🔍 誤情報の見分け方",
+            "description": "虚偽または誤解を招く情報はオンラインで急速に広がります。信じたり共有したりする前に：",
             "items": [
-                "情報源を確認"
+                "情報源を確認 — 信頼できるか？",
+                "複数の信頼できる報道を探す",
+                "日付を確認 — 古いニュースの再共有？",
+                "見出しだけでなく本文も読む",
+                "内容が怒りを感じさせる？それがしばしば狙いです。"
             ]
         },
         "faq": {
-            "title": "❓ Q&A",
-            "subtitle": "質問をクリック。",
+            "title": "❓ もし...なら？（よくある質問）",
+            "subtitle": "質問をクリックしてどうすべきか確認しましょう。",
             "q1": {
-                "question": "リンクを押した？",
-                "answer": "パスワード変更。"
+                "question": "怪しいリンクをクリックしてしまったら？",
+                "answer": "慌てないでください。情報を入力せずにすぐにページを閉じてください。デバイスでウイルススキャンを実行してください。パスワードを入力した場合は、メールと銀行から始めてすぐに変更してください。アカウントの異常な活動を監視してください。"
             },
             "q2": {
-                "question": "パスワード教えた？",
-                "answer": "すぐ変更。"
+                "question": "誰かにパスワードを教えてしまったら？",
+                "answer": "そのパスワードをすぐに変更し、同じパスワードを使っている他のアカウントも変更してください。二段階認証を有効にしてください。サービス（銀行、メールなど）に連絡して知らせてください。不審な活動を監視してください。"
             },
             "q3": {
-                "question": "お金を送った？",
-                "answer": "銀行へ連絡。"
+                "question": "詐欺師にお金を送ってしまったら？",
+                "answer": "すぐに銀行や決済サービス（Venmo、CashApp、Zelle）に連絡してください — 取引を止めたり取り消したりできるかもしれません。reportfraud.ftc.govに報告を提出してください。残念ながら、電信送金やギフトカードで送ったお金の回収は非常に困難です。"
             },
             "q4": {
-                "question": "内緒にして？",
-                "answer": "詐欺です。"
+                "question": "家族に秘密にするよう求められたら？",
+                "answer": "これは重大な危険信号です。詐欺師はあなたを孤立させるために秘密を利用します。本当の緊急事態では家族から隠す必要はありません。常に、相手から与えられた番号ではなく、すでに持っている番号で直接電話して確認してください。"
             },
             "q5": {
-                "question": "友人がお金を？",
-                "answer": "直接電話。"
+                "question": "ソーシャルメディアの「友人」がお金を求めてきたら？",
+                "answer": "アカウントがハッキングされている可能性があります。何かを送る前に、別の方法（本当の番号に電話やテキスト）で連絡して、本人かどうか確認してください。本当の友人はあなたの慎重さを理解してくれます。"
             },
             "q6": {
-                "question": "情報が盗まれた？",
-                "answer": "通報する。"
+                "question": "身元が盗まれたと思ったら？",
+                "answer": "IdentityTheft.gov（FTCの公式リソース）にアクセスして報告し、個別の回復プランを入手してください。銀行とクレジットカード会社に連絡してください。三大信用情報機関に詐欺警告やクレジット凍結を設定することを検討してください。"
             }
         },
         "citizenship": {
-            "title": "🌐 デジタル市民",
-            "description": "マナー。",
-            "think": "考える",
-            "respect": "尊重",
-            "standUp": "反対する",
-            "verify": "確認"
+            "title": "🌐 良いデジタル市民になろう",
+            "description": "オンラインの安全は自分を守ることだけではありません。投稿前に考え、他者のプライバシーを尊重し、いじめに立ち向かい、すべての画面の向こうには本当の人がいることを忘れないでください。",
+            "think": "投稿前に考える",
+            "respect": "プライバシーを尊重",
+            "standUp": "いじめに立ち向かう",
+            "verify": "共有前に確認"
         },
         "officialResources": {
             "title": "📚 公式リソース",
-            "description": "リンク:",
+            "description": "あなたや知人が詐欺に遭った場合、これらの公式リソースが役立ちます：",
             "identityTheft": "IdentityTheft.gov",
-            "identityTheftDesc": "盗難報告",
+            "identityTheftDesc": "個人情報盗難を報告",
             "reportFraud": "ReportFraud.ftc.gov",
-            "reportFraudDesc": "詐欺報告"
+            "reportFraudDesc": "詐欺を報告"
         }
     },
     "scenarios": {
         "bank_scam": {
-            "title": "Bank of America High Interest Offer",
-            "description": "You receive an exclusive offer for a high-yield savings account."
+            "title": "バンク・オブ・アメリカ高金利オファー",
+            "description": "高利回り普通預金口座の特別オファーが届きます。"
         },
         "social_security": {
-            "title": "Urgent: Social Security Suspension",
-            "description": "You receive a call claiming your Social Security number has been flagged."
+            "title": "緊急：社会保障番号の停止",
+            "description": "社会保障番号に問題があるという電話が来ます。"
         },
         "job_offer": {
-            "title": "Remote Data Entry Job",
-            "description": "You applied for a job and got an immediate response."
+            "title": "リモートデータ入力の仕事",
+            "description": "求人に応募したら即座に返答がありました。"
         },
         "tech_support": {
-            "title": "Virus Alert Popup",
-            "description": "A loud alarm starts playing on your computer."
+            "title": "ウイルス警告ポップアップ",
+            "description": "コンピュータから大きな警告音が鳴り始めます。"
         },
         "social_legit": {
-            "title": "Friend in Need?",
-            "description": "You get a DM from your friend Sarah on Instagram."
+            "title": "困っている友人？",
+            "description": "Instagramで友人のSarahからDMが届きます。"
         },
         "service_legit": {
-            "title": "Bank Fraud Alert",
-            "description": "You receive a text message about a suspicious charge."
+            "title": "銀行の不正利用アラート",
+            "description": "不審な取引についてのテキストメッセージが届きます。"
         }
     },
     "gameSelection": {
@@ -249,7 +262,12 @@
         "timeoutMessage": "時間切れです。",
         "timeoutFeedback": "詐欺師は、あなたをパニックにさせるために緊急性を利用することがよくあります。時間をかけすぎるのは急ぐよりはマシですが、このシミュレーションでは失敗とみなされます。",
         "choiceEmergencyExit": "緊急脱出",
-        "choiceTimeout": "時間切れ"
+        "choiceTimeout": "時間切れ",
+        "from": "差出人",
+        "subject": "件名",
+        "incomingCall": "着信",
+        "voice": "音声",
+        "platformMessage": "メッセージ"
     },
     "summary": {
         "success": "安全!",
@@ -268,6 +286,6 @@
         "seconds": "秒"
     },
     "languageSwitcher": {
-        "label": "Language"
+        "label": "言語"
     }
 }
